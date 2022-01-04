@@ -1,0 +1,299 @@
+@font-face {
+  font-family: 'Digica';
+  src: local('Digica'), url(fonts/dogica.woff) format('woff');
+}
+@font-face {
+  font-family: 'DigicaBold';
+  src: local('DigicaBold'), url(fonts/dogicabold.woff) format('woff');
+}
+
+$color-green: #5ed16d;
+$color-green-semi-80: rgba(94, 209, 109, 0.8);
+$color-green-semi-50: rgba(94, 209, 109, 0.5);
+$color-black-semi-30: rgba(0, 0, 0, 0.3);
+$break-sm-max: 767px;
+$break-md-min: 768px;
+
+$font-default: 'Digica', 'Courier New', monospace;
+$font-bold: 'DigicaBold', 'Courier New', monospace;
+
+html {
+  font-size: 16px;
+  letter-spacing: -1px;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(1, 28, 2);
+  font-family: $font-default;
+  color: $color-green;
+  line-height: 1.25;
+}
+*:focus {
+  outline: none;
+}
+.page {
+  /* position: relative;
+  background: #333;
+  min-height: 100vh; */
+}
+.pageFg {
+  position: relative;
+  padding: 2rem;
+}
+.isLoading .pageFg {
+  opacity: 0;
+}
+.mainBg {
+  pointer-events: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#pattern_jyUjl line {
+  stroke: 'red';
+}
+.mainBgVignette {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 49, 71);
+  background: radial-gradient(
+    circle,
+    rgba(0, 49, 71, 0.4) 6%,
+    rgba(3, 32, 2, 4) 93%
+  );
+}
+.mainHeader {
+  background-color: $color-green-semi-80;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.5rem 1rem;
+  font-family: $font-bold;
+  @media (max-width: $break-sm-max) {
+    display: block;
+    width: 100%;
+  }
+  @media (min-width: $break-md-min) {
+    display: flex;
+    .left {
+      width: 50%;
+    }
+    .right {
+      width: 50%;
+      text-align: right;
+    }
+  }
+}
+.gameWrap {
+  opacity: 0;
+  &.active {
+    opacity: 1;
+  }
+}
+
+.terminalOutput {
+  white-space: pre-line;
+  width: calc(100% - 2rem);
+  height: auto;
+  background-color: $color-black-semi-30;
+  border: 1px solid $color-green;
+  padding: 1rem;
+  max-height: calc(100vh - 16rem);
+  overflow-y: auto;
+}
+.terminalOutputEof {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+.terminalInputWrap {
+  margin-top: 1rem;
+}
+.terminalOutputWrap {
+  padding-top: 1rem;
+}
+.terminalOutputWrap label,
+.terminalInputWrap label {
+  font-size: 1rem;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+.terminalInput {
+  background-color: $color-black-semi-30;
+  padding: 1rem;
+  width: calc(100% - 2rem);
+  display: block;
+  border: none;
+  font-family: $font-default;
+  border: 1px solid $color-green;
+  color: $color-green;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.LoadingDisplay {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: center;
+}
+.cassette-wrap {
+  width: 100%;
+  max-width: 350px;
+  position: relative;
+  opacity: 0.7;
+}
+.cassette {
+  width: 100%;
+}
+.cassette-hub {
+  animation: cassette-spin 1s linear infinite;
+  position: absolute;
+  width: 12%;
+  height: auto;
+  left: 20.75%;
+  top: 31.5%;
+}
+.cassette-wrap.saving .cassette-hub {
+  animation: cassette-spin-rev 1s linear infinite;
+}
+.cassette-hub-right {
+  left: 67.5%;
+}
+@keyframes cassette-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes cassette-spin-rev {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+}
+.selectGame {
+  .explainer {
+    padding: 1rem;
+  }
+
+  .buttons {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  button {
+    -webkit-appearance: none;
+    border: none;
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    margin: 1rem 0;
+    background-color: $color-green-semi-50;
+    border: 1px solid $color-green;
+    color: #333;
+    font-family: $font-default;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-family: $font-bold;
+    &:hover {
+      background-color: $color-green;
+      cursor: pointer;
+    }
+    &.selected {
+      background-color: $color-green;
+    }
+  }
+}
+.devToolsToggle {
+  text-align: right;
+  button {
+    -webkit-appearance: none;
+    color: white;
+    font-family: $font-default;
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem;
+  }
+}
+.devTools {
+  margin-top: 0.25rem;
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  background-color: $color-black-semi-30;
+  border: 1px solid $color-green;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  label {
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  button {
+    padding: 0.25rem;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-family: $font-default;
+  }
+  select,
+  input {
+    display: block;
+    background-color: transparent;
+    padding: 0.25rem;
+    color: white;
+    border: 1px solid white;
+    width: calc(100% - 0.5rem);
+    font-family: $font-default;
+  }
+  select {
+    width: 100%;
+  }
+  .actionsRow,
+  .conditionsRow {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .conditions select {
+    width: calc(80% - 1rem);
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  .conditions input {
+    width: calc(20% - 10px);
+    display: inline-block;
+  }
+  .row {
+    display: flex;
+  }
+  .col-6 {
+    width: calc(50% - 2rem);
+    padding: 1rem;
+  }
+}

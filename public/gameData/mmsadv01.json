@@ -1,0 +1,158 @@
+{
+	"headers": {
+		"maxCarry": 5,
+		"origin": 1,
+		"wordLength": 3,
+		"lightTime": 10,
+		"numMessages": 88,
+        "maxScore": 100,
+        "introText": "In the summer of '78, the Caperville Mall is the place to be! Grab a slice and cup of Lemon Brutus in our award-winning food court. Take a stroll through aisle after aisle of parachute pants at L'Gênant. Crack a book or two at Wormwood Booksellers, then relax in the fancy massage chairs at The Shopper Image. [cue jingle] You can have it all... at the Caperville Mall!"
+	},
+	"vocab": [ 
+        {
+            "//": "GO CAR",
+            "matches": [158],
+            "conditions": [44,42,80,0,0],
+            "actions": [8170, 0]
+        }, {
+            "//": "EXIT CAR",
+            "matches": [1358],
+            "conditions": [84, 40, 0, 0, 0],
+            "actions": [8170, 0]
+        }, {
+            "//": "WIPE NOSE - NO TISSUE",
+            "matches": [2564],
+            "conditions": [25,0,0,0,0],
+            "actions": [750,0]
+        }, {
+            "//": "WIPE NOSE - ALREADY DONE",
+            "matches": [2564],
+            "conditions": [21,28,0,0,0],
+            "actions": [600,0]
+        }, {
+            "//": "WIPE NOSE",
+            "matches": [2564],
+            "conditions": [21, 29, 20, 0, 0],
+            "actions": [8703,0]
+        }, {
+            "//": "RIDE HORSE, USE COIN - NO COIN",
+            "matches": [4815, 3916],
+            "conditions": [122,105,0,0,0],
+            "actions": [750,0]
+        }, {
+            "//": "RIDE HORSE, USE COIN",
+            "matches": [4815, 3916],
+            "conditions": [101,122,100,0,0],
+            "actions": [1103,15300]
+        }, {
+            "//": "PAINT WALL - NO PAINT",
+            "matches": [4967, 3911],
+            "conditions": [85,0,0,0,0],
+            "actions": [750, 0]
+        }, {
+            "//": "PAINT WALL",
+            "matches": [4967, 3911],
+            "conditions": [81,64,0,0,0],
+            "actions": [900, 0]
+        }
+    ],
+	"events": [ 
+        {
+            "//": "CAR RADIO MESSAGE 1 - Music",
+            "id": 1,
+            "prob": 50,
+            "conditions": [84,0,0,0,0],
+            "actions": [150, 0]
+        },
+        {
+            "//": "CAR RADIO MESSAGE 2 - Exit",
+            "id": 2,
+            "prob": 50,
+            "conditions": [84,0,0,0,0],
+            "actions": [300, 0]
+        }
+    ],
+	"verbs": ["AUT", "GO", "*CLI", "*WAL", "*RUN", "*ENT", "*PAC", "*FOL", "SAY", "EXI", "GET", "*TAK", "*CAT", "*PIC", "*REM", "*WEA", "*PUL", "WIP", "DRO", "*REL", "*THR", "*LEA", "*GIV", "DRI", "*EAT", "INV", "USE", "LOO", "*EXA", "*WAT", "REA", "LIS", "RID", "PAI", "", "", "", "", ".", "OPE", "*SHA", "UNL", "HEL", ".", ".", "SWI", "QUI", "BUI", "*MAK", "WAK", "SET", "CAS", "DIG", "BUR", "FIN", "JUM", "EMP", "WEI", "", "BRE", "*SMA", "", "", "WAI", "FEE", "", "", "CLO", "*SHU", "", "", "", "", "", "", "", "", "", "", ""],
+	"nouns": ["ANY", "NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN", ".", "CAR",  "TIS", "*BOX", "CAN", "*SPR", "*PAI", "NOS", "HOR", "COI", "WAL", "REC", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+	"rooms": [{
+        "id": 0,
+		"desc": "",
+		"exits": [null, 0, 0, 0, 0, 0, 0]
+	}, {
+        "id": 1,
+		"desc": "stinky dumpster",
+		"exits": [null, 0, 0, 2, 3, 0, 0]
+	}, {
+        "id": 2,
+		"desc": "parking lot",
+		"exits": [null, 0, 0, 0, 1, 0, 0]
+	}, {
+        "id": 3,
+		"desc": "*I stand behind between the dumpster and a cinder block wall that has been heavily vandalized. Someone by the name of Xero has left their tag here.",
+		"exits": [null, 0, 0, 1, 0, 0, 0]
+    }, {
+        "id": 4,
+		"desc": "parked 1982 Chevette",
+		"exits": [null, 0, 0, 0, 0, 0, 0]
+    }, {
+        "id": 5,
+		"desc": "*Nowheresville, USA. No exit. No escape.",
+		"exits": [null, 0, 0, 0, 0, 0, 0]
+	}],
+	"items": [
+        {
+            "id": 0,
+            "desc": "",
+            "loc": -1
+        }, {
+            "id": 1,
+            "article": "a",
+            "desc": "tissue box",
+            "loc": 1,
+            "short": "TIS"
+        }, {
+            "id": 2,
+            "article": "a",
+            "desc": "poorly maintained car",
+            "loc": 2
+        }, {
+            "id": 3,
+            "article": "a",
+            "desc": "receipt from Rick's House of Lo Mein covered in duck sauce",
+            "loc": 4,
+            "short": "REC"
+        }, {
+            "id": 4,
+            "article": "a",
+            "desc": "can of orange spray paint",
+            "loc": 3,
+            "short": "CAN"
+        }, {
+            "id": 5,
+            "article": "a",
+            "desc": "coin",
+            "loc": 1,
+            "short": "COI"
+        }, {
+            "id": 6,
+            "article": "a",
+            "desc": "glorious coin-operated horse",
+            "loc": 2
+        }
+    ],
+	"bitFlagInfo": [
+        {"label": "Unknown", "value": 0},
+        {"label": "Clean Nose, Warm Heart", "value": 10}
+    ],
+	"messages": {
+        "0": "Nothing is happening.",
+        "1": "`Slow ride! Take it ... Slow ride!` The 8-track stuck in the dash seems to be looping.",
+        "2": "If you want to exit a car, sometimes it's as simple as saying EXIT CAR.",
+        "3": "Ah, that's better. My face less hideous now.",
+        "4": "No need. I already wiped my nose.",
+        "5": "I cannot do that.",
+        "6": "Frankly, I am appalled that you would even suggest such a thing.",
+        "7": "YAY! HORSIE! That was the most fun I've had in months. Thanks.",
+        "52": "Something seems to have fallen out."
+    }
+}
