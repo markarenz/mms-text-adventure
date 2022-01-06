@@ -8,15 +8,20 @@ const getGamesList = async (setGamesList) => {
 };
 
 const initGame = (thisGame, setGameState) => {
+  const rooms = [];
+  for (let x = 0; x < thisGame.rooms.length; x++) {
+    rooms[x] = { visited: false };
+  }
   setGameState({
     bitFlags: [],
-    alive: true,
     darkFlag: false,
+    gameActive: true,
     items: [...thisGame.items],
     numTurns: 0,
     currentCounter: 0,
     swapValue: null,
     currentRoom: thisGame.headers.origin,
+    rooms,
   });
 };
 

@@ -55,7 +55,6 @@ const actionsList = {
   72: 'SWAP ITEM LOCATIONS FOR X AND Y',
   74: 'TAKE ITEM X EVEN IF ALREADY IN INVENTORY',
   75: 'PUT ITEM X WITH Y (?)',
-  76: 'LOOK',
   77: 'DECREMENT COUNTER',
   78: 'DISPLAY COUNTER',
   79: 'SET COUNTER VALUE',
@@ -66,6 +65,7 @@ const actionsList = {
   86: 'LINEFEED',
   90: 'STOP ALL ACTIONS',
 };
+const gameOverMessage = 'Press ENTER to continue.';
 const defaultShowDevTools = true;
 export {
   selectGameIntroText,
@@ -78,4 +78,5 @@ export {
   conditionsList,
   actionsList,
   defaultShowDevTools,
+  gameOverMessage,
 };

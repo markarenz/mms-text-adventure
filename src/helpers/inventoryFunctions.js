@@ -9,7 +9,7 @@ const getInventory = (o, gs, gd) => {
     if (item.loc === CARRIED) {
       invOutput = `${invOutput}${numInv > 0 ? ', ' : ''}${
         item.article !== '' ? `${item.article} ` : ''
-      }${item.desc}`;
+      }${item.desc}${item.invModifier ? ` (${item.invModifier})` : ''}`;
       numInv = numInv + 1;
     }
   }

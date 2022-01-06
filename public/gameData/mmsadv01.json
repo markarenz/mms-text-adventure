@@ -6,7 +6,9 @@
 		"lightTime": 10,
 		"numMessages": 88,
         "maxScore": 100,
-        "introText": "In the summer of '78, the Caperville Mall is the place to be! Grab a slice and cup of Lemon Brutus in our award-winning food court. Take a stroll through aisle after aisle of parachute pants at L'Gênant. Crack a book or two at Wormwood Booksellers, then relax in the fancy massage chairs at The Shopper Image. [cue jingle] You can have it all... at the Caperville Mall!"
+        "introText": "In the summer of '78, the Caperville Mall is the place to be! Grab a slice and cup of Lemon Brutus in our award-winning food court. Take a stroll through aisle after aisle of parachute pants at L'Gênant. Crack a book or two at Wormwood Booksellers, then relax in the fancy massage chairs at The Shopper Image. [cue jingle] You can have it all... at the Caperville Mall!",
+        "gameWonMessage": "Hurray! Sure, the effort required to reverse engineer the chemical from this tiny sample and produce enough to cure thousands of residents is going to be a massive pain, but that's happening outside the scope of this story, so who really cares? For the sake of wrapping things up, I'll just say that with the antidote in our hands, the town's future is once again secure. All thanks to me- I mean you- I mean us. Together we have completed this adventure. I hope you're proud of yourself.",
+        "deathMessage": "Oh, dear. I have died."
 	},
 	"vocab": [ 
         {
@@ -54,6 +56,36 @@
             "matches": [4967, 3911],
             "conditions": [81,64,0,0,0],
             "actions": [900, 0]
+        }, {
+            "//": "READ NOTE - NO NOTE",
+            "matches": [4520],
+            "conditions": [165,0,0,0,0],
+            "actions": [1200,0]   
+        }, {
+            "//": "READ NOTE",
+            "matches": [4520],
+            "conditions": [161,0,0,0,0],
+            "actions": [15450, 0]   
+        }, {
+            "//": "TAKE CAT 1 - room 2 > 3",
+            "matches": [1521],
+            "conditions": [182,44,180,60,0],
+            "actions": [9310,1650]
+        }, {
+            "//": "TAKE CAT 2 - room 3 > 4",
+            "matches": [1521],
+            "conditions": [182,64,180,80,0],
+            "actions": [9310,1800]
+        }, {
+            "//": "TAKE CAT 3 - room 4 > 1",
+            "matches": [1521],
+            "conditions": [182,84,180,20,0],
+            "actions": [9310,1950]
+        }, {
+            "//": "TAKE CAT 4 - room 1",
+            "matches": [1521],
+            "conditions": [182,24,0,0,0],
+            "actions": [1413,0]
         }
     ],
 	"events": [ 
@@ -73,30 +105,34 @@
         }
     ],
 	"verbs": ["AUT", "GO", "*CLI", "*WAL", "*RUN", "*ENT", "*PAC", "*FOL", "SAY", "EXI", "GET", "*TAK", "*CAT", "*PIC", "*REM", "*WEA", "*PUL", "WIP", "DRO", "*REL", "*THR", "*LEA", "*GIV", "DRI", "*EAT", "INV", "USE", "LOO", "*EXA", "*WAT", "REA", "LIS", "RID", "PAI", "", "", "", "", ".", "OPE", "*SHA", "UNL", "HEL", ".", ".", "SWI", "QUI", "BUI", "*MAK", "WAK", "SET", "CAS", "DIG", "BUR", "FIN", "JUM", "EMP", "WEI", "", "BRE", "*SMA", "", "", "WAI", "FEE", "", "", "CLO", "*SHU", "", "", "", "", "", "", "", "", "", "", ""],
-	"nouns": ["ANY", "NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN", ".", "CAR",  "TIS", "*BOX", "CAN", "*SPR", "*PAI", "NOS", "HOR", "COI", "WAL", "REC", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+	"nouns": ["ANY", "NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN", ".", "CAR",  "TIS", "*BOX", "CAN", "*SPR", "*PAI", "NOS", "HOR", "COI", "WAL", "REC", "BEA", "NOT", "CAT", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
 	"rooms": [{
         "id": 0,
-		"desc": "",
+		"name": "",
 		"exits": [null, 0, 0, 0, 0, 0, 0]
 	}, {
         "id": 1,
-		"desc": "stinky dumpster",
+		"name": "stinky dumpster",
+        "desc": "This place has the kind of indescribable ambiance that makes a person question every decision in their lives up to this point. Luckily, the dumpster is mostly empty aside from the stains on the floor and the sticker on the wall that says 'Reading (the note in your pocket) is fundamental.' A bit odd, that.",
 		"exits": [null, 0, 0, 2, 3, 0, 0]
 	}, {
         "id": 2,
-		"desc": "parking lot",
+		"name": "parking lot",
+        "desc": "Circles of harsh halogen light stream down onto the nearly empty flat black surface of the lot, as empty and dull as the town itself.",
 		"exits": [null, 0, 0, 0, 1, 0, 0]
 	}, {
         "id": 3,
-		"desc": "*I stand behind between the dumpster and a cinder block wall that has been heavily vandalized. Someone by the name of Xero has left their tag here.",
+		"name": "fenced in area near a large wall",
+        "desc": "I stand behind between the dumpster and a cinder block wall that has been heavily vandalized. Someone by the name of Kid Zero has left their tag here.",
 		"exits": [null, 0, 0, 1, 0, 0, 0]
     }, {
         "id": 4,
-		"desc": "parked 1982 Chevette",
+		"name": "parked 1982 Chevette",
+        "desc": "Although I cannot confirm this, it seems highly likely that the the car's current owner eats every meal right here in the driver's seat. Empty Burger Duke bags are strewn everywhere. If I'm honest, the smell makes me wish I was still in the dumpster.",
 		"exits": [null, 0, 0, 0, 0, 0, 0]
     }, {
         "id": 5,
-		"desc": "*Nowheresville, USA. No exit. No escape.",
+		"name": "*Nowheresville, USA. No exit. No escape.",
 		"exits": [null, 0, 0, 0, 0, 0, 0]
 	}],
 	"items": [
@@ -138,6 +174,26 @@
             "article": "a",
             "desc": "glorious coin-operated horse",
             "loc": 2
+        }, {
+            "id": 7,
+            "article": "a",
+            "desc": "snazzy propeller beanie",
+            "loc": 2,
+            "short": "BEA",
+            "invModifier": "worn"
+        }, {
+            "id": 8,
+            "article": "a",
+            "desc": "crumpled note",
+            "loc": 999,
+            "short": "NOT"
+        }, {
+            "id": 9,
+            "article": "a",
+            "desc": "sleek black cat with a glass cylinder hanging from its collar",
+            "short": "CAT",
+            "fakeTake": true,
+            "loc": 1
         }
     ],
 	"bitFlagInfo": [
@@ -152,7 +208,14 @@
         "4": "No need. I already wiped my nose.",
         "5": "I cannot do that.",
         "6": "Frankly, I am appalled that you would even suggest such a thing.",
-        "7": "YAY! HORSIE! That was the most fun I've had in months. Thanks.",
-        "52": "Something seems to have fallen out."
+        "7": "You insert the coin into the machine and... YAY! HORSIE! That was the most fun I've had in months. Thanks.",
+        "8": "I don't have that.",
+        "9": "Meeeooow! I carefully take the capsule from the cat's collar as she (is it weird that I assume the cat is a she?) slinks off into the darkness.",
+        "10": "The cat slips through your fingers and skitters off deeper into the maze of tunnels.",
+        "11": "We need to keep searching for that cat. It's our only hope of survival!",
+        "12": "The cat seems to be getting tired. Keep at it!",
+        "13": "One more time maybe. Keep searching for that cat!",
+        "52": "Something seems to have fallen out.",
+        "53": "The note says: `Hello, me. It's me.  I'm writing this to tell you (us) that you (we) are in grave danger. You may have noticed that there aren't a lot of people around. This is because they've been slowly disappearing recently. As soon as you can, visit Dr. Morbus at the university. She may have some answers. I'm not sure how you can get there from here, but you (we) will figure it out. Her lab is under tight security. The password is 'zither.' That's all I know (or can remember).` The note continues in different ink, a shakier hand: `PS: Do not trust KZ. Destroy this note at your first opportunity.`"
     }
 }

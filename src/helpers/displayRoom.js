@@ -1,6 +1,6 @@
 import { CARRIED, exitLabels } from '@src/constants';
 
-const displayRoom = (output, gameState, gameData) => {
+const displayRoom = (output, forceDisplayRoomDesc, gameState, gameData) => {
   let exitsText = '';
   const x = gameState?.currentRoom;
   // ITEM SLOT 9 IS DEDICATED TO ACTIVE LIGHT SOURCE
@@ -12,7 +12,7 @@ const displayRoom = (output, gameState, gameData) => {
       exitsText = `${exitsText}${exitLabels[d]} `;
     }
   }
-  const roomName = gameData.rooms[x].desc;
+  const roomName = gameData.rooms[x].name;
   if (roomName.charAt(0) === '*') {
     output = `${output}${roomName.replace('*', '')}\n`;
   } else {
@@ -21,6 +21,12 @@ const displayRoom = (output, gameState, gameData) => {
     );
     output = `${output}I am in ${startsWithVowel ? 'an' : 'a'} ${roomName}.\n`;
   }
+  if (
+    (!gameState.rooms[gameState.currentRoom].visited || forceDisplayRoomDesc) &&
+    gameData.rooms[gameState.currentRoom].desc
+  ) {
+    output = `${output}${gameData.rooms[gameState.currentRoom].desc}\n`;
+  }
   if (exitsText !== '') {
     output = `${output}\nObvious Exits: ${exitsText}`;
   }
@@ -28,8 +34,8 @@ const displayRoom = (output, gameState, gameData) => {
   for (let i = 0; i < gameState.items.length; i++) {
     if (gameState.items[i].loc === x) {
       itemsInRoom = `${itemsInRoom}${itemsInRoom !== '' ? ', ' : ''}${
-        gameData.items[i].desc
-      }`;
+        gameData.items[i].article
+      } ${gameData.items[i].desc}`;
     }
   }
   return `${output}\nItems: ${itemsInRoom !== '' ? itemsInRoom : 'None'}\n\n`;

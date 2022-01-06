@@ -31,9 +31,19 @@ const PageMain = () => {
   const handleToggleDevTools = () => {
     setShowDevTools(!showDevTools);
   };
+  const resetGame = () => {
+    setAppStatus(SELECTING_GAME);
+    setStdOutput('');
+    setInputBuffer('');
+    setGameState(null);
+  };
   const handleInputSubmit = (e) => {
     e.preventDefault();
     if (appStatus === PLAYING_GAME) {
+      if (!gameState.gameActive || inputBuffer === 'QUIT') {
+        resetGame();
+        return null;
+      }
       if (inputBuffer === '?') {
         displayHelp(updateStdOutput);
       } else {

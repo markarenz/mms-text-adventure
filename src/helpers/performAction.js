@@ -1,4 +1,4 @@
-import { CARRIED } from '@src/constants';
+import { CARRIED, gameOverMessage } from '@src/constants';
 // import { getInventory } from '@src/helpers';
 
 const performAction = (
@@ -9,10 +9,8 @@ const performAction = (
   oldGameState,
   gameData,
   newShouldDrawRoom,
-  triggerLoadDisplay,
   s
 ) => {
-  console.log('PERFOM ACTION: ', actionObj.event);
   let shouldStop = false;
   let newOutput = '';
   let earlyMessage = '';
@@ -23,19 +21,9 @@ const performAction = (
   for (let cc = 0; cc < 5; cc++) {
     let cv, dv, cx;
     cx = actionObj.conditions[cc];
-    console.log('gameData.condition', actionObj.conditions);
     if (cx > 0) {
       dv = Math.floor(cx / 20);
       cv = cx % 20;
-      console.log(
-        'Action Conditions: actionObj: ',
-        actionObj.conditions,
-        'cv',
-        cv,
-        'dv',
-        dv,
-        conditionPassed
-      );
       switch (cv) {
         case 0: // PARAM
           if (conditionPassed) {
@@ -53,12 +41,10 @@ const performAction = (
           }
           break;
         case 3: // ITEM CARRIED OR IN ROOM
-          console.log('ITEM CARRIED OR IN ROOM', gameData.items[dv].desc);
           if (
             newGameState.items[dv].loc !== CARRIED &&
             newGameState.items[dv].loc !== oldGameState.currentRoom
           ) {
-            console.log('ITEM CARRIED OR IN ROOM: FAILED');
             conditionPassed = false;
           }
           break;
@@ -163,7 +149,6 @@ const performAction = (
   }
 
   let pCounter = 0;
-  console.log('ConditionsPassed for action ', actionObj.id, conditionPassed);
   if (conditionPassed) {
     if (actionObj.event) {
       // ONLY ONE EVENT PER TURN
@@ -175,15 +160,15 @@ const performAction = (
     act[2] = Math.floor(actionObj.actions[1] / 150);
     act[3] = Math.floor(actionObj.actions[1] % 150);
     for (let i = 0; i < 4; i++) {
-      console.log('DOING ACTION', act[i]);
       if (act[i] > 0 && act[i] < 52) {
         // EARLY MESSAGE
-        console.log('early message', act[i], gameData.messages[act[i] + 1]);
-        earlyMessage = `<i>${gameData.messages[act[i]]}</i>\n`;
+        earlyMessage = `${earlyMessage}<i>${gameData.messages[act[i]]}</i>\n`;
       } else {
         if (act[i] > 101) {
           // LATE MESSAGE
-          lateMessage = `<i>${gameData.messages[act[i] - 50]}</i>\n`;
+          lateMessage = `${lateMessage}<i>${
+            gameData.messages[act[i] - 50]
+          }</i>\n`;
         } else {
           switch (act[i]) {
             case 52: // GET ITEM IF YOU AREN'T CARRYING TOO MUCH
@@ -203,11 +188,6 @@ const performAction = (
               }
               break;
             case 53: // DROP ITEM
-              console.log(
-                'Drop Item',
-                param[pCounter],
-                newGameState.items[param[pCounter]].desc
-              );
               newGameState.items[param[pCounter]].loc =
                 newGameState.currentRoom;
               pCounter = pCounter + 1;
@@ -240,15 +220,22 @@ const performAction = (
               break;
             case 61: // DEATH
               shouldStop = true;
+              newOutput = `${newOutput}${gameData.headers.deathMessage}\n`;
+              newOutput = `${newOutput}\n${gameOverMessage}\n`;
+              shouldStop = true;
               newGameState.darkFlag = false;
-              newGameState.alive = false;
+              newGameState.gameActive = false;
               break;
             case 62: // ITEM X PUT IN ROOM Y
               newGameState.items[param[pCounter]].loc = param[pCounter + 1];
               pCounter = pCounter + 2;
               break;
-            case 63: // GAME OVER
-              newOutput = `${newOutput}GAME OVER.\n`;
+            case 63: // GAME WON
+              newOutput = `${newOutput}\n${gameData.headers.gameWonMessage}\n`;
+              newOutput = `${newOutput}\n${gameOverMessage}\n`;
+              shouldStop = true;
+              newGameState.darkFlag = false;
+              newGameState.gameActive = false;
               break;
             case 64: // REDRAW ROOM
               newShouldDrawRoom = true;
@@ -286,12 +273,8 @@ const performAction = (
               newGameState.items[param[pCounter]].loc = CARRIED;
               pCounter = pCounter + 1;
               break;
-            case 75: // PUT ITEM X WITH Y
-              console.log('PUT ITEM X WITH Y - NOT YET SUPPORTED');
-              break;
-            case 76: // LOOK
-              newShouldDrawRoom = true;
-              break;
+            // case 75: // PUT ITEM X WITH Y - DEPRECATED
+            // case 76: // LOOK - DEPRECATED
             case 77: // DECREMENT CURRENTCOUNTER
               if (newGameState.currentCounter > 0) {
                 newGameState.currentCounter = newGameState.currentCounter - 1;
@@ -304,11 +287,7 @@ const performAction = (
               newGameState.currentCounter = param[pCounter];
               pCounter = pCounter + 1;
               break;
-            case 80: // SWAP LOCATION WITH LOCATION-SWAP VALUE
-              console.log(
-                'SWAP LOCATION WITH LOCATION-SWAP VALUE - NOT YET SUPPORTED'
-              );
-              break;
+            // case 80: // SWAP LOCATION WITH LOCATION-SWAP VALUE - DEPRECATED
             case 81: // SWAP COUNTER WITH BACKUP COUNTER
               console.log(
                 'SWAP COUNTER WITH BACKUP COUNTER - NOT YET SUPPORTED'
@@ -333,17 +312,9 @@ const performAction = (
             case 86: // LINEFEED
               newOutput = `${newOutput}$\n`;
               break;
-            case 87: // SWAP CURRENT LOCATION WITH LOCATION-SWAP VALUE
-              console.log(
-                'SWAP CURRENT LOCATION WITH LOCATION-SWAP VALUE - NOT YET SUPPORTED'
-              );
-              break;
-            case 88: // WAIT...
-              console.log('WAIT- NOT YET SUPPORTED');
-              break;
-            case 89: // DRAW PICTURE
-              console.log('DRAW PICTURE - NOT YET SUPPORTED');
-              break;
+            // case 87: // SWAP CURRENT LOCATION WITH LOCATION-SWAP VALUE - DEPRECATED
+            // case 88: // WAIT... - DEPRECATED
+            // case 89: // DRAW PICTURE - DEPRECATED
             case 90: // STOP SUBSEQUENT ACTIONS
               shouldStop = true;
               break;

@@ -22,6 +22,7 @@ const playerTurn = (
 ) => {
   let output = '';
   let shouldDrawRoom = false;
+  let forceDisplayRoomDesc = false;
   let outputMode = 'append';
   let newGameState = { ...gameState };
   const oldInvCount = getInventoryCount(gameState, gameData.items.length);
@@ -152,8 +153,10 @@ const playerTurn = (
           }
         }
         if (i > 0 && itemsCarried < gameData.headers.maxCarry + 1) {
-          newGameState.items[i].loc = CARRIED;
-          output = `${output}OK. TAKEN.\n`;
+          if (!gameData.items[i].fakeTake) {
+            newGameState.items[i].loc = CARRIED;
+            output = `${output}OK. TAKEN.\n`;
+          }
         } else {
           if (itemsCarried > gameData.headers.maxCarry) {
             output = `${output}You are carrying too much stuff.\n`;
@@ -182,10 +185,10 @@ const playerTurn = (
     if (vc === 27) {
       outputMode = 'clear';
       shouldDrawRoom = true;
+      forceDisplayRoomDesc = true;
     }
     // 9. ACTIONS
     let tmpVocab = vc * 150 + nc;
-    console.log('>>>TMPVOCAB:', verb, noun, vc, nc, tmpVocab);
     const actions2do = [];
     for (let x = 0; x < gameData.vocab.length; x++) {
       if (gameData.vocab[x].matches.includes(tmpVocab)) {
@@ -195,7 +198,6 @@ const playerTurn = (
     // 10. EVENTS
     gameData.events.map((e, idx) => {
       const diceRoll = Math.floor(Math.random() * 100);
-      console.log('event?', diceRoll, e.prob);
       if (diceRoll < e.prob) {
         actions2do.push({ ...e, event: true });
       }
@@ -205,9 +207,8 @@ const playerTurn = (
     // 11. PROCESS ACTIONS
     let result = null;
     let stopThis = false;
-    console.log('actions2do', actions2do);
+    console.log('???', actions2do);
     actions2do.map((actionObj) => {
-      console.log('actions2do Map stop?', stopThis);
       if (!(stopThis && actionObj.event)) {
         result = performAction(
           actionObj,
@@ -217,7 +218,6 @@ const playerTurn = (
           gameState,
           gameData,
           shouldDrawRoom,
-          triggerLoadDisplay,
           s
         );
         stopThis = result.shouldStop;
@@ -233,7 +233,12 @@ const playerTurn = (
       shouldDrawRoom = true;
     }
     if (shouldDrawRoom) {
-      output = displayRoom(output, newGameState, gameData);
+      output = displayRoom(
+        output,
+        forceDisplayRoomDesc,
+        newGameState,
+        gameData
+      );
     }
   } else {
     if (numTurns > 0) {
@@ -241,7 +246,12 @@ const playerTurn = (
     } else {
       outputMode = 'clear';
       output = `${output}<i>${gameData.headers.introText}</i>\n\n`;
-      output = displayRoom(output, newGameState, gameData);
+      output = displayRoom(
+        output,
+        forceDisplayRoomDesc,
+        newGameState,
+        gameData
+      );
     }
   }
   // If the inventory has changed on this turn, remove the take error message.
@@ -249,6 +259,9 @@ const playerTurn = (
   if (oldInvCount !== newInvCount) {
     output = output.replace(takeErrorMsg, '');
   }
+  // Mark room from previous turn as visited
+  newGameState.rooms[gameState.currentRoom].visited = true;
+
   setGameState({
     ...newGameState,
     numTurns: numTurns + 1,
