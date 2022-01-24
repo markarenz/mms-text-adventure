@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { conditionsList, actionsList } from '@src/constants';
-import { getNounVerbFromInput, getWordsFromInput } from '@src/helpers';
-
+import {
+  getNounVerbFromInput,
+  getWordsFromInput,
+  reverseConditions,
+  reverseActions,
+} from '@src/helpers';
 const DevTools = ({ gameData }) => {
-  const defaultConditions = [0, 0, 0, 0, 0];
+  const defaultConditions = [0, 0, 0, 0, 0, 0, 0]; // 2 extra
   const defaultActions = [0, 0, 0, 0];
   const [inputBuffer, setInputBuffer] = useState('');
+  const [inputReverseConditions, setInputReverseConditions] = useState('');
+  const [inputReverseActions, setInputReverseActions] = useState('');
   const [vocabId, setVocabId] = useState(0);
+  const [saveNumInput, setSaveNumInput] = useState('1');
   const [conditions, setConditions] = useState([...defaultConditions]);
   const [conditionVals, setConditionVals] = useState([...defaultConditions]);
   const [actions, setActions] = useState([...defaultActions]);
@@ -88,7 +95,7 @@ const DevTools = ({ gameData }) => {
         value={actions[i]}
         onChange={handleActionChange}
       >
-        <option value="">NONE SELECTED</option>
+        <option value={0}>NONE SELECTED</option>
         {actionsListArr.map((a, idx) => (
           <option value={idx} key={`action-option-${i}-${idx}`}>
             {a}
@@ -111,10 +118,39 @@ const DevTools = ({ gameData }) => {
   };
   const handleConditionValChange = (e) => {
     const idx = parseInt(e.target.name.replace('conditionVal-', ''));
+    const numVal = !isNaN(e.target.value) ? parseInt(e.target.value) : 0;
     const newConditionVals = conditionVals.map((v, i) =>
-      i === idx ? parseInt(e.target.value) : v
+      i === idx ? numVal : v
     );
     setConditionVals([...newConditionVals]);
+  };
+  const handleSaveNumInputChange = (e) => {
+    setSaveNumInput(e.target.value);
+  };
+  const handleFixGameSave = () => {
+    const n = parseInt(saveNumInput);
+    const saveName = `save-${gameData.headers.slug}-${n}`;
+    const savedDataTxt = localStorage.getItem(saveName);
+    const savedData = JSON.parse(savedDataTxt);
+    gameData.rooms.map((room, idx) => {
+      if (!savedData.rooms[idx]) {
+        savedData.rooms[idx] = room;
+      }
+      return null;
+    });
+    gameData.items.map((item, idx) => {
+      if (!savedData.items[idx]) {
+        savedData.items[idx] = item;
+      }
+      return null;
+    });
+    localStorage.setItem(saveName, JSON.stringify(savedData));
+  };
+  const handleReverseConditions = () => {
+    reverseConditions(inputReverseConditions, setConditions, setConditionVals);
+  };
+  const handleReverseActions = () => {
+    reverseActions(inputReverseActions, setActions);
   };
   return (
     <div className="devTools">
@@ -135,7 +171,7 @@ const DevTools = ({ gameData }) => {
         </div>
       </div>
       <div className="row">
-        <div className="col-6 left conditions">
+        <div className="col-6 left splitCell">
           <label>Conditions:</label>
           {defaultConditions.map((_c, idx) => (
             <div className="conditionsRow" key={`conditions--${idx}`}>
@@ -167,6 +203,43 @@ const DevTools = ({ gameData }) => {
           <label>Action Result:</label>
           <div>Final: {getActionString()}</div>
           <div>Raw Actions: {JSON.stringify(actions)}</div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-6 left">
+          <label>Lookup Items</label>
+          <select name="items-lookup">
+            {gameData.items.map((i, idx) => (
+              <option key={idx}>{`${i.name} (${idx})`}</option>
+            ))}
+          </select>
+        </div>
+        <div className="col-6 right">
+          <label>Fix Dev Game Save</label>
+          <input
+            value={saveNumInput}
+            onChange={handleSaveNumInputChange}
+            style={{ width: '20%', display: 'inline', marginRight: 10 }}
+          />
+          <button onClick={handleFixGameSave}>FIX</button>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-6 left splitÇellRev">
+          <label>Reverse Conditions</label>
+          <input
+            value={inputReverseConditions}
+            onChange={(e) => setInputReverseConditions(e.target.value)}
+          />
+          <button onClick={handleReverseConditions}>REVERSE</button>
+        </div>
+        <div className="col-6 right splitÇellRev">
+          <label>Reverse Actions</label>
+          <input
+            value={inputReverseActions}
+            onChange={(e) => setInputReverseActions(e.target.value)}
+          />
+          <button onClick={handleReverseActions}>REVERSE</button>
         </div>
       </div>
     </div>

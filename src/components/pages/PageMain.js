@@ -24,9 +24,12 @@ const PageMain = () => {
   const [stdOutput, setStdOutput] = useState('Initializing...');
   const [gameData, setGameData] = useState(null);
   const [gameState, setGameState] = useState(null);
-  const [showDevTools, setShowDevTools] = useState(defaultShowDevTools);
+  const [showDevTools, setShowDevTools] = useState(false);
+
   const handleInputChange = (e) => {
-    setInputBuffer(e.target.value.toUpperCase());
+    if (appStatus === PLAYING_GAME) {
+      setInputBuffer(e.target.value.toUpperCase());
+    }
   };
   const handleToggleDevTools = () => {
     setShowDevTools(!showDevTools);
@@ -50,7 +53,7 @@ const PageMain = () => {
         playerTurn(
           inputBuffer,
           updateStdOutput,
-          gameState,
+          { ...gameState },
           gameData,
           setGameState,
           triggerLoadDisplay

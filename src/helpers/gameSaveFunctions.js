@@ -43,6 +43,20 @@ const loadGame = (
     shouldDrawRoom = true;
     outputMode = 'clear';
   }
+  // Auto-heal older saves with missing items or rooms
+  gameData.rooms.map((room, idx) => {
+    if (!newGameState.rooms[idx]) {
+      newGameState.rooms[idx] = room;
+    }
+    return null;
+  });
+  gameData.items.map((item, idx) => {
+    if (!newGameState.items[idx]) {
+      newGameState.items[idx] = item;
+    }
+    return null;
+  });
+
   return {
     newGameState,
     output,

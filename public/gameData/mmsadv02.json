@@ -1,0 +1,83 @@
+{
+	"headers": {
+        "title": "Temp Game",
+        "author": "Mark Arenz",
+        "year": 2022,
+		"maxCarry": 5,
+		"origin": 1,
+		"wordLength": 3,
+		"lightTime": 25,
+        "lightOffItemId": 35,
+        "lightOnItemId": 9,
+        "introText": "This game is still in development.",
+        "gameWonMessage": "TBD",
+        "deathMessage": "Oh, dear. I have died."
+	},
+	"vocab": [ 
+        {
+            "//": "TEST",
+            "matches": [4508],
+            "conditions": [23,20,0,0,0,0,0],
+            "actions": [208,0]          
+        }
+    ],
+    "events": [
+        {
+            "//": "TEMP EVENT",
+            "id": 1,
+            "prob": 25,
+            "conditions": [24,0,0,0,0,0,0],
+            "actions": [15450,0]          
+        }
+
+    ],
+	"verbs": ["AUT", "GO", "*CLI", "*WAL", "*RUN", "*ENT", "*PAC", "*FOL", "SAY", "EXI", "GET", "*TAK", "*CAT", "*PIC", "*REM", "*WEA", "", "", "DRO", "*REL", "*THR", "*LEA", "", "", "", "", "USE", "LOO", "*EXA", "*WAT", "REA", "", "", "", "", "", "", "", "", "", "", "", "", "", ".", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+	"nouns": ["ANY", "NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN", ".", "NOT",  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+	"rooms": [{
+        "id": 0,
+		"name": "",
+		"exits": [null, 0, 0, 0, 0, 0, 0]
+	}, {
+        "id": 1,
+		"name": "in an unfinished game.",
+        "desc": "Imagine walls covered in 'image not loaded' textures.",
+		"exits": [null, 0, 2, 0, 0, 0, 0]
+	}, {
+        "id": 2,
+		"name": "in another part of the unfinished game.",
+        "desc": "This room looks much like the other. Maybe I should wait until the game is released.",
+		"exits": [null, 1, 0, 0, 0, 0, 0]                                                                
+    }, {
+        "id": 100,
+		"name": "*...",
+		"exits": [null, 0, 0, 0, 0, 0, 0]
+	}],
+	"items": [
+        {
+            "id": 0,
+            "name": "",
+            "desc": "",
+            "loc": -1
+        }, {
+            "id": 1,
+            "article": "a",
+            "name": "note",
+            "loc": 1,
+            "short": "NOT"
+        }
+    ],
+	"bitFlagInfo": [
+        {"id": 0, "label": "Unknown", "value": 0},
+        {"id": 1, "label": "The curious sort", "value": 10}
+    ],
+	"messages": {
+        "0": "Nothing is happening.",
+        "1": "While you might have expected a note left out for us to find would explain things a bit, but sadly it's just a scrap of paper the developer was scribbling on. The handwriting is atrocious, by the way. For what it's worth, there's a diagram on the note that could be a map, so at least that means development is underway.",
+
+        "//": "------------------------------------------------------------------------------------",
+
+        "52": "I sense that something has changed.",
+        "53": "All around me I feel the sensation of being where I don't belong...",
+        "": ""
+    }
+}

@@ -9,7 +9,7 @@ const getInventory = (o, gs, gd) => {
     if (item.loc === CARRIED) {
       invOutput = `${invOutput}${numInv > 0 ? ', ' : ''}${
         item.article !== '' ? `${item.article} ` : ''
-      }${item.desc}${item.invModifier ? ` (${item.invModifier})` : ''}`;
+      }${item.name}${item.invModifier ? ` (${item.invModifier})` : ''}`;
       numInv = numInv + 1;
     }
   }
@@ -17,7 +17,6 @@ const getInventory = (o, gs, gd) => {
     const invOutputArr = invOutput.split(', ');
     const invOutputLastItem = invOutputArr.pop();
     const invOutputFront = invOutputArr.join(', ');
-    console.log(invOutputFront, invOutputArr);
     invOutput = `${invOutputFront} and ${invOutputLastItem}`;
   }
 

@@ -14,8 +14,10 @@ const initGame = (thisGame, setGameState) => {
   }
   setGameState({
     bitFlags: [],
+    commandLog: [],
     darkFlag: false,
     gameActive: true,
+    lightTimer: 0,
     items: [...thisGame.items],
     numTurns: 0,
     currentCounter: 0,

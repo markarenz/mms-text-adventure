@@ -1,15 +1,15 @@
 [
     {
-        "name": "Test Game A",
+        "name": "You Can Have It All At The Caperville Mall",
         "slug": "mmsadv01"
     },
     {
-        "name": "Test Game B",
-        "slug": "mmsadv01"
+        "name": "Game 2 (Coming Soon)",
+        "slug": "temp"
     },
     {
-        "name": "Test Game C",
-        "slug": "mmsadv01"
+        "name": "Game 3 (Coming Soon)",
+        "slug": "temp"
     }
 
 ]

@@ -1,26 +1,39 @@
 {
 	"headers": {
+        "title": "You Can Have It All At the Caperville Mall",
+        "author": "Mark Arenz",
+        "year": 2022,
 		"maxCarry": 5,
 		"origin": 1,
 		"wordLength": 3,
-		"lightTime": 10,
-		"numMessages": 88,
-        "maxScore": 100,
+		"lightTime": 25,
+        "lightOffItemId": 35,
+        "lightOnItemId": 9,
         "introText": "In the summer of '78, the Caperville Mall is the place to be! Grab a slice and cup of Lemon Brutus in our award-winning food court. Take a stroll through aisle after aisle of parachute pants at L'Gênant. Crack a book or two at Wormwood Booksellers, then relax in the fancy massage chairs at The Shopper Image. [cue jingle] You can have it all... at the Caperville Mall!",
         "gameWonMessage": "Hurray! Sure, the effort required to reverse engineer the chemical from this tiny sample and produce enough to cure thousands of residents is going to be a massive pain, but that's happening outside the scope of this story, so who really cares? For the sake of wrapping things up, I'll just say that with the antidote in our hands, the town's future is once again secure. All thanks to me- I mean you- I mean us. Together we have completed this adventure. I hope you're proud of yourself.",
         "deathMessage": "Oh, dear. I have died."
 	},
 	"vocab": [ 
         {
-            "//": "GO CAR",
+            "//": "GO CAR - MALL",
             "matches": [158],
             "conditions": [44,42,80,0,0],
             "actions": [8170, 0]
         }, {
-            "//": "EXIT CAR",
+            "//": "GO CAR - UNIVERSITY",
+            "matches": [158],
+            "conditions": [42,524,80,0,0,0,0],
+            "actions": [8170, 0]    
+        }, {
+            "//": "EXIT CAR - MALL",
             "matches": [1358],
-            "conditions": [84, 40, 0, 0, 0],
+            "conditions": [84,129,40,0,0,0,0],
             "actions": [8170, 0]
+        }, {
+            "//": "EXIT CAR - UNIVERSITY",
+            "matches": [1358],
+            "conditions": [84,128,520,0,0,0,0],
+            "actions": [8170, 0]            
         }, {
             "//": "WIPE NOSE - NO TISSUE",
             "matches": [2564],
@@ -44,8 +57,8 @@
         }, {
             "//": "RIDE HORSE, USE COIN",
             "matches": [4815, 3916],
-            "conditions": [101,122,100,0,0],
-            "actions": [1103,15300]
+            "conditions": [101,122,140,120,160, 100, 0],
+            "actions": [16872,9803]
         }, {
             "//": "PAINT WALL - NO PAINT",
             "matches": [4967, 3911],
@@ -59,13 +72,13 @@
         }, {
             "//": "READ NOTE - NO NOTE",
             "matches": [4520],
-            "conditions": [165,0,0,0,0],
+            "conditions": [185,0,0,0,0],
             "actions": [1200,0]   
         }, {
             "//": "READ NOTE",
             "matches": [4520],
-            "conditions": [161,0,0,0,0],
-            "actions": [15450, 0]   
+            "conditions": [681,80,0,0,0],
+            "actions": [15508,0]   
         }, {
             "//": "TAKE CAT 1 - room 2 > 3",
             "matches": [1521],
@@ -86,6 +99,323 @@
             "matches": [1521],
             "conditions": [182,24,0,0,0],
             "actions": [1413,0]
+        }, {
+            "//": "LOOK MIRROR - OK",
+            "matches": [4072, 3922],
+            "conditions": [222,28,0,0,0],
+            "actions": [2100,0]    
+        }, {
+            "//": "LOOK MIRROR - NOT OK",
+            "matches": [4072, 3922],
+            "conditions": [222,29,0,0,0],
+            "actions": [2250,0]        
+        }, {
+            "//": "LOOK WINCH - LADDER UP",
+            "matches": [4072, 3922],
+            "conditions": [322,282,0,0,0],
+            "actions": [15600,0]
+        }, {
+            "//": "LOOK WINCH - LADDER DOWN",
+            "matches": [4073],
+            "conditions": [322,302,0,0,0],
+            "actions": [15750,0]
+        }, {
+            "//": "USE CRANK (AFTER ATTACHED) - LADDER DOWN",
+            "matches": [3924, 3923, 9174],
+            "conditions": [342,302,0,0,0],
+            "actions": [16200,0]
+        }, {
+            "//": "USE CRANK (AFTER ATTACHED) - LADDER UP",
+            "matches": [3924, 3923, 9174],
+            "conditions": [342,282,280,300,40],
+            "actions": [10858,16050]
+        }, {
+            "//": "ATTACH CRANK or USE CRANK",
+            "matches": [5124, 3924, 3923],
+            "conditions": [322,261,260,320,340],
+            "actions": [8322,15900]
+        }, {
+            "//": "LOOK CRANK",
+            "matches": [4074],
+            "conditions": [263,0,0,0,0],
+            "actions": [16350,0]
+        }, {
+            "//": "CLIMB UP, GO LADDER - MALL ROOF",
+            "matches": [176, 155],
+            "conditions": [64,302,180,0,0],
+            "actions": [8170,0]
+        }, {
+            "//": "CLIMB DOWN, GO LADDER - MALL ROOF",
+            "matches": [176, 156],
+            "conditions": [184,313,60,0,0],
+            "actions": [8170,0]
+        }, {
+            "//": "GO FOUNTAIN - WET",
+            "matches": [177],
+            "conditions": [382,0,0,0,0],
+            "actions": [16500,0]
+        }, {
+            "//": "GO FOUNTAIN - DRY",
+            "matches": [177],
+            "conditions": [402,300,0,0,0],
+            "actions": [8100,0]
+        }, {
+            "//": "TURN LEVER/USE LEVER - WATER ON",
+            "matches": [9778,9178,3928],
+            "conditions": [422,393,380,400,0],
+            "actions": [2472,0]
+        }, {
+            "//": "TURN LEVER - WATER OFF",
+            "matches": [9778,9178,3928],
+            "conditions": [422,413,380,400,0],
+            "actions": [2472,0]
+        }, {
+            "//": "LOOK BEANIE",
+            "matches": [4069],
+            "conditions": [163,0,0,0,0],
+            "actions": [16650,0]    
+        }, {
+            "//": "GO COUNTER - NO BEANIE",
+            "matches": [180],
+            "conditions": [204,165,220,0,0],
+            "actions": [16950,0]    
+        }, {
+            "//": "GO COUNTER",
+            "matches": [180],
+            "conditions": [204,161,220,0,0],
+            "actions": [8100,0]
+        }, {
+            "//": "GO CONCOURSE/MALL - GUARD",
+            "matches": [183],
+            "conditions": [284,462,0,0,0],
+            "actions": [17250,0]
+        }, {
+            "//": "GO CONCOURSE/MALL - NO GUARD",
+            "matches": [183],
+            "conditions": [284,466,340,0,0],
+            "actions": [8100,0]
+        }, {
+            "//": "GIVE BURGER",
+            "matches": [5581],
+            "conditions": [441,462,440,460,0,0,0],
+            "actions": [17455,8250]
+        }, {
+            "//": "READ NEWSPAPER",
+            "matches": [4535],
+            "conditions": [482,0,0,0,0,0,0],
+            "actions": [17550,0]
+        }, {
+            "//": "READ MAGAZINE",
+            "matches": [4536],
+            "conditions": [502,0,0,0,0,0,0],
+            "actions": [17700,0]
+        }, {
+            "//": "READ BOOK",
+            "matches": [4537],
+            "conditions": [522,0,0,0,0,0,0],
+            "actions": [17850,0]    
+        }, {
+            "//": "READ HINT",
+            "matches": [4538],
+            "conditions": [542,0,0,0,0,0,0],
+            "actions": [18000,0]
+        }, {
+            "//": "PLAY GAME / USE COIN",
+            "matches": [5440, 3916],
+            "conditions": [582,101,562,560,160,100,100],
+            "actions": [18212,8308]
+        }, {
+            "//": "SAY TONY - NO JULIE",
+            "matches": [1239],
+            "conditions": [626,0,0,0,0,0,0],
+            "actions": [18750,0]
+        }, {
+            "//": "SAY TONY - JULIE NOSE",
+            "matches": [1239],
+            "conditions": [623,29,0,0,0,0,0],
+            "actions": [18900,0]
+        }, {
+            "//": "SAY TONY - JULIE",
+            "matches": [1239],
+            "conditions": [622,28,620,600,660,0,0],
+            "actions": [18522,11100]
+        }, {
+            "//": "GIVE PAINT - TONY",
+            "matches": [5561],
+            "conditions": [81,164,562,80,620,600,0],
+            "actions": [18355,10800]
+        }, {
+            "//": "GIVE PIN - BEANIE",
+            "matches": [5591],
+            "conditions": [164,562,661,161,0,0,0],
+            "actions": [19050,0]
+        }, {
+            "//": "GIVE PIN",
+            "matches": [5591],
+            "conditions": [164,562,661,165,660,640,60],
+            "actions": [18672,8700]
+        }, {
+            "//": "DRIVE CAR / START CAR - MALL -> UNIVERSITY",
+            "matches": [3458, 6458],
+            "conditions": [641,84,129,520,40,520,120],
+            "actions": [19254,9358]
+        }, {
+            "//": "DRIVE CAR / START CAR - UNIVERSITY -> MALL",
+            "matches": [3458, 6458],
+            "conditions": [641,84,128,40,40,40,120],
+            "actions": [19404,9360]
+        }, {
+            "//": "LOOK LANTERN (ON)",
+            "matches": [4093],
+            "conditions": [181,0,0,0,0,0,0],
+            "actions": [19780,0]
+        }, {
+            "//": "LOOK LANTERN (OFF)",
+            "matches": [4093],
+            "conditions": [701,0,0,0,0,0,0],
+            "actions": [19930,0]
+        }, {
+            "//": "LIGHT LANTERN (OFF - NO FUEL)",
+            "matches": [9943],
+            "conditions": [701,19,180,700,0,0,0],
+            "actions": [19800,0]
+        }, {
+            "//": "LIGHT LANTERN (OFF)",
+            "matches": [9943],
+            "conditions": [701,39,180,700,0,0,0],
+            "actions": [19722,9600]
+        }, {
+            "//": "UNLIGHT LANTERN (ON)",
+            "matches": [6193],
+            "conditions": [181,180,700,0,0,0,0],
+            "actions": [19872,0]
+        }, {
+            "//": "FILL LANTERN / USE PUMP - NO RECEIPT",
+            "matches": [10393, 3944],
+            "conditions": [701,65,104,0,0,0,0],
+            "actions": [19950,0]
+        }, {
+            "//": "FILL LANTERN / USE PUMP - RECEIPT",
+            "matches": [10393, 3944],
+            "conditions": [701,61,104,0,0,0,0],
+            "actions": [20169,0]            
+        }, {
+            "//": "GO ALCOVE - FORBIDDEN BOOKS",
+            "matches": [195, 187, 196],
+            "conditions": [364,460,0,0,0,0,0],
+            "actions": [20304,0]
+        }, {
+            "//": "LOOK BAG / COFFEE / DONUTS",
+            "matches": [4097],
+            "conditions": [743,0,0,0,0,0,0],
+            "actions": [20400,0]
+        }, {
+            "//": "LOOK/READ INVOICE",
+            "matches": [4101, 4551],
+            "conditions": [763,140,0,0,0,0,0],
+            "actions": [20608,0]
+        }, {
+            "//": "USE COMPACTOR - NOPE",
+            "matches": [3955, 3954],
+            "conditions": [242,785,0,0,0,0,0],
+            "actions": [20850,0]
+        }, {
+            "//": "USE COMPACTOR",
+            "matches": [3955, 3954],
+            "conditions": [242,781,780,800,140,160,0],
+            "actions": [20755,9358]
+        }, {
+            "//": "READ SIGN - ART",
+            "matches": [4557],
+            "conditions": [604,0,0,0,0,0,0],
+            "actions": [21000,0]    
+        }, {
+            "//": "DROP CUBE - GALLERY",
+            "matches": [2756],
+            "conditions": [801,604,800,180,0,0,0],
+            "actions": [21205,8700]
+        }, {
+            "//": "SAY PASSWORD - ATTENDANT",
+            "matches": [1258],
+            "conditions": [624,842,0,0,0,0,0],
+            "actions": [21300,0]
+        }, {
+            "//": "SAY PASSWORD",
+            "matches": [1258],
+            "conditions": [624,846,640,0,0,0,0],
+            "actions": [21504,0]         
+        }, {
+            "//": "GIVE BAG - ATTENDANT",
+            "matches": [5597],
+            "conditions": [741,842,624,740,840,0,0],
+            "actions": [21655,8250]
+        }, {
+            "//": "PLAY MESSAGE / USE MACHINE 1",
+            "matches": [3955, 5459],
+            "conditions": [862,209,229,220,200,0,0],
+            "actions": [21810,8700]
+        }, {
+            "//": "PLAY MESSAGE / USE MACHINE 2",
+            "matches": [3955, 5459],
+            "conditions": [862,229,208,220,200,0,0],
+            "actions": [21958,9000]
+        }, {
+            "//": "PLAY MESSAGE / USE MACHINE 3",
+            "matches": [3955, 5459],
+            "conditions": [862,209,228,200,220,0,0],
+            "actions": [22108,8700]
+        }, {
+            "//": "PLAY MESSAGE / USE MACHINE 4",
+            "matches": [3955, 5459],
+            "conditions": [862,208,228,200,220,0,0],
+            "actions": [22260,9000]    
+        }, {
+            "//": "CAT 1",
+            "matches": [1521],
+            "conditions": [202,724,200,860,0,0,0],
+            "actions": [1511,9300]
+        }, {
+            "//": "CAT 2",
+            "matches": [1521],
+            "conditions": [202,864,200,840,0,0,0],
+            "actions": [1512,9300]
+        }, {
+            "//": "CAT 3",
+            "matches": [1521],
+            "conditions": [202,844,200,660,0,0,0],
+            "actions": [1513,9300]
+        }, {
+            "//": "CAT 4",
+            "matches": [1521],
+            "conditions": [202,664,240,0,0,0,0],
+            "actions": [8763,0]
+        }, {
+            "//": "LOOK FIGURINE",
+            "matches": [4113],
+            "conditions": [943,0,0,0,0,0,0],
+            "actions": [22350,0]
+        }, {
+            "//": "LOOK JAR",
+            "matches": [4111],
+            "conditions": [903,0,0,0,0,0,0],
+            "actions": [22350,0]
+        }, {
+            "//": "LOOK BARETTE",
+            "matches": [4112],
+            "conditions": [923,0,0,0,0,0,0],
+            "actions": [22350,0]
+        }, {
+            "//": "LOOK STATUETTE",
+            "matches": [4114],
+            "conditions": [963,0,0,0,0,0,0],
+            "actions": [22350,0]
+        }, {
+            "//": "LOOK BOTTLE SODA",
+            "matches": [4110, 4115],
+            "conditions": [883,0,0,0,0,0,0],
+            "actions": [22350,0]
+        
+
         }
     ],
 	"events": [ 
@@ -95,127 +425,655 @@
             "prob": 50,
             "conditions": [84,0,0,0,0],
             "actions": [150, 0]
-        },
-        {
+        }, {
             "//": "CAR RADIO MESSAGE 2 - Exit",
             "id": 2,
             "prob": 50,
             "conditions": [84,0,0,0,0],
             "actions": [300, 0]
+        }, {
+            "//": "Smell Coffee and Donuts in north concourse coming from security room",
+            "id": 3,
+            "prob": 75,
+            "conditions": [757,484,0,0,0,0,0],
+            "actions": [2550,0]
+        }, {
+            "//": "MALL PA 1",
+            "id": 4,
+            "prob": 33,
+            "conditions": [284,0,0,0,0,0,0],
+            "actions": [2700,0]
+        }, {
+            "//": "MALL PA 2",
+            "id": 5,
+            "prob": 33,
+            "conditions": [344,0,0,0,0,0,0],
+            "actions": [2850,0]
+        }, {
+            "//": "MALL PA 3",
+            "id": 6,
+            "prob": 33,
+            "conditions": [484,0,0,0,0,0,0],
+            "actions": [3000,0]
+        }, {
+            "//": "RED HERRING CHECK",
+            "id": 7,
+            "prob": 100,
+            "conditions": [269,881,901,921,941,961,260],
+            "actions": [22558,0]
+            
         }
     ],
-	"verbs": ["AUT", "GO", "*CLI", "*WAL", "*RUN", "*ENT", "*PAC", "*FOL", "SAY", "EXI", "GET", "*TAK", "*CAT", "*PIC", "*REM", "*WEA", "*PUL", "WIP", "DRO", "*REL", "*THR", "*LEA", "*GIV", "DRI", "*EAT", "INV", "USE", "LOO", "*EXA", "*WAT", "REA", "LIS", "RID", "PAI", "", "", "", "", ".", "OPE", "*SHA", "UNL", "HEL", ".", ".", "SWI", "QUI", "BUI", "*MAK", "WAK", "SET", "CAS", "DIG", "BUR", "FIN", "JUM", "EMP", "WEI", "", "BRE", "*SMA", "", "", "WAI", "FEE", "", "", "CLO", "*SHU", "", "", "", "", "", "", "", "", "", "", ""],
-	"nouns": ["ANY", "NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN", ".", "CAR",  "TIS", "*BOX", "CAN", "*SPR", "*PAI", "NOS", "HOR", "COI", "WAL", "REC", "BEA", "NOT", "CAT", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+	"verbs": ["AUT", "GO", "*CLI", "*WAL", "*RUN", "*ENT", "*PAC", "*FOL", "SAY", "EXI", "GET", "*TAK", "*CAT", "*PIC", "*REM", "*WEA", "", "WIP", "DRO", "*REL", "*THR", "*LEA", "", "DRI", "*EAT", "INV", "USE", "LOO", "*EXA", "*WAT", "REA", "LIS", "RID", "PAI", "ATT", "*COM", "PLA", "GIV", "OFF", "OPE", "*SHA", "UNL", "HEL", "STA", ".", "SWI", "QUI", "BUI", "*MAK", "WAK", "SET", "CAS", "DIG", "BUR", "FIN", "JUM", "EMP", "WEI", "", "BRE", "*SMA", "TUR", "", "WAI", "FEE", "PUL", "LIG", "CLO", "*SHU", "FIL", "", "", "", "", "", "", "", "", "", ""],
+	"nouns": ["ANY", "NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN", ".", "CAR",  "TIS", "*BOX", "SPR", "*PAI", "", "NOS", "HOR", "COI", "WAL", "REC", "BEA", "NOT", "CAT", "MIR", "WIN", "CRA", "*HAN", "LAD", "FOU", "LEV", "OFF", "COU", "HAM", "*BUR", "CON", "*MAL", "NEW", "MAG", "BOO", "HINT", "TON", "GAM", "PIN", "*BUT", "LAN", "PUM", "ALC", "FOR", "BAG", "*SAC", "*DON", "*COF", "INV", "CAN", "*BUN", "COM", "MAC", "CUB", "SIG", "ZIT", "MES", "BOT", "JAR", "BAR", "FIG", "STA", "SOD", "KEY", "", "", "", "", "", "", "", "", "", "", "", "", ""],
 	"rooms": [{
         "id": 0,
 		"name": "",
 		"exits": [null, 0, 0, 0, 0, 0, 0]
 	}, {
         "id": 1,
-		"name": "stinky dumpster",
-        "desc": "This place has the kind of indescribable ambiance that makes a person question every decision in their lives up to this point. Luckily, the dumpster is mostly empty aside from the stains on the floor and the sticker on the wall that says 'Reading (the note in your pocket) is fundamental.' A bit odd, that.",
+		"name": "in a stinky dumpster",
+        "desc": "This place has the kind of indescribable ambiance that makes a person question every decision in their lives up to this point. Luckily, the dumpster is mostly empty aside from the stains on the floor and the sticker on the wall that says, 'Reading (the note in your pocket) is fundamental.' Well, that's oddly specific.",
 		"exits": [null, 0, 0, 2, 3, 0, 0]
 	}, {
         "id": 2,
-		"name": "parking lot",
-        "desc": "Circles of harsh halogen light stream down onto the nearly empty flat black surface of the lot, as empty and dull as the town itself.",
-		"exits": [null, 0, 0, 0, 1, 0, 0]
+		"name": "in a mall parking lot (north)",
+        "desc": "Circles of harsh halogen light stream down onto the nearly empty flat black surface of the lot, as empty and dull as the town itself. A path leads north and curves west to the back of the mall.",
+		"exits": [null, 7, 5, 0, 1, 0, 0]
 	}, {
         "id": 3,
-		"name": "fenced in area near a large wall",
+		"name": "in a fenced-in area near a large wall",
         "desc": "I stand behind between the dumpster and a cinder block wall that has been heavily vandalized. Someone by the name of Kid Zero has left their tag here.",
 		"exits": [null, 0, 0, 1, 0, 0, 0]
     }, {
         "id": 4,
-		"name": "parked 1982 Chevette",
+		"name": "in a parked 1982 Chevette",
         "desc": "Although I cannot confirm this, it seems highly likely that the the car's current owner eats every meal right here in the driver's seat. Empty Burger Duke bags are strewn everywhere. If I'm honest, the smell makes me wish I was still in the dumpster.",
 		"exits": [null, 0, 0, 0, 0, 0, 0]
     }, {
         "id": 5,
-		"name": "*Nowheresville, USA. No exit. No escape.",
+        "name": "in a mall parking lot (south)",
+        "desc": "Much the same as its northern cousin, the south parking lot is largely empty, though, there is a sense that this parking lot wants to break away from these united parking lots and form its own mall, which will only end in failure. There is a kerosine pump station here with a sign saying 'all devices must be OFF before using pump.'",
+        "exits": [null, 2, 0, 0, 6, 0, 0]   
+    }, {
+        "id": 6,
+        "name": "outside the front entrance of the mall",
+        "desc": "Unfortunately, the front door is blocked with debris. The disappearances have some folks in a post-apocalyptic mood, apparently. To the south, you see the shining sign of Burger Duke.",
+        "exits": [null, 0, 10, 5, 0, 0, 0]   
+    }, {
+        "id": 7,
+        "name": "behind the mall",
+        "desc": "While the Caperville Mall seems all glitz and glamor in the front, back here it's mostly industrial equipment. Kind of like an anti-mall, so to speak. To the east, a path leads back to the parking lot.",
+        "exits": [null, 0, 0, 2, 8, 0, 0]   
+    }, {
+        "id": 8,
+        "name": "in the loading dock",
+        "desc": "Boxes of unimportant items lay strewn around the dock waiting to be loaded or unloaded onto a truck that may never arrive. It's all a bit like a metaphor for something, but I honestly can't be bothered to think of one.",
+        "exits": [null, 0, 0, 7, 0, 0, 0]   
+    }, {
+        "id": 9,
+        "name": "on the roof of the mall",
+        "desc": "On top of the world, ma! From here you can see the parking lot and Burker Duke to the south. The view is not fantastic. What is interesting, however, is the access hatch leading down into the building. A LADDER leads down to the ground.",
+        "exits": [null, 0, 25, 0, 0, 0, 0]
+    }, {
+        "id": 10,
+        "name": "in Burger Duke",
+        "desc": "Ah, your nose detects the unmistakable aroma of the 'meat' on the grill. Due to a consent decree with the US Justice Department, we are legally required to put quotes around 'meat.' Regardless, all the action seems to be happening behind the COUNTER. You can hear employees being berated.",
+        "exits": [null, 6, 0, 0, 0, 0, 0]
+    }, {
+        "id": 11,
+        "name": "in the employees only section of Burger Duke",
+        "desc": "It feels so illicit to be where I'm not supposed to be. The manager doesn't seem to notice me, busy as he is yelling at a cadre of teenagers in beanies.",
+        "exits": [null, 10, 0, 0, 0, 0, 0]
+    }, {
+        "id": 12,
+        "name": "in a break room",
+        "desc": "A poster on the wall declares that this is the break room for employees of Just Shoes, Inc. It's rather sad. The hatch leading to the roof is above you.",
+        "exits": [null, 0, 0, 0, 13, 25, 0]
+    }, {
+        "id": 13,
+        "name": "at Just Shoes shoe store",
+        "desc": "The store is filled with racks and racks of shoes, but when I try to touch them I hear a ghostly sigh then someone says 'interactive objects are time consuming to program.' I don't think the shoes are important.",
+        "exits": [null, 0, 0, 12, 14, 0, 0]
+    }, {
+        "id": 14,
+        "name": "at the mall entrance",
+        "desc": "I stand in the stately entrance of the Caperville Mall, truly a wonder of the world. As I may have mentioned previously, the door to the south is blocked from the outside. To the north is the main CONCOURSE. There is a lovely FOUNTAIN here generating some lovely white noise to drown out the soft jazz coming from the mall speakers.",
+        "exits": [null, 0, 0, 13, 16, 0, 0]
+    }, {
+        "id": 15,
+        "name": "fully inside this fountain",
+        "desc": "All the best adventurers are fountain-dippers. The fountain is surprisingly roomy, as if it was designed for you to walk into it. The smell of chlorine is a bit overpowering.",
+        "exits": [null, 14, 0, 0, 0, 0, 0]
+    }, {
+        "id": 16,
+        "name": "at Jacque's Jocks sporting goods store",
+        "desc": "Given the current level of public concern about the disappearances, it's not surprising that most fo the shelves are barren. The camping section is the least picked-over.",
+        "exits": [null, 0, 0, 14, 0, 0, 0]
+    }, {
+        "id": 17,
+        "name": "the mall concourse",
+        "desc": "Here in the mall's main concourse, I can get a sense of how big the place is. I see shops to the east and west, and to the north there are even more shops. This mall really does have it all. Most interestingly, I hear tantalizing sounds of electronic chaos to my east.",
+        "exits": [null, 24, 14, 19, 18, 0, 0]  
+    }, {
+        "id": 18,
+        "name": "in Wormwood Booksellers store",
+        "desc": "The shelves are filled almost entirely with books I have never read or even heard of, so I will refuse to describe them. I see an ALCOVE marked 'forbidden books' cordoned off and festooned with warnings- seems promising. A sign on the wall clearly disclaims that items here cannot be taken (they appear to be glued to the counters and shelves), but they can be READ.",
+        "exits": [null, 0, 0, 17, 0, 0, 0]
+    }, {
+        "id": 19,
+        "name": "in an arcade",
+        "desc": "Pew Pew! The beeps and buzzes of electrical pandemonium surround me. Nearly every machine has a crowd of kids standing around it waiting their turn. The only unattended GAME is a humble standup cabinet with 'Coin Eater' emblazoned across the front and sides.",
+        "exits": [null, 0, 0, 0, 17, 0, 0]
+    }, {
+        "id": 20,
+        "name": "in a music store",
+        "desc": "All the instruments have signs on them saying 'no touching' so I will not touch. To the east, a door is ajar leading to a darkened back office.",
+        "exits": [null, 0, 0, 21, 24, 0, 0]   
+    }, {
+        "id": 21,
+        "name": "in a back office",
+        "desc": "In the warm light of the lantern, I see stacks of instrument cases and invoices. Along the far wall, I can see words smeared in jelly: BEWARE THE DONUT.",
+        "exits": [null, 0, 0, 0, 20, 0, 0],
+        "dark": true
+    }, {
+        "id": 22,
+        "name": "in Blair's Boutique",
+        "desc": "The walls are covered in accessories of every size, style and shape. The variety is dizzying, frankly, and I'm feeling a bit uneasy.",
+        "exits": [null, 0, 0, 24, 0, 0, 0]
+    }, {
+        "id": 23,
+        "name": "in the dreaded Room 23 (security holding pen)",
+        "desc": "This is the place for shoplifters and other miscreants. Just a sad white room with sad folding chairs and sad posters on the wall about juvenile delinquency. On the monitor connected to the closed-circuit TV camera, I can see shoppers walking past, unaware that they are being observed. The officers have left me alone. I can probably just walk out.",
+        "exits": [null, 0, 24, 0, 0, 0, 0]   
+    }, {
+        "id": 24,
+        "name": "in the concourse (north)",
+        "desc": "Here at the far end of the mall, I can see the other concourse to the south and shops on either side. To the north is a blank white wall with a locked door. There's a camera mounted on the wall. It seems to loom over me ominously.",
+        "exits": [null, 0, 17, 20, 22, 0, 0]
+    }, {
+        "id": 25,
+        "name": "on the roof near the mall roof access hatch",
+        "desc": "The maintenance hatch is ajar, a clear sign that mall employees sometimes come up here to throw bottles at passing cars, explaining all he broken glass down there.",
+        "exits": [null, 9, 0, 0, 0, 0, 12]
+    }, {
+        "id": 26,
+        "name": "in a parking lot at the university",
+        "desc": "Through the glare of the nearby streetlamp, I can see college life unfolding around me. To my north I see the statue-freckled courtyard that marks the center of campus. Thanks to the loud music coming from the fraternity house nearby, I am already getting a headache.",
+        "exits": [null, 27, 0, 0, 29, 0, 0]
+    }, {
+        "id": 27,
+        "name": "in the central quad of the university",
+        "desc": "Statues of the university's founders and large-money donors encircle the brick courtyard. To the west, I hear the sound of loud music and beverage cans clinking together. To the north, the university's art building. To the east, a shining beacon of scientific progress.",
+        "exits": [null, 30, 26, 31, 28, 0, 0]
+    }, {
+        "id": 28,
+        "name": "on the front porch of a rather rowdy fraternity house",
+        "desc": "I am standing in a puddle of what I hope is beer. The door is locked, and knocking doesn't seem like a good idea. They seem busy.",
+        "exits": [null, 0, 29, 27, 0, 0, 0]
+    }, {
+        "id": 29,
+        "name": "along the side of the fraternity house",
+        "desc": "The pile of refuse and detritus heaped up next to the house is prodigious. Every minute or so, someone tosses another empty beverage can out of a nearby window. I hear a fair amount of belching coming from inside.",
+        "exits": [null, 28, 0, 26, 0, 0, 0]
+    }, {
+        "id": 30,
+        "name": "within the erudite confines of a very fancy art gallery",
+        "desc": "The art on lining the walls of this room is so utterly sublime that to describe it would be to insult it, so I will not. I see pretty pictures.",
+        "exits": [null, 0, 27, 0, 0, 0, 0]
+    }, {
+        "id": 31,
+        "name": "in the university's science building",
+        "desc": "The richly illuminated rooms and gleaming walls of the science center look like a vision of the future, maybe as far as 1980. The lab entryway is so high tech, I need to use my voice to gain access. I just need to SAY the passphrase and I'm in.",
+        "exits": [null, 0, 0, 0, 27, 0, 0]
+    }, {
+        "id": 32,
+        "name": "in the lab of Dr. Morbus",
+        "desc": "We appear to be too late. I say 'we' in case there's blame to be spread around. Famed scientist Dr. Morbus lies lifeless at my feet, still wearing her white lab coat. A small hatch in the floor with a pictogram of a cat etched into it has been left open, revealing darkness below.",
+        "exits": [null, 0, 0, 0, 27, 0, 33]   
+    }, {
+        "id": 33,
+        "name": "in the steam tunnels under the school",
+        "desc": "A ladder leads up to the lab above.",
+        "exits": [null, 0, 34, 0, 39, 32, 0]
+    }, {
+        "id": 34,
+        "name": "in the steam tunnels under the school",
+        "desc": "Each passageway is more or less indistinguishable from the rest.",
+        "dark": true,
+        "exits": [null, 33, 35, 36, 0, 0, 0]
+    }, {
+        "id": 35,
+        "name": "in the steam tunnels under the school",
+        "desc": "One concrete hallways looks just like the others.",
+        "exits": [null, 34, 0, 0, 37, 0, 0]
+    }, {
+        "id": 36,
+        "name": "in the steam tunnels under the school",
+        "desc": "Have I already been here? I can't quite tell. These passages all seem the same.",
+        "exits": [null, 0, 0, 0, 34, 0, 0]
+    }, {
+        "id": 37,
+        "name": "in the steam tunnels under the school",
+        "desc": "More tunnels. Nothing much to describe.",
+        "dark": true,
+        "exits": [null, 38, 0, 35, 0, 0, 0]
+    }, {
+        "id": 38,
+        "name": "in the steam tunnels under the school",
+        "desc": "Another passageway that looks just about exactly like the others.",
+        "exits": [null, 0, 37, 0, 42, 0, 0]
+    }, {
+        "id": 39,
+        "name": "in the steam tunnels under the school",
+        "desc": "I thought I saw something unique about this one, but I was wrong.",
+        "dark": true,
+        "exits": [null, 40, 0, 33, 41, 0, 0]
+    }, {
+        "id": 40,
+        "name": "in the steam tunnels under the school",
+        "desc": "Nothing special here.",
+        "dark": true,
+        "exits": [null, 0, 39, 43, 0, 0, 0]
+    }, {
+        "id": 41,
+        "name": "in the steam tunnels under the school",
+        "desc": "These tunnels are so monotonous that I'm even running out of ways to describe how boring they are.",
+        "exits": [null, 0, 42, 39, 0, 0, 0]
+    }, {
+        "id": 42,
+        "name": "in the steam tunnels under the school",
+        "desc": "Another steam tunnel passage.",
+        "dark": true,
+        "exits": [null, 41, 0, 38, 0, 0, 0]
+    }, {
+        "id": 43,
+        "name": "in the steam tunnels under the school",
+        "desc": "These steam tunnels are all the same.",
+        "dark": true,
+        "exits": [null, 0, 0, 0, 40, 0, 0]
+                                                                                                                
+                
+    }, {
+        "id": 100,
+		"name": "*...",
 		"exits": [null, 0, 0, 0, 0, 0, 0]
 	}],
 	"items": [
         {
             "id": 0,
+            "name": "",
             "desc": "",
             "loc": -1
         }, {
             "id": 1,
             "article": "a",
-            "desc": "tissue box",
+            "name": "tissue box",
+            "desc": "It's a rectangular box of facial tissue with a tearaway lid for ease of use, a simple but elegant design.",
+            "//":  "10",
             "loc": 1,
             "short": "TIS"
         }, {
             "id": 2,
             "article": "a",
-            "desc": "poorly maintained car",
+            "name": "poorly maintained car",
+            "desc": "While it's not surprising that Tony 'Has a Car' Phillipson does, indeed, have a car, the dilapidated state of the vehicle does make me wonder why he brags about it so much.",
             "loc": 2
         }, {
             "id": 3,
             "article": "a",
-            "desc": "receipt from Rick's House of Lo Mein covered in duck sauce",
+            "name": "stained receipt",
+            "desc": "This recent receipt from Rick's House of Lo Mein is thoroughly covered in duck sauce, so much so that it's nearly impossible to read.",
             "loc": 4,
             "short": "REC"
         }, {
             "id": 4,
-            "article": "a",
-            "desc": "can of orange spray paint",
+            "article": "",
+            "name": "orange spray paint",
+            "desc": "This is the kind of quick dry paint you see advertized on TV. It's a good quality paint, though this shade of orange is a little tacky for my sensibilities.",
             "loc": 3,
-            "short": "CAN"
+            "short": "SPR"
         }, {
             "id": 5,
             "article": "a",
-            "desc": "coin",
-            "loc": 1,
+            "name": "coin",
+            "desc": "While it would be fun to report that this is a rare 1917 Liberty half dollar, it's just a boring 1978 quarter. No good for keeping in your pockets if you're time travelling, of course, but it'll do.",
+            "loc": 15,
             "short": "COI"
         }, {
             "id": 6,
             "article": "a",
-            "desc": "glorious coin-operated horse",
-            "loc": 2
+            "name": "glorious coin-operated horse",
+            "desc": "My words are insufficient to describe the raw majesty of this artificial beast. I know my job is to do what you say, but if you were to perhaps find a coin and then instruct me to RIDE the HORSE, I would be ever so grateful. The coin acceptance slot seems a little dodgy, though.",
+            "loc": 6
         }, {
             "id": 7,
             "article": "a",
-            "desc": "snazzy propeller beanie",
-            "loc": 2,
-            "short": "BEA",
-            "invModifier": "worn"
+            "name": "coin-operated horse currently occupied by a young child",
+            "loc": 0
         }, {
             "id": 8,
             "article": "a",
-            "desc": "crumpled note",
-            "loc": 999,
-            "short": "NOT"
+            "name": "snazzy propeller beanie",
+            "loc": 0,
+            "short": "BEA",
+            "invModifier": "worn"
         }, {
             "id": 9,
             "article": "a",
-            "desc": "sleek black cat with a glass cylinder hanging from its collar",
+            "name": "lantern (on)",
+            "loc": 0,
+            "short": "LAN"
+        }, {
+            "id": 10,
+            "article": "a",
+            "name": "small black cat",
+            "desc": "The sleek black cat has a small glass cylinder handing from its collar. Hey, is this the cat Dr. Morbus was talking about?",
             "short": "CAT",
             "fakeTake": true,
-            "loc": 1
+            "loc": 36
+        }, {
+            "id": 11,
+            "article": "a",
+            "name": "mirror",
+            "desc": "",
+            "loc": 13
+        }, {
+            "id": 12,
+            "article": "an",
+            "name": "industrial compactor",
+            "desc": "This is a PowerCrush 7200, a truly impressive machine. Though it is marketed as a highly versital compactor, it seems like this can only handle one or two types of things to crush because, well, games.",
+            "loc": 7
+        }, {
+            "id": 13,
+            "article": "a",
+            "name": "crank handle",
+            "short": "CRA",
+            "loc": 10
+        }, {
+            "id": 14,
+            "article": "a",
+            "name": "wall-mounted ladder (currently raised)",
+            "desc": "",
+            "loc": 3
+        }, {
+            "id": 15,
+            "article": "a",
+            "name": "wall-mounted ladder (currently lowered)",
+            "desc": "",
+            "loc": 0
+        }, {
+            "id": 16,
+            "article": "a",
+            "name": "winch mounted the wall",
+            "desc": "",
+            "loc": 3
+        }, {
+            "id": 17,
+            "article": "a",
+            "name": "winch mounted the wall with a handle attached",
+            "loc": 0
+        }, {
+            "id": 18,
+            "article": "a",
+            "name": "scattering of broken glass",
+            "loc": 6
+        }, {
+            "id": 19,
+            "article": "a",
+            "name": "fountain spitting water everywhere",
+            "loc": 14
+         }, {
+            "id": 20,
+            "article": "a",
+            "name": "fountain (no longer running)",
+            "loc": 0
+        }, {
+            "id": 21,
+            "article": "a",
+            "name": "lever marked (main water supply)",
+            "loc": 8
+        }, {
+            "id": 22,
+            "article": "a",
+            "name": "hamburger",
+            "short": "HAM",
+            "loc": 11
+        }, {
+            "id": 23,
+            "article": "a",
+            "name": "security guard blocking your way into the concourse",
+            "loc": 14
+        }, {
+            "id": 24,
+            "article": "a",
+            "name": "local newspaper",
+            "loc": 18
+        }, {
+            "id": 25,
+            "article": "a",
+            "name": "magazine with articles about new donut technologies",
+            "loc": 18
+        }, {
+            "id": 26,
+            "article": "a",
+            "name": "book titled Accidental 'Inter-Dimensional Travel And You'",
+            "loc": 18
+        }, {
+            "id": 27,
+            "article": "a",
+            "name": "hint",
+            "loc": 18
+        }, {
+            "id": 28,
+            "article": "",
+            "name": "Tony (has a car) Phillipson",
+            "loc": 19
+        }, {
+            "id": 29,
+            "article": "an",
+            "name": "arcade game",
+            "loc": 19
+        }, {
+            "id": 30,
+            "article": "a",
+            "name": "sign on the counter saying 'on break, be back whenever'",
+            "loc": 22                                
+        }, {
+            "id": 31,
+            "article": "a",
+            "name": "bored-looking teenage salesperson with a 'Julie' name tag",
+            "loc": 0
+        }, {
+            "id": 32,
+            "article": "a",
+            "name": "set of car keys",
+            "short": "KEY",
+            "loc": 0
+        }, {
+            "id": 33,
+            "article": "a",
+            "name": "Ramones pin",
+            "loc": 0,
+            "short": "PIN"
+        }, {
+            "id": 34,
+            "article": "a",
+            "name": "crumpled note",
+            "loc": 999,
+            "short": "NOT"
+        }, {
+            "id": 35,
+            "article": "a",
+            "name": "lantern (off)",
+            "loc": 16,
+            "short": "LAN"
+        }, {
+            "id": 36,
+            "article": "a",
+            "name": "kerosine pump",
+            "loc": 5
+        }, {
+            "id": 37,
+            "article": "a",
+            "name": "bag of coffee and donuts",
+            "loc": 23,
+            "short": "BAG"            
+        }, {
+            "id": 38,
+            "article": "an",
+            "name": "invoice for instrument repair",
+            "loc": 21,
+            "short": "INV"            
+        }, {
+            "id": 39,
+            "article": "a",
+            "name": "bunch of aluminum cans",
+            "loc": 29,
+            "short": "CAN"
+        }, {
+            "id": 40,
+            "article": "a",
+            "name": "gleaming cube of aluminum",
+            "loc": 0,
+            "short": "CUB"
+        }, {
+            "id": 41,
+            "article": "a",
+            "name": "sign related to an art contest",
+            "loc": 30    
+        }, {
+            "id": 42,
+            "article": "a",
+            "name": "front desk attendant",
+            "loc": 31
+        }, {
+            "id": 43,
+            "article": "an",
+            "name": "answering machine with blinking red light",
+            "loc": 32
+        }, {
+            "id": 44,
+            "article": "a",
+            "name": "bottle of Red Herring soda",
+            "short": "BOT",
+            "loc": 19
+        }, {
+            "id": 45,
+            "article": "a",
+            "name": "jar of pickled red herring",
+            "short": "JAR",
+            "loc": 23
+        }, {
+            "id": 46,
+            "article": "a",
+            "name": "red barrette shaped like a fish",
+            "short": "BAR",
+            "loc": 22
+        }, {
+            "id": 47,
+            "article": "a",
+            "name": "figurine of a rosy-hued fish",
+            "short": "FIG",
+            "loc": 4
+        }, {
+            "id": 48,
+            "article": "a",
+            "name": "small statue of a red herring",
+            "short": "STA",
+            "loc": 27
         }
     ],
 	"bitFlagInfo": [
-        {"label": "Unknown", "value": 0},
-        {"label": "Clean Nose, Warm Heart", "value": 10}
+        {"id": 0, "label": "Unknown", "value": 0},
+        {"id": 1, "label": "Clean Nose, Warm Heart", "value": 10},
+        {"id": 2, "label": "Crank it down", "value": 10},
+        {"id": 3, "label": "Tony is, like, impressed", "value": 15},
+        {"id": 4, "label": "Reading is FUNdamental 1", "value": 15},
+        {"id": 5, "label": "High Score", "value": 10},
+        {"id": 6, "label": "College car", "value": 0},
+        {"id": 7, "label": "Music notes", "value": 10},
+        {"id": 8, "label": "Crunch!", "value": 10},
+        {"id": 9, "label": "Artsy", "value": 25},
+        {"id": 10, "label": "Messages 1", "value": 0},
+        {"id": 11, "label": "Messages 10", "value": 0},
+        {"id": 12, "label": "That cat", "value": 30},
+        {"id": 13, "label": "Red herrings", "value": 50}
     ],
 	"messages": {
         "0": "Nothing is happening.",
         "1": "`Slow ride! Take it ... Slow ride!` The 8-track stuck in the dash seems to be looping.",
-        "2": "If you want to exit a car, sometimes it's as simple as saying EXIT CAR.",
+        "2": "If you want me to exit a car, sometimes it's as simple as saying EXIT CAR.",
         "3": "Ah, that's better. My face less hideous now.",
         "4": "No need. I already wiped my nose.",
         "5": "I cannot do that.",
         "6": "Frankly, I am appalled that you would even suggest such a thing.",
-        "7": "You insert the coin into the machine and... YAY! HORSIE! That was the most fun I've had in months. Thanks.",
+        "7": "",
         "8": "I don't have that.",
         "9": "Meeeooow! I carefully take the capsule from the cat's collar as she (is it weird that I assume the cat is a she?) slinks off into the darkness.",
-        "10": "The cat slips through your fingers and skitters off deeper into the maze of tunnels.",
+        "10": "The cat slips through my fingers and skitters off deeper into the maze of tunnels.",
         "11": "We need to keep searching for that cat. It's our only hope of survival!",
         "12": "The cat seems to be getting tired. Keep at it!",
         "13": "One more time maybe. Keep searching for that cat!",
+        "14": "I see myself in the mirror looking, you know, normal.",
+        "15": "I see myself in the mirror, and there's something in my nose. How embarrassing!",
+        "16": "I hear something.",
+        "17": "A strong smell of coffee is coming from the room to the north.",
+        "18": "The PA system crackles over my head: \"Regarding the streaking incident last Saturday evening, Caperville Mall management would like to state unequivocally that ours is a happy and safe place to shop and that we are committed to keeping it that way. To the perpetrator, we would like to say that you will be caught and brought to justice. Our security team is on high alert. Contrary to rumor, our guards cannot be bribed with savory foods. That is all.\"",
+        "19": "The PA system buzzes overhead: \"So, you like shirts but you think the collars are too small? It's 1978, so we've got shirts with enormous collars. Huge ones! In fact, the collars on these shirts are so big that one day in the future you may see photos of you wearing them, and it may seem silly- but I doubt it. You can have it all at the Caperville Mall!\"",
+        "20": "The PA system blares: \"Come out to the Caperville Mall next weekend, local daredevil Malevolent Mike will jump his banana seat Schwinn Stingray over 'as many as one bus' in an exciting display of bravery and/or recklessness in our south parking lot. You can have it all at the Caperville Mall!\"",
+
+        "//": "------------------------------------------------------------------------------------",
+
         "52": "Something seems to have fallen out.",
-        "53": "The note says: `Hello, me. It's me.  I'm writing this to tell you (us) that you (we) are in grave danger. You may have noticed that there aren't a lot of people around. This is because they've been slowly disappearing recently. As soon as you can, visit Dr. Morbus at the university. She may have some answers. I'm not sure how you can get there from here, but you (we) will figure it out. Her lab is under tight security. The password is 'zither.' That's all I know (or can remember).` The note continues in different ink, a shakier hand: `PS: Do not trust KZ. Destroy this note at your first opportunity.`"
+        "53": "The note reads: The note says: \"Hello, me. It's me.  I'm writing this to tell you (us) that you (we) are in grave danger. You may have noticed that there aren't a lot of people around. This is because they've been disappearing recently. As soon as you can, visit Dr. Morbus at the university. She may have some answers. I'm not sure how you can get there from here since it's too far to walk, but you (we) will figure it out.\"",
+        "54": "The winch attached to the ladder mechanism has a small hexagonal hole.",
+        "55": "It's a study looking ladder winch with a crank handle attached.",
+        "56": "The handle fits perfectly- almost as if it was made for this purpose!",
+        "57": "The ladder smoothly descends, making it climbable.",
+        "58": "Sure, I could do that, but I don't see the point.",
+        "59": "This solid metal crank handle has a hexagonal bit at the end that seems designed to go somewhere- but where exactly is anyone's guess at this point. I have to confess that I'm barely paying attention.",
+        "60": "I can't go in there. I'll get all wet!",
+        "61": "This is a multi-hued beanie with a plastic propeller on the top. It's not the kind of thing you want to be seen in at the mall, of course.",
+        "62": "I insert the coin into the machine and... YAY! HORSIE! That was the most fun I've had in months. The coin slot appears to be broken because it popped right back out. A small child has appeared and has begun riding the horse, leaving something behind.",
+        "63": "Not so fast! I am unable to go behind the counter since I am not a Burger Duke employee. The manager looks rather menacing in spite of his colorful Burger Duke hat with a bit on top that spins as he turns to glare at me.",
+        "64": "I don't think that's a good idea. I may need this later.",
+        "65": "There is no way I can get past this uniformed goon. I can hear his stomach rumbling, and I worry that he will eat me.",
+        "66": "The guard gleefully accepts the hamburger from me and walks off to consume it unobserved. I can now GO to the CONCOURSE.",
+        "67": "In the local newspaper, I see several articles about the recent disappearances. \"Jack was right here. I was talking to him then - poof!,\" said one concerned resident. \"Last week, he signed up to be a subject in that research study at the university, but I'm sure that's just a coincidence.\"",
+        "68": "Like most publications of this type, this donut industry trade magazine is light on content. It includes a few articles about icing types and sprinkle decanting along with a full page ad from local company Torus Industries: \"Bringing you the confections of tomorrow... today!'\"",
+        "69": "The book is very lengthy, but nearly every page has the same message repeated over and over. \"If you are reading this, please we need your help. I was writing a science fiction novel in my apartment one day having my morning cup of joe and a snack then suddenly I found myself in this inter-zone with giant woodpeckers everywhere. Also, the TV here is very dull. Send help!\"",
+        "70": "The slip of paper marked 'HINT' on the counter reads as follows: \"Don't walk around in the dark without something to light the way. It could be dangerous. Save often.\"",
+        "71": "BEEP BOOP. I twiddle the joystick for a bit as the lights flash nonsensically. Soon the game is over and my score seems to impress the bystanders. Tony sniffs with reluctant respect and says, \"Nice score. When you're cool enough (hint: we are not currently cool enough), come find me outside the mall and bring some graffiti supplies. Maybe you can ride in my car.\" And with that, Tony disappears into the crowd.",
+        "72": "\"Hey\", says Tony, trying very hard to sound aloof. \"Have you been to Blair's? I think Julie is working tonight. It would be really cool if you talked to her and asked her about me. Just SAY TONY at her and she how she reacts. Then maybe I'll take you somewhere in my sweet ride.\"",
+        "73": "\"Tony's cool, I guess,\" she says between pops of her gum. \"He has a car, so that's a plus. Do I 'like him' like him? I don't know. Anyway, take this pin. Give it to him from me.\" She presses a small PIN into my hand featuring the Ramones logo. With that, Jule goes back on break.",
+        "74": "\"What did she say?\" Tony asks excitedly as he snatches it from my hand. \"Nice Ramones Pin. Very cool. Look, I have some important loitering to do, so I don't have time to drive you. You seem trustworthy, I guess. Just take the keys. Don't crash it or my dad will murder me.\" He then tosses me the keys and continues to stand there looking deliberately aloof.",
+        "75": "OK. Nothing happens.",
+        "76": "\"Ew!\" she shrieks, pointing at me with a haunted look. \"Go check yourself in a mirror. Something is not right with your face.\"",
+        "77": "Tony scoffs, unable to hide his disappointment. \"Dude, what are you thinking coming here looking like a Poindexter. Get out of here, man.\"",
+        "78": "In spite of appearances, the car is remarkably easy to drive. In fact, it has taken me to the university so directly that I suspect this is the only place it can go- as if it were part of some poorly-conceived game.",
+        "79": "The car dutifully returns me to the parking lot at the Caperville mall as if programmed to do so.",
+        "80": "The instructions on the side are clear and concise: \"to turn lantern on, try LIGHT LANTERN; to turn it off, UNLIGHT LANTERN. This lantern uses kerosine fuel.\"",
+        "81": "The lantern is providing light.",
+        "82": "The lantern is off.",
+        "83": "\"Hold on a second, bub,\" says the pump attendant. \"Do you have proof you paid for the fuel? If you don't, you better step aside.\"",
+        "84": "\"Can I see your receipt?\" asks the pump attendant. I hand over the receipt and, unable to read the words through the duck sauce, relents and refills the lantern. It's a small lantern so I may need to come back to refill again.",
+        "85": "As soon as I step into the restricted area, I feel myself being picked up by my armpits and carried off into the dark recesses of the Caperville Mall...",
+        "86": "The official label on the side of the bag indicates that this is part of a scientific study. It seems clear that I am not supposed to consume the contents, so I will not.",
+        "87": "The invoice is for the restringing of a zither owned by Dr. Morbus. In the memo section at the bottom, it reads, \"I wonder if this could be a clue.\" Hmm. I wonder if this could be a clue.",
+        "88": "The machine bears down on the formless mass of cans in a deeply satisfying way, crunching and crackling. After a minute of squeezing, the machine spits out a nearly perfect cube of shiny aluminum, a thing of raw beauty.",
+        "89": "Yeah, I don't think that'll work. It looks like the compactor can only work on metal.",
+        "90": "ATTENTION: Those participating in this year's modern art exhibition and contest should place their art objects in this room. The judges ask that you not bore them with anything banal or pedestrian. Deadline is tonight!",
+        "91": "I place the cube in the exhibition area, and immediately several very snooty judges begin circling it, nodding and scratching their chins thoughtfully. \"Such spare lines,\" says one. \"Such brutality of form,\" says another. Moments later, I am a darling of the art world.",
+        "92": "\"You can't go back there,\" shouts the attendant. \"I don't care if you do know the password to get into the lab. Dr. Morbus is in the middle of an experiment and cannot be disturbed.\"",
+        "93": "Upon saying that word, I hear a series of very serious-sounding beeps and boops as the wall outside the lab rotates. Suddenly, I find myself in the other room.",
+        "94": "The front desk attendant tears into the bag and begins eating the donut. \"Wow, this is the best donut I have ever tasted!\" says the attendant just before taking a drink of coffee, suddenly and inexplicably vanishing in a puff of inter-dimensional dust.",
+        "95": "\"BEEP - For whoever hears this, I'm unaware of how much you know about my work and the dangers it may have brought to our town. For some time now, I've been working on a revolutionary new type of donut, all the flavor and zero calories. After early results looked promising, I secured grant funding from Torus Industries to continue my work. We recruited local subjects for taste tests, and at first the results were fantastic...\"",
+        "96": "\"BEEP - Soon, however, we found that something was very wrong. When consumed with coffee, the donuts cause the subject to be transported to another dimension. Don't worry. They're fine. They have food and water, but the TV is a bit dull, so we need to bring them back...\"",
+        "97": "\"BEEP - Fearing this might happen, I whipped up an antidote and, to keep it out of the wrong hands, I put it in a vial attached to my cat's collar. I fear Torus Industries may be intending to ransom these people or harm me, so please act quickly, person I've never met!\"",
+        "98": "\"BEEP - Also, memo to self - I need to pick up my zither from the music store.\" The messages seem to loop back around from here.",
+        "99": "It's hard to say if it looks important. Some items seem to be here just to distract us.",
+        "100": "CONGRATS! By collecting all of the pointless items in the game, you have won the Red Herring award and boosted another meaningless stat, your score!",
+        "": ""
     }
 }

@@ -5,9 +5,10 @@ import { initGameSelection, gameSelectionInput } from './gameSelector';
 import { getInventory, getInventoryCount } from './inventoryFunctions';
 import { loadGame, saveGame } from './gameSaveFunctions';
 import displayRoom from './displayRoom';
-import performAction from './performAction';
 import showScore from './showScore';
 import { getNounVerbFromInput, getWordsFromInput } from './processInput';
+import { reverseConditions, reverseActions } from './devToolsFunctions';
+import isDark from './isDark';
 
 export {
   getGamesList,
@@ -22,8 +23,10 @@ export {
   loadGame,
   saveGame,
   displayRoom,
-  performAction,
   showScore,
   getNounVerbFromInput,
   getWordsFromInput,
+  reverseConditions,
+  reverseActions,
+  isDark,
 };

@@ -33,7 +33,7 @@ const conditionsList = [
   'TURN NUMBER GREATER THAN OR EQUAL', // 16
   'ITEM IN ORIGINAL ROOM', // 17
   'ITEM NOT IN ORIGINAL ROOM', // 18
-  'TURN NUMBER EQUALS', // 19
+  'LIGHT TIMER STATE ( 0 = IS EMPTY, 1 = IS NOT EMPTY)', // 19
 ];
 const actionsList = {
   52: 'GET ITEM X IF CAN CARRY',
@@ -46,8 +46,9 @@ const actionsList = {
   60: 'CLEAR BITFLAG X',
   61: 'DEATH',
   62: 'PUT ITEM X IN ROOM Y',
-  63: 'GAME OVER, MAN',
+  63: 'GAME WON',
   64: 'REDRAW ROOM',
+  65: 'MOVE ITEM X TO CURRENT ROOM',
   67: 'SET BITFLAG 0',
   68: 'CLEAR BITFLAG 0',
   69: 'REFILL LAMP',

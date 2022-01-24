@@ -1,25 +1,24 @@
-import { CARRIED, exitLabels } from '@src/constants';
+import { exitLabels } from '@src/constants';
+import { isDark } from '@src/helpers';
 
 const displayRoom = (output, forceDisplayRoomDesc, gameState, gameData) => {
   let exitsText = '';
   const x = gameState?.currentRoom;
-  // ITEM SLOT 9 IS DEDICATED TO ACTIVE LIGHT SOURCE
-  if (gameState.darkFlag && gameState.items[9].loc !== CARRIED) {
+  if (isDark(gameState, gameData)) {
     return `${output}\nIt is too dark. I cannot see.\n`;
   }
   for (let d = 1; d <= 6; d++) {
     if (gameData.rooms[x].exits[d] > 0) {
-      exitsText = `${exitsText}${exitLabels[d]} `;
+      exitsText = `${exitsText}${exitsText.length > 0 ? ', ' : ''}${
+        exitLabels[d]
+      }`;
     }
   }
   const roomName = gameData.rooms[x].name;
   if (roomName.charAt(0) === '*') {
     output = `${output}${roomName.replace('*', '')}\n`;
   } else {
-    const startsWithVowel = ['a', 'e', 'i', 'o', 'u'].includes(
-      roomName.charAt(0)?.toLowerCase()
-    );
-    output = `${output}I am in ${startsWithVowel ? 'an' : 'a'} ${roomName}.\n`;
+    output = `${output}I am ${roomName}.\n`;
   }
   if (
     (!gameState.rooms[gameState.currentRoom].visited || forceDisplayRoomDesc) &&
@@ -33,11 +32,13 @@ const displayRoom = (output, forceDisplayRoomDesc, gameState, gameData) => {
   let itemsInRoom = '';
   for (let i = 0; i < gameState.items.length; i++) {
     if (gameState.items[i].loc === x) {
-      itemsInRoom = `${itemsInRoom}${itemsInRoom !== '' ? ', ' : ''}${
+      const conj = i === gameState.items.length - 1 ? ' and ' : ', ';
+      itemsInRoom = `${itemsInRoom}${itemsInRoom !== '' ? conj : ''}${
         gameData.items[i].article
-      } ${gameData.items[i].desc}`;
+      } ${gameData.items[i].name}`;
     }
   }
+
   return `${output}\nItems: ${itemsInRoom !== '' ? itemsInRoom : 'None'}\n\n`;
 };
 

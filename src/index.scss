@@ -261,6 +261,11 @@ body {
     border: 1px solid white;
     color: white;
     font-family: $font-default;
+    cursor: pointer;
+    &:hover {
+      background-color: white;
+      color: #333;
+    }
   }
   select,
   input {
@@ -280,12 +285,14 @@ body {
     width: 100%;
     margin-bottom: 0.5rem;
   }
-  .conditions select {
+  .splitÇellRev input,
+  .splitCell select {
     width: calc(80% - 1rem);
     display: inline-block;
     margin-right: 1rem;
   }
-  .conditions input {
+  .splitÇellRev button,
+  .splitCell input {
     width: calc(20% - 10px);
     display: inline-block;
   }
