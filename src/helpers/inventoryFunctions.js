@@ -5,7 +5,6 @@ const getInventory = (o, gs, gd) => {
   let numInv = 0;
   for (let j = 0; j < gd.items.length; j++) {
     const item = gs.items[j];
-    console.log(item);
     if (item.loc === CARRIED) {
       invOutput = `${invOutput}${numInv > 0 ? ', ' : ''}${
         item.article !== '' ? `${item.article} ` : ''

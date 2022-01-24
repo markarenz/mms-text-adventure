@@ -398,12 +398,6 @@ const playerTurn = (
           }
         }
         let pCounter = 0;
-        console.log(
-          'actionObj',
-          actionObj,
-          conditionPassed,
-          gameState.bitFlags[6]
-        );
         if (conditionPassed) {
           showFailedActionsMsg = false;
           if (actionObj.event) {

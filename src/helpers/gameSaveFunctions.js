@@ -66,7 +66,6 @@ const loadGame = (
 const saveGame = (s, newGameState, gameData, output, triggerLoadDisplay) => {
   triggerLoadDisplay(true, 'saving');
   const saveSlot = getSaveSlot(s);
-  console.log('saving', gameData);
   const saveName = `save-${gameData.headers.slug}-${saveSlot}`;
   window.localStorage.setItem(saveName, JSON.stringify(newGameState));
   output = `${output}Saved.\n`;
