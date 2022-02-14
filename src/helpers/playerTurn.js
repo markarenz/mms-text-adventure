@@ -226,11 +226,12 @@ const playerTurn = (
       }
     }
     // 8. LOOK
-    if (vc === 27 && !nc) {
+    if (s === 'LOOK') {
       showFailedActionsMsg = false;
       outputMode = 'clear';
       shouldDrawRoom = true;
       forceDisplayRoomDesc = true;
+      commandUnderstood = true;
     }
     // 9. ACTIONS
     let tmpVocab = vc * 150 + nc;
@@ -613,7 +614,7 @@ const playerTurn = (
     if (oldCurrentRoom !== newGameState.currentRoom && !shouldDrawRoom) {
       shouldDrawRoom = true;
     }
-    if (shouldDrawRoom) {
+    if (shouldDrawRoom && newGameState.gameActive) {
       output = displayRoom(
         output,
         forceDisplayRoomDesc,

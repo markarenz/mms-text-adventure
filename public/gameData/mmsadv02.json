@@ -1,55 +1,1349 @@
 {
 	"headers": {
-        "title": "Temp Game",
+        "title": "Squalor Holler",
         "author": "Mark Arenz",
         "year": 2022,
 		"maxCarry": 5,
 		"origin": 1,
 		"wordLength": 3,
-		"lightTime": 25,
-        "lightOffItemId": 35,
-        "lightOnItemId": 9,
-        "introText": "This game is still in development.",
-        "gameWonMessage": "TBD",
+		"lightTime": 0,
+        "lightOffItemId": 0,
+        "lightOnItemId": 0,
+        "introText": "It was all a big myth-understanding...\n\nLocal bigwig Mr. Zee has bulldozed the hilltop to make way for a gated community, O Mountain Estates, leaving everyone else to eke out a living down here in a depressing little village affectionately known as Squalor Holler. Saving the town will mean defeating Zee at his own game, but judging by the lightning bolt he carries around with him everywhere, I don't think butting heads with him is a good idea.\n\nI will be your avatar in this world. I am new in town, so I won't be much help in explaining what's going on. We need to talk to people here to make things happen. If you know a character is interested in fish, for example, try a command like SAY FISH to trigger more dialogue or other events. You can also just SAY HI to engage with a character if you want.",
+        "gameWonMessage": "Zee has followed me here, panting and wheezing as I hold the lightning bolt over the fountain threatening to destroy it. \"No! Stop!\" shouts Zee, pleading. \"OK, I admit it! Yes, The gated community project was just an excuse to drown the town in raw sewage. Yes, it's a failure and out of cash. I would have gotten away with it, too, if it weren't for those meddling gods.\"\n\n\"Oh yeah\" says Theena in sudden realization. \"I suppose we are gods. We used to live up on that hill together. It's all coming back to me now.\"\n\n\"Oh, that,\" said Zee sheepishly. \"A while back, I put something in the water supply to get you to forget who you are, and I think it's wearing off.\"\n\nZee then quickly fled, closely pursued by a pack of pitchfork-wielding O Mountain investors. In the hours that followed, the residents of Squalor Holler (soon to be renamed something slightly less degrading) held an informal election to decide the town's new post-Zee leadership. Folks chose Jerry for town marshall and Paulo for tourism director. Dion, now sober as a judge, accepted the role of judge, and Theena became the new mayor with a fancy sash and everything.\n\nThings are shaping up well enough here that I may just stick around in Squalor Holler. You can go on and play some other game. Go on, now. Git!",
         "deathMessage": "Oh, dear. I have died."
 	},
 	"vocab": [ 
         {
+            "//": "Say Hi Dion 1",
+            "matches": [1278],
+            "conditions": [882,44,0,0,0,0,0],
+            "actions": [15750,0]
+        }, {
+            "//": "Say Hi Dion 2",
+            "matches": [1278],
+			"conditions": [882,444,0,0,0,0,0],
+			"actions": [26250,0]
+        }, {
+            "//": "Say Hi Theena no apple, no blueprints",
+            "matches": [1278],
+            "conditions": [862,309,289,0,0,0,0],
+            "actions": [27150,0]
+        }, {
+            "//": "Say Hi Theena, yes blueprints, no apple",
+            "matches": [1278],
+            "conditions": [862,308,289,0,0,0,0],
+            "actions": [27300,0]
+        }, {
+            "//": "Say Hi Theena, no blueprints, yes apple",
+            "matches": [1278],
+            "conditions": [862,309,288,0,0,0,0],
+            "actions": [27450,0]
+        }, {
+            "//": "Say Hi Theena, yes blueprints, yes apple",
+            "matches": [1278],
+            "conditions": [862,308,288,0,0,0,0],
+            "actions": [27600,0]
+        }, {
+            "//": "Say Zee to Theena - no blueprints",
+            "matches": [1266],
+            "conditions": [862,289,0,0,0,0,0],
+            "actions": [26550,0]
+        }, {
+            "//": "Say Zee to Theena - yes blueprints",
+            "matches": [1266],
+            "conditions": [862,288,0,0,0,0,0],
+            "actions": [27750,0]
+        }, {
+            "//": "Say Chera to Theena - no apple",
+            "matches": [1267],
+            "conditions": [862,309,0,0,0,0,0],
+            "actions": [27900,0]
+        }, {
+            "//": "Say Chera to Theena - yes apple",
+            "matches": [1267],
+            "conditions": [862,308,0,0,0,0,0],
+            "actions": [26850,0]
+        }, {
+            "//": "Say Apple to Theena - no apple",
+            "matches": [1211],
+            "conditions": [862,309,0,0,0,0,0],
+            "actions": [28050,0]
+        }, {
+            "//": "Say Apple to Theena - yes apple",
+            "matches": [1211],
+            "conditions": [862,308,0,0,0,0,0],
+            "actions": [27600,0]
+        }, {
+            "//": "Say Festus or Ditey to Theena",
+            "matches": [1265, 1264],
+            "conditions": [862,0,0,0,0,0,0],
+            "actions": [26700,0]
+        }, {
+            "//": "Say Labyrinth to Theena",
+            "matches": [1280],
+            "conditions": [862,0,0,0,0,0,0],
+            "actions": [27000,0]
+        }, {
+            "//": "Say Pandy to Theena",
+            "matches": [1268],
+            "conditions": [862,0,0,0,0,0,0],
+            "actions": [28200,0]
+        }, {
+            "//": "Say Paulo to Theena",
+            "matches": [1274],
+            "conditions": [862,0,0,0,0,0,0],
+            "actions": [28350,0,0]
+        }, {
+            "//": "Say Steph to Theena",
+            "matches": [1270],
+            "conditions": [862,0,0,0,0,0,0],
+            "actions": [28500,0]
+        }, {
+            "//": "Say Hades to Theena",
+            "matches": [1281],
+            "conditions": [862,0,0,0,0,0,0],
+            "actions": [28650,0]
+        }, {
+            "//": "Say Delos to Theena",
+            "matches": [1282],
+            "conditions": [862,0,0,0,0,0,0],
+            "actions": [28800,0]
+        }, {
+            "//": "Say Poe to Theena",
+            "matches": [1275],
+            "conditions": [862,0,0,0,0,0,0],
+            "actions": [28950,0]
+        }, {
+            "//": "Say Dion to Theena",
+            "matches": [1262],
+            "conditions": [862,0,0,0,0,0,0],
+            "actions": [29100,0]
+        }, {
+            "//": "Look Theena",
+            "matches": [4111],
+            "conditions": [862,0,0,0,0,0,0],
+            "actions": [22500,0]
+        }, {
+            "//": "Look Dion",
+            "matches": [4112],
+            "conditions": [882,0,0,0,0,0,0],
+            "actions": [22650,0]
+        }, {
+            "//": "Look Hermie",
+            "matches": [4113],
+            "conditions": [902,0,0,0,0,0,0],
+            "actions": [22800,0]
+        }, {
+            "//": "Look Ditey",
+            "matches": [4114],
+            "conditions": [922,0,0,0,0,0,0],
+            "actions": [22950,0]
+        }, {
+            "//": "Look Festus",
+            "matches": [4115],
+            "conditions": [942,0,0,0,0,0,0],
+            "actions": [23100,0]
+        }, {
+            "//": "Look Zee",
+            "matches": [4116],
+            "conditions": [962,704,0,0,0,0,0],
+            "actions": [23250,0]
+        }, {
+            "//": "Look Chera",
+            "matches": [4117],
+            "conditions": [982,0,0,0,0,0,0],
+            "actions": [23400,0]
+        }, {
+            "//": "Look Pandy",
+            "matches": [4118],
+            "conditions": [1002,0,0,0,0,0,0],
+            "actions": [23550,0]
+        }, {
+            "//": "Look Jerry",
+            "matches": [4119],
+            "conditions": [1022,0,0,0,0,0,0],
+            "actions": [23700,0]
+        }, {
+            "//": "Look Steph",
+            "matches": [4120],
+            "conditions": [1042,0,0,0,0,0,0],
+            "actions": [23850,0]
+        }, {
+            "//": "Look Cerberus",
+            "matches": [4121],
+            "conditions": [1062,0,0,0,0,0,0],
+            "actions": [24000,0]
+        }, {
+            "//": "Look Reeze",
+            "matches": [4123],
+            "conditions": [1082,0,0,0,0,0,0],
+            "actions": [24150,0]
+        }, {
+            "//": "Look Paulo",
+            "matches": [4124],
+            "conditions": [1102,0,0,0,0,0,0],
+            "actions": [24300,0]
+        }, {
+            "//": "Look Poe",
+            "matches": [4125],
+            "conditions": [1122,0,0,0,0,0,0],
+            "actions": [24450,0]
+        }, {
+            "//": "Look Cetus",
+            "matches": [4127],
+            "conditions": [1142,0,0,0,0,0,0],
+            "actions": [24600,0]
+        }, {
+            "//": "Say Hi Festus - no fish",
+            "matches": [1278],
+            "conditions": [942,149,0,0,0,0,0],
+            "actions": [25500,0]
+        }, {
+            "//": "Say Hi Festus - yes fish, no build",
+            "matches": [1278],
+			"conditions": [942,148,489,0,0,0,0],
+			"actions": [33750,0]
+            }, {
+            "//": "Say Hi Festus - yes fish, yes build",
+            "matches": [1278],
+			"conditions": [942,148,488,0,0,0,0],
+            "actions": [29250,0]
+        }, {
+            "//": "say hi poe - no safety",
+            "matches": [1278],
+            "conditions": [1122,89,0,0,0,0,0],
+            "actions": [29400,0]
+        }, {
+            "//": "say hi/safety poe - yes safety",
+            "matches": [1278, 1284],
+            "conditions": [1122,88,0,0,0,0,0],
+            "actions": [29700,0]
+        }, {
+            "//": "say Safety Poe - no pills",
+            "matches": [1284],
+            "conditions": [1122,89,1206,0,0,0,0],
+            "actions": [29850,0]
+        }, {
+            "//": "say Safety Poe - yes pills",
+            "matches": [1284],
+            "conditions": [1122,89,1201,80,1200,0,0],
+            "actions": [30058,8250]
+        }, {
+            "//": "look poster (at the marina)",
+            "matches": [4135, 4585],
+            "conditions": [1222,0,0,0,0,0,0],
+            "actions": [29550,0]
+        }, {
+            "//": "look paddleboard",
+            "matches": [4093],
+            "conditions": [582,0,0,0,0,0,0],
+            "actions": [20100,0]
+        }, {
+            "//": "use Paddleboard",
+            "matches": [3943],
+            "conditions": [582,300,0,0,0,0,0],
+            "actions": [2604,0]
+        }, {
+            "//": "look jetski",
+            "matches": [4091],
+            "conditions": [562,0,0,0,0,0,0],
+            "actions": [19950,0]
+        }, {
+            "//": "use Jetski no safety, no PFD",
+            "matches": [3941],
+            "conditions": [562,89,1246,0,0,0,0],
+            "actions": [30150,0]
+        }, {
+            "//": "use jetski yes safety, no PFD",
+            "matches": [3941],
+            "conditions": [562,88,1246,0,0,0,0],
+            "actions": [30150,0]
+        }, {
+            "//": "use jetski no safety, yes PFD",
+            "matches": [3941],
+            "conditions": [562,89,1241,0,0,0,0],
+            "actions": [30150,0]
+        }, {
+            "//": "use jetski, yes safety, yes pdf",
+            "matches": [3941],
+            "conditions": [562,88,1241,320,0,0,0],
+            "actions": [8100,0]
+        }, {
+            "//": "South from cetus",
+            "matches": [152],
+            "conditions": [1142,1260,0,0,0,0,0],
+            "actions": [1554,0]
+        }, {
+            "//": "Look Fish",
+            "matches": [4059],
+            "conditions": [23,0,0,0,0,0,0],
+            "actions": [15900,0]
+        }, {
+            "//": "Festus Fish",
+            "matches": [2409],
+            "conditions": [21,942,140,520,20,0,0],
+            "actions": [25708,10800]
+        }, {
+            "//": "Use Sears, Cut fence",
+            "matches": [3939, 4736],
+            "conditions": [264,1262,521,1260,1280,0,0],
+            "actions": [2772,9600]
+        }, {
+            "//": "Go West - Marsh - Fence",
+            "matches": [154],
+            "conditions": [264,1262,260,0,0,0,0],
+            "actions": [30354,0]
+        }, {
+            "//": "Look duck",
+            "matches": [4060],
+            "conditions": [43,0,0,0,0,0,0],
+            "actions": [16050,0]
+        }, {
+            "//": "Look apple",
+            "matches": [4061],
+            "conditions": [63,0,0,0,0,0,0],
+            "actions": [16200,0]
+        }, {
+            "//": "Look blueprints",
+            "matches": [4062],
+            "conditions": [83,0,0,0,0,0,0],
+            "actions": [16350,0]
+        }, {
+            "//": "Look bolt",
+            "matches": [4063],
+            "conditions": [103,0,0,0,0,0,0],
+            "actions": [16500,0]
+        }, {
+            "//": "Look MRE",
+            "matches": [4065],
+            "conditions": [123,0,0,0,0,0,0],
+            "actions": [16650,0]
+        }, {
+            "//": "Look Remote (no batteries)",
+            "matches": [4066],
+            "conditions": [143,0,0,0,0,0,0],
+            "actions": [16800,0]
+        }, {
+            "//": "Look remote with batteries",
+            "matches": [],
+            "conditions": [1183,0,0,0,0,0,0],
+            "actions": [16950,0]
+        }, {
+            "//": "Look Batteries",
+            "matches": [4067],
+            "conditions": [163,0,0,0,0,0,0],
+            "actions": [17100, 0]
+        }, {
+            "//": "Look Screwdriver",
+            "matches": [4068],
+            "conditions": [183,0,0,0,0,0,0],
+            "actions": [17250,0]
+        }, {
+            "//": "Look Radio",
+            "matches": [4069],
+            "conditions": [203,0,0,0,0,0,0],
+            "actions": [17400,0]
+        }, {
+            "//": "Look Rose",
+            "matches": [4137],
+            "conditions": [223,0,0,0,0,0,0],
+            "actions": [17550,0]
+        }, {
+            "//": "Look Fleece",
+            "matches": [4070],
+            "conditions": [243,0,0,0,0,0,0],
+            "actions": [17700,0]
+        }, {
+            "//": "Look water bowl",
+            "matches": [4072],
+            "conditions": [263,0,0,0,0,0,0],
+            "actions": [17850,0]
+        }, {
+            "//": "Look motor",
+            "matches": [4074],
+            "conditions": [283,0,0,0,0,0,0],
+            "actions": [18000,0]
+        }, {
+            "//": "Look needle",
+            "matches": [4076],
+            "conditions": [303,0,0,0,0,0,0],
+            "actions": [18150,0]
+        }, {
+            "//": "Look Booklet (compass)",
+            "matches": [4078],
+            "conditions": [323,0,0,0,0,0,0],
+            "actions": [18300,0]
+        }, {
+            "//": "look brochure (just died)",
+            "matches": [4079],
+            "conditions": [343,0,0,0,0,0,0],
+            "actions": [18450,0]
+        }, {
+            "//": "look bone",
+            "matches": [4138],
+            "conditions": [363,0,0,0,0,0,0],
+            "actions": [18600,0]
+        }, {
+            "//": "Look Plank",
+            "matches": [4080],
+            "conditions": [383,0,0,0,0,0,0],
+            "actions": [18750,0]
+        }, {
+            "//": "Look vending machine",
+            "matches": [4081],
+            "conditions": [403,0,0,0,0,0,0],
+            "actions": [18900,0]
+        }, {
+            "//": "Look wrench",
+            "matches": [4083],
+            "conditions": [443,0,0,0,0,0,0],
+            "actions": [19050,0]
+        }, {
+            "//": "Look hair",
+            "matches": [4085],
+            "conditions": [463,0,0,0,0,0,0],
+            "actions": [19200,0]
+        }, {
+            "//": "Look Pomegranate",
+            "matches": [4086],
+            "conditions": [483,0,0,0,0,0,0],
+            "actions": [19350,0]
+        }, {
+            "//": "Look Payphone",
+            "matches": [4087],
+            "conditions": [503,0,0,0,0,0,0],
+            "actions": [19500,0]
+        }, {
+            "//": "Look Payphone - if coin not in game",
+            "matches": [4087],
+            "conditions": [503,634,620,0,0,0,0],
+            "actions": [203,0]
+        }, {
+            "//": "Look shears",
+            "matches": [4089],
+            "conditions": [523,0,0,0,0,0,0],
+            "actions": [19650,0]
+        }, {
+            "//": "Look Compass",
+            "matches": [4090],
+            "conditions": [523,0,0,0,0,0,0],
+            "actions": [19800,0]
+        }, {
+            "//": "Look climbing gear",
+            "matches": [4094],
+            "conditions": [603,0,0,0,0,0,0],
+            "actions": [20250,0]
+        }, {
+            "//": "Look Coin",
+            "matches": [],
+            "conditions": [623,0,0,0,0,0,0],
+            "actions": [20400,0]
+        }, {
+            "//": "Look panel - not fixed",
+            "matches": [4118],
+            "conditions": [643,349,0,0,0,0,0],
+            "actions": [20550,0]
+        }, {
+            "//": "Look panel - fixed",
+            "matches": [4118],
+            "conditions": [643,348,0,0,0,0,0],
+            "actions": [20700,0]
+        }, {
+            "//": "Look Documents",
+            "matches": [4097, 4547],
+            "conditions": [663,0,0,0,0,0,0],
+            "actions": [20850,0]
+        }, {
+            "//": "Look ball",
+            "matches": [4098],
+            "conditions": [683,0,0,0,0,0,0],
+            "actions": [21000,0]
+        }, {
+            "//": "Look box",
+            "matches": [4057],
+            "conditions": [703,0,0,0,0,0,0],
+            "actions": [21150,0]
+        }, {
+            "//": "Look Helm",
+            "matches": [4058],
+            "conditions": [723,0,0,0,0,0,0],
+            "actions": [21300,0]
+        }, {
+            "//": "Look Sunscreen",
+            "matches": [4100],
+            "conditions": [423,0,0,0,0,0,0],
+            "actions": [21450,0]
+        }, {
+            "//": "Look visor",
+            "matches": [4101],
+            "conditions": [743,0,0,0,0,0,0],
+            "actions": [21600,0]
+        }, {
+            "//": "Look Medallion",
+            "matches": [4102],
+            "conditions": [763,0,0,0,0,0,0],
+            "actions": [21750,0]
+        }, {
+            "//": "Look Banana",
+            "matches": [4103],
+            "conditions": [783,0,0,0,0,0,0],
+            "actions": [21900,0]
+        }, {
+            "//": "Look Tub",
+            "matches": [4105],
+            "conditions": [803,0,0,0,0,0,0],
+            "actions": [22050,0]
+        }, {
+            "//": "Look Can of Oracle Wax",
+            "matches": [4107],
+            "conditions": [823,0,0,0,0,0,0],
+            "actions": [22200,0]
+        }, {
+            "//": "Look CUP",
+            "matches": [4109],
+            "conditions": [843,0,0,0,0,0,0],
+            "actions": [22350,0]
+        }, {
+            "//": "Give Duck",
+            "matches": [2410],
+			"conditions": [882,41,40,1240,880,440,400],
+			"actions": [24972,9358]
+        }, {
+            "//": "Use/eat pills",
+            "matches": [3983, 4883],
+            "conditions": [1201,0,0,0,0,0,0],
+            "actions": [15450,0]
+        }, {
+            "//": "Say hi Paulo",
+            "matches": [1278],
+            "conditions": [1102,0,0,0,0,0,0],
+            "actions": [2850,0]
+        }, {
+            "//": "Say hi Paulo > hair",
+            "matches": [1278],
+            "conditions": [1102,209,229,249,269,460,0],
+            "actions": [30524,0]
+        }, {
+            "//": "Give Paulo trash 1: 39 / banana peel",
+            "matches": [2453],
+            "conditions": [1102,781,200,780,0,0,0],
+            "actions": [30658,8250]
+        }, {
+            "//": "Give Paulo trash 1: 39 / banana peel - final",
+            "matches": [2453],
+            "conditions": [1102,781,228,248,268,180,120],
+            "actions": [30808,11100]
+        }, {
+            "//": "Give Paulo trash 2: 40 / tub of chicken",
+            "matches": [2455],
+            "conditions": [1102,801,220,800,0,0,0],
+            "actions": [30658,8250]
+        }, {
+            "//": "Give Paulo trash 2: 40 / tub of chicken - final",
+            "matches": [2455],
+            "conditions": [1102,801,208,248,268,180,120],
+            "actions": [30808,11100]
+        }, {
+            "//": "Give Paulo trash 3: 41 / can of oracle wax",
+            "matches": [2457],
+            "conditions": [1102,821,240,820,0,0,0],
+            "actions": [30658,8250]
+        }, {
+            "//": "Give Paulo trash 3: 41 / can of oracle wax - final",
+            "matches": [2457],
+            "conditions": [1102,821,208,228,268,180,120],
+            "actions": [30808,11100]
+        }, {
+            "//": "Give Paulo trash 4: 42 / foam cup",
+            "matches": [2459],
+            "conditions": [1102,841,260,840,0,0,0],
+            "actions": [30658,8250]
+        }, {
+            "//": "Give Paulo trash 4: 42 / foam cup - final",
+            "matches": [2459],
+            "conditions": [1102,841,208,228,248,180,120],
+            "actions": [30808,11100]
+        }, {
+            "//": "Give Hair",
+            "matches": [2435],
+            "conditions": [1162,461,460,800,1160,0,0],
+            "actions": [805,10800]
+        }, {
+            "//": "Gate North death",
+            "matches": [151],
+            "conditions": [544,1260,0,0,0,0,0],
+            "actions": [2454,0]
+        }, {
+            "//": "Landmines S no radio",
+            "matches": [152],
+            "conditions": [164,205,1260,0,0,0,0],
+            "actions": [2004,0]
+        }, {
+            "//": "Landmines S yes radio",
+            "matches": [152],
+            "conditions": [164,201,0,0,0,0,0],
+            "actions": [2100,0]    
+        }, {
+            "//": "Landmines N no radio",
+            "matches": [151],
+            "conditions": [144,205,1260,0,0,0,0],
+            "actions": [2004,0]
+        }, {
+            "//": "Landmines N yes radio",
+            "matches": [151],
+            "conditions": [144,201,0,0,0,0,0],
+            "actions": [2100,0]
+        }, {
+            "//": "Say hi Reeze - pre MRE flag",
+            "matches": [1278],
+            "conditions": [1082,449,0,0,0,0,0],
+            "actions": [30900,0]
+        }, {
+            "//": "Say hi Reeze - post MRE flag",
+            "matches": [1278],
+            "conditions": [1082,448,0,0,0,0,0],
+            "actions": [31050,0]
+        }, {
+            "//": "Give MRE",
+            "matches": [2415],
+            "conditions": [1082,121,120,600,440,0,0],
+            "actions": [31272,8700]
+        }, {
+            "//": "Say Hi Steph",
+            "matches": [1278],
+            "conditions": [1042,0,0,0,0,0,0],
+            "actions": [31350,0]
+        }, {
+            "//": "Give Pom Steph",
+            "matches": [2436],
+            "conditions": [1042,481,480,380,0,0,0],
+            "actions": [24805,8700]
+        }, {
+			"//": "READ BROCHURE",
+			"matches": [4529],
+			"conditions": [343,0,0,0,0,0,0],
+			"actions": [18450,0]
+        }, {
+			"//": "USE COIN - No Zee Rage",
+			"matches": [3946, 5040],
+			"conditions": [1324,621,29,1300,620,0,0],
+			"actions": [1104,8250]
+        }, {
+            "//": "USE COIN - Zee Rage no coin",
+			"matches": [1278],
+			"conditions": [1324,634,28,1300,0,0,0],
+			"actions": [1254,0]
+        }, {
+			"//": "USE COIN - Zee Rage",
+			"matches": [3946, 5040],
+			"conditions": [1324,621,28,1300,0,0,0],
+			"actions": [1254,0]
+        }, {
+			"//": "USE WRENCH - fix water",
+			"matches": [3933],
+			"conditions": [642,349,340,0,0,0,0],
+			"actions": [3058,0]
+        }, {
+			"//": "USE WRENCH - unfix water",
+			"matches": [3933],
+			"conditions": [642,348,340,0,0,0,0],
+			"actions": [3060,0]
+        }, {
+			"//": "USE PUMP- bad",
+			"matches": [3991, 4141],
+			"conditions": [1302,349,0,0,0,0,0],
+			"actions": [31500,0]
+        }, {
+			"//": "USE PUMP- ok",
+			"matches": [3991],
+			"conditions": [1302,348,0,0,0,0,0],
+			"actions": [31650,0]
+        }, {
+			"//": "GIVE BONE",
+			"matches": [2488],
+			"conditions": [1062,361,320,1060,360,0,0],
+			"actions": [31858,8305]
+        }, {
+			"//": "GO EAST - Cerberus",
+			"matches": [153],
+			"conditions": [1062,1204,1200,0,0,0,0],
+			"actions": [1704,0]
+        }, {
+			"//": "GO DOWN - Port-a-Potty",
+			"matches": [156],
+			"conditions": [84,80,0,0,0,0,0],
+			"actions": [32004,0]
+        }, {
+			"//": "GO UP - no climb",
+			"matches": [155],
+			"conditions": [464,605,460,0,0,0,0],
+			"actions": [32154,0]
+        }, {
+			"//": "GO UP - yes climb",
+			"matches": [155],
+			"conditions": [464,601,0,0,0,0,0],
+			"actions": [3150,0]
+        }, {
+            "//": "GO SOUTH from construction site",
+            "matches": [152],
+            "conditions": [564,560,0,0,0,0,0],
+            "actions": [32304,0]
+        }, {
+			"//": "SAY HI - Chera",
+			"matches": [1278],
+			"conditions": [982,0,0,0,0,0,0],
+			"actions": [32400,0]
+        }, {
+			"//": "SAY * - Chera",
+			"matches": [1266, 1265, 1264, 1268, 1262],
+			"conditions": [982,0,0,0,0,0,0],
+			"actions": [32550,0]
+        }, {
+			"//": "SAY THEENA - Chera",
+			"matches": [1261],
+			"conditions": [982,0,0,0,0,0,0],
+			"actions": [32700,0]
+        }, {
+			"//": "GO WEST - Prevent pool access before blueprints handed over",
+			"matches": [154],
+			"conditions": [584,289,580,0,0,0,0],
+			"actions": [32904,0]
+        }, {
+			"//": "GIVE BLUEPRINTS",
+			"matches": [2412],
+			"conditions": [81,862,80,300,280,0,0],
+			"actions": [25122,8700]
+        }, {
+			"//": "LOOK BLUEPRINTS",
+			"matches": [4062],
+			"conditions": [81,0,0,0,0,0,0],
+			"actions": [33000,0]
+        }, {
+			"//": "LOOK NOVEL",
+			"matches": [4078, 4142],
+			"conditions": [1323,0,0,0,0,0,0],
+			"actions": [33503,0]
+        }, {
+			"//": "GIVE NOVEL",
+			"matches": [2492, 2428],
+			"conditions": [982,1321,460,1320,0,0,0],
+			"actions": [33208,8250]
+        }, {
+			"//": "TAKE APPLE - no distract",
+			"matches": [1511],
+			"conditions": [982,469,62,60,0,0,0],
+			"actions": [33353,0]
+        }, {
+			"//": "TAKE APPLE - yes distract",
+			"matches": [1511],
+			"conditions": [982,468,62,0,0,0,0],
+			"actions": [3300,0]            
+        }, {
+			"//": "SAY APPLE - Chera",
+			"matches": [1211],
+			"conditions": [982,0,0,0,0,0,0],
+			"actions": [33600,0]
+        }, {
+			"//": "GIVE APPLE",
+			"matches": [2411],
+			"conditions": [862,61,60,300,0,0,0],
+			"actions": [25405,8700]
+        }, {
+			"//": "GO EAST - labyrinth S no compass",
+			"matches": [153],
+			"conditions": [784,545,740,0,0,0,0],
+			"actions": [3654,0]
+        }, {
+			"//": "GO EAST - labyrinth N no compass",
+			"matches": [153],
+			"conditions": [744,545,780,0,0,0,0],
+			"actions": [3654,0]
+        }, {
+			"//": "GO EAST- into labyrinth no Zee Rage",
+			"matches": [153],
+			"conditions": [444,29,440,0,0,0,0],
+			"actions": [3804,0]
+        }, {
+			"//": "DROP MOTOR Compass",
+			"matches": [2724],
+			"conditions": [942,302,262,480,540,0,0],
+			"actions": [33958,11100]
+        }, {
+			"//": "DROP BOWL Compass",
+			"matches": [2722],
+			"conditions": [942,302,282,480,540,0,0],
+			"actions": [33958,11100]
+        }, {
+			"//": "DROP NEEDLE Compass",
+			"matches": [2726],
+			"conditions": [942,282,262,480,540,0,0],
+			"actions": [33958,11100]
+        }, {
+			"//": "READ BOOKLET",
+			"matches": [4528],
+			"conditions": [323,0,0,0,0,0,0],
+			"actions": [18300,0]
+        }, {
+			"//": "GO EAST - enable no-drop plank",
+			"matches": [153],
+			"conditions": [444,500,0,0,0,0,0],
+			"actions": [8700,0]
+        }, {
+			"//": "GO WEST- disable no-drop plank",
+			"matches": [154],
+			"conditions": [724,500,0,0,0,0,0],
+			"actions": [9000,0]            
+        }, {
+			"//": "DROP PLANK",
+			"matches": [2730],
+			"conditions": [508,380,0,0,0,0,0],
+			"actions": [4124,0]
+        }, {
+			"//": "GO WEST 44 chasm - no plank",
+			"matches": [154],
+			"conditions": [884,385,880,0,0,0,0],
+			"actions": [3954,0]
+        }, {
+            "//": "GO WEST 44 chasm - plank",
+			"matches": [154],
+			"conditions": [884,381,0,0,0,0,0],
+			"actions": [300,0]                        
+        }, {
+            "//": "GO EAST 46 chasm - no plank",
+            "matches": [153],
+            "conditions": [924,385,920,0,0,0,0],
+            "actions": [3954,0]            
+        }, {
+            "//": "GO EAST 46 chasm - plank",
+            "matches": [153],
+			"conditions": [924,381,0,0,0,0,0],
+			"actions": [300,0]
+        }, {
+			"//": "GIVE FLEECE",
+			"matches": [2420],
+			"conditions": [444,882,241,420,240,680,0],
+			"actions": [26458,10800]
+        }, {
+			"//": "SAY HI Ditey",
+			"matches": [1278],
+			"conditions": [922,0,0,0,0,0,0],
+			"actions": [34050,0]
+        }, {
+			"//": "SAY FESTUS to Ditey",
+			"matches": [1265],
+			"conditions": [922,0,0,0,0,0,0],
+			"actions": [34200,0]
+        }, {
+			"//": "GIVE ROSE",
+			"matches": [2487],
+			"conditions": [922,221,220,160,0,0,0],
+			"actions": [34255,8700]
+        }, {
+            "//": "Say Hi to Jerry",
+			"matches": [1278],
+			"conditions": [1022,360,0,0,0,0,0],
+			"actions": [34558,0]
+        }, {
+			"//": "GO NORTH - MEDUSA FAIL",
+			"matches": [151],
+            "conditions": [584,685,69,1260,0,0,0],
+			"actions": [4254,0]
+        }, {
+			"//": "GO NORTH - MEDUSA SUCCESS",
+			"matches": [151],
+			"conditions": [584,681,60,0,0,0,0],
+			"actions": [4408,0]
+        }, {
+			"//": "TAKE BOLT - failure",
+			"matches": [1513],
+			"conditions": [704,102,725,1260,720,0,0],
+			"actions": [1854,7950]
+        }, {
+			"//": "TAKE BOLT - success",
+			"matches": [1513],
+			"conditions": [704,102,721,100,0,0,0],
+			"actions": [34708,0]
+        }, {
+			"//": "USE BATTERIES",
+			"matches": [3917],
+			"conditions": [163,143,181,140,1180,160,0],
+			"actions": [522,8250]
+        }, {
+			"//": "GO SOUTH - Hades Door - Fail",
+			"matches": [152],
+			"conditions": [1104,1185,1100,0,0,0,0],
+			"actions": [4554,0]
+        }, {
+			"//": "GO SOUTH - Hades Door - Success",
+			"matches": [152],
+			"conditions": [1104,1181,1100,0,0,0,0],
+			"actions": [1350,0]
+        }, {
+			"//": "GIVE BOX failure",
+			"matches": [2407],
+			"conditions": [701,1002,349,0,0,0,0],
+			"actions": [34800,0]
+        }, {
+			"//": "GIVE BOX success",
+			"matches": [2407],
+			"conditions": [701,1002,348,700,720,0,0],
+			"actions": [35022,0]
+        }, {
+			"//": "USE COIN - Vending",
+			"matches": [3946],
+			"conditions": [402,621,620,420,0,0,0],
+			"actions": [205,7950]
+        }, {
+			"//": "DROP SUN",
+			"matches": [2750],
+			"conditions": [384,742,762,40,0,0,0],
+			"actions": [658,0]
+        }, {
+			"//": "DROP MEDAL",
+			"matches": [2752],
+			"conditions": [384,742,422,40,0,0,0],
+			"actions": [658,0]
+        }, {
+			"//": "DROP VISOR",
+			"matches": [2751],
+			"conditions": [384,762,422,40,0,0,0],
+			"actions": [658,0]
+        }, {
+			"//": "GO EAST - Post Heist",
+            "matches": [153],
+            "conditions": [464,108,1380,0,0,0,0],
+            "actions": [2313,8100]
+        }, {
             "//": "TEST",
-            "matches": [4508],
-            "conditions": [23,20,0,0,0,0,0],
-            "actions": [208,0]          
+            "matches": [],
+            "conditions": [0,0,0,0,0,0,0],
+            "actions": [0,0]
+        }, {
+            "//": "TEST",
+            "matches": [],
+            "conditions": [0,0,0,0,0,0,0],
+            "actions": [0,0]
+        }, {
+            "//": "TEST",
+            "matches": [],
+            "conditions": [0,0,0,0,0,0,0],
+            "actions": [0,0]
+
         }
     ],
     "events": [
         {
-            "//": "TEMP EVENT",
+            "//": "Zee town square",
             "id": 1,
-            "prob": 25,
-            "conditions": [24,0,0,0,0,0,0],
-            "actions": [15450,0]          
+            "prob": 100,
+			"conditions": [24,308,29,20,780,0,0],
+			"actions": [3508,8100]
+        }, {
+            "//": "Compass Build Cleanup",
+            "id": 2,
+            "prob": 100,
+			"conditions": [488,942,260,280,300,0,0],
+			"actions": [8305,8250]
+        }, {
+            "//": "Sun worship cleanup",
+            "id": 3,
+            "prob": 100,
+			"conditions": [384,48,420,740,760,0,0],
+			"actions": [8305,8250]
+            }, {
+            "//": "TEMP EVENT",
+            "id": 4,
+            "prob": 0,
+            "conditions": [0,0,0,0,0,0,0],
+            "actions": [0,0]
+        }, {
+            "//": "TEMP EVENT",
+            "id": 5,
+            "prob": 0,
+            "conditions": [0,0,0,0,0,0,0],
+            "actions": [0,0]
+        }, {
+            "//": "TEMP EVENT",
+            "id": 6,
+            "prob": 0,
+            "conditions": [0,0,0,0,0,0,0],
+            "actions": [0,0]
+        }, {
+            "//": "TEMP EVENT",
+            "id": 7,
+            "prob": 0,
+            "conditions": [0,0,0,0,0,0,0],
+            "actions": [0,0]
+        }, {
+            "//": "TEMP EVENT",
+            "id": 8,
+            "prob": 0,
+            "conditions": [0,0,0,0,0,0,0],
+            "actions": [0,0]
+        }, {
+            "//": "TEMP EVENT",
+            "id": 9,
+            "prob": 0,
+            "conditions": [0,0,0,0,0,0,0],
+            "actions": [0,0]
+        }, {
+            "//": "TEMP EVENT",
+            "id": 10,
+            "prob": 0,
+            "conditions": [0,0,0,0,0,0,0],
+            "actions": [0,0]                                                                                                                                                        
         }
-
     ],
-	"verbs": ["AUT", "GO", "*CLI", "*WAL", "*RUN", "*ENT", "*PAC", "*FOL", "SAY", "EXI", "GET", "*TAK", "*CAT", "*PIC", "*REM", "*WEA", "", "", "DRO", "*REL", "*THR", "*LEA", "", "", "", "", "USE", "LOO", "*EXA", "*WAT", "REA", "", "", "", "", "", "", "", "", "", "", "", "", "", ".", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
-	"nouns": ["ANY", "NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN", ".", "NOT",  "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+	"verbs": ["AUT", "GO", "*CLI", "*WAL", "*RUN", "*ENT", "*PAC", "*FOL", "SAY", "EXI", "GET", "*TAK", "*CAT", "*PIC", "*REM", "*WEA", "GIV", "*OFF", "DRO", "*REL", "*THR", "*LEA", "", "", "", "", "USE", "LOO", "*EXA", "*WAT", "REA", "CUT", "EAT", "PAY", ""],
+	"nouns": ["ANY", "NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN", "BOX", "HEL", "FIS", "DUC", "APP", "BLU", "BOL", "*LIG", "MRE", "REM", "BAT", "SCR", "RAD", "FLE", "*GOL", "BOW", "*WAT", "MOT", "*ELE", "NEE", "*KNI", "BOO", "BRO", "PLA", "VEN", "*MAC", "WRE", "*PIP", "HAI", "POM", "PAY", "*PHO", "SHE", "COM", "JET", "*SKI", "PAD", "GEA", "*CLI", "COI", "DOC", "BAL", "*DIS", "SUN", "VIS", "MED", "BAN", "*PEE", "TUB", "*CHI", "CAN", "*WAX", "CUP", "*FOA", "THE", "DIO", "HER", "DIT", "FES", "ZEE", "CHE", "PAN", "JER", "STE", "CER", "*DOG", "REE", "PAU", "POE", "*SID", "CET", "HI", "WAT", "LAB", "HAD", "DEL", "PIL", "SAF", "POS", "FEN", "ROS", "BON", "PFD", "FER", "PUM", "NOV", "*ROM"],
 	"rooms": [{
         "id": 0,
 		"name": "",
 		"exits": [null, 0, 0, 0, 0, 0, 0]
 	}, {
         "id": 1,
-		"name": "in an unfinished game.",
-        "desc": "Imagine walls covered in 'image not loaded' textures.",
-		"exits": [null, 0, 2, 0, 0, 0, 0]
+		"name": "in the Squalor Holler town square",
+        "desc": "Here in the center of town, the space is dominated my a large statue of a lightning bolt just to remind us who is in charge here. Dirt paths lead off in all directions. To the north is a blacksmith's forge, and to the south I see a ramshackle building with a sign declaring it to be \"Theena's.\"",
+		"exits": [null, 5, 2, 6, 23, 0, 0]
 	}, {
         "id": 2,
-		"name": "in another part of the unfinished game.",
-        "desc": "This room looks much like the other. Maybe I should wait until the game is released.",
-		"exits": [null, 1, 0, 0, 0, 0, 0]                                                                
+		"name": "on the front porch of Theena's bar",
+        "desc": "The decking boards creak under my feet. To the west I see a port-a-potty in case I feel nature calling.",
+		"exits": [null, 1, 3, 0, 4, 0, 0]
     }, {
-        "id": 100,
-		"name": "*...",
+        "id": 3,
+        "name": "in Theena's bar",
+        "desc": "The ambiance here is heavy and unpleasantly aromatic. A quick scan of the bar leads to the firm belief that there is not a clean glass to be found in this establishment. World-weary Theena sits behind the bar knitting, waiting for patrons who have not materialized.",
+        "exits": [null, 2, 0, 0, 0, 0, 0]
+    }, {
+        "id": 4,
+        "name": "in a port-a-potty",
+        "desc": "The mood of this plastic bathroom capsule, not to mention the smell, is ghastly. Just under the din of flies buzzing, I could swear I hear ominous church organ music blaring. A sign above the toilet seat issues a dire warning, \"Abandon hope, y'all who enter here.\"",
+        "exits": [null, 0, 0, 2, 0, 0, 64]
+    }, {
+        "id": 5,
+        "name": "at the forge",
+        "desc": "The heat coming off the fire is a sharp contrast from the cool air outside. Festus is here looking glum as usual.",
+        "exits": [null, 0, 1, 0, 0, 0, 0]
+    }, {
+        "id": 6,
+        "name": "in a clearing",
+        "desc": "While I would love to wax rhapsodic about trees and grass, this spot is little more than a clearing east of the town square leading to some other, more important, areas. To the north is a residential plot and to the south is the marina. There is a water pump here sticking out of the ground. As the only potable water supply in town and centrally located, I think it's safe to assume anyone can use it.",
+        "exits": [null, 7, 11, 22, 1, 0, 0]
+    }, {
+        "id": 7,
+        "name": "in a front yard",
+        "desc": "I'm going to say this slowly and quietly... There are landmines all over the lawn... I can tell because there are little mounds everywhere that don't look like moles made them and because there is a rather large sign saying, \"GIT OFF MY PROPERTY!! LANDMINES!\" Past the landmines to the north is a small shack, which seems hardly worth the effort of dying to get there.",
+        "exits": [null, 8, 6, 0, 0, 0, 0]
+    }, {
+        "id": 8,
+        "name": "in a shack",
+        "desc": "Daylight is visible through the loose boards that comprise the walls of this place. What can I say? It's a shack. In the corner, I can see a pile of debris pushed to one side to expose a hole in the floor large enough to fit through. So, it seems logical to conclude that whoever went to all this trouble to protect their privacy is still down there.",
+        "exits": [null, 0, 7, 0, 0, 0, 9]
+    }, {
+        "id": 9,
+        "name": "in a bunker",
+        "desc": "Dirt walls and the smell of stale air surround me. Crates of survival supplies line the passageway. To the east is a faint flickering light.",
+        "exits": [null, 0, 0, 10, 0, 8, 0]
+    }, {
+        "id": 10,
+        "name": "in a rumpus room",
+        "desc": "On the walls are photos and other memorabilia of the illustrious military career of someone named A. Reeze. The bunker's living area is a model of self-sufficiency: bicycle generator, hot plate, chemical toilet- all the elements necessary to survive an apocalypse (real or imagined) in style. Mr. Reeze himself is here sipping a beer in his lounger and watching westerns on a small black and white television.",
+        "exits": [null, 0, 0, 0, 9, 0, 0]
+    }, {
+        "id": 11,
+        "name": "at the marina",
+        "desc": "Poe's Marina is the gateway to watery fun. I know this because that's what the sign above my head says in very large multi-colored letters. Marina proprietor and lifeguard Poe Sidon is here, ready to blow his whistle at anyone who gets out of line on his waterfront.",
+        "exits": [null, 6, 13, 0, 0, 0, 0]
+    }, {
+        "id": 12,
+        "name": "in a marsh",
+        "desc": "Amid the reeds and cattails, the mud here is soupy and sticky, nearly taking my shoes off with every soggy step. The sea to the south is inviting but I cannot access it from here.",
+        "exits": [null, 0, 0, 13, 0, 0, 0]
+    }, {
+        "id": 13,
+        "name": "on the beach",
+        "desc": "Here on the white sands of the marina, I can see the perilous sea and the gleaming island of Delos beyond. The beast Cetus swims these waters they say, and given the menacing grey fin visible between the breaking waves, I believe them. There are two ways to enjoy the waters here, according to Poe. The JETSKI can travel fast but it requires a safety briefing and a PFD (personal floatation device). The PADDLEBOARD, on the other hand, is free for anyone to use.",
+        "exits": [null, 11, 0, 14, 12, 0, 0]
+    }, {
+        "id": 14,
+        "name": "on the deck",
+        "desc": "Here on the deck, we can see Paulo here soaking up the rays of the sun. With his dark curly hair and designer sunglasses, everything about him exudes the vibe of a major celebrity. I feel a bit overwhelmed to be in his presence. Am I becoming a Paulo fan?",
+        "exits": [null, 0, 0, 0, 13, 0, 0]
+    }, {
+        "id": 15,
+        "name": "in dangerous waters",
+        "desc": "Here in the middle of the harbor, the waves are growing larger and the paddleboard struggles to make progress. Besides, my arms are tired and I need a rest. To the south is the isle of Delos. Between here and there, I can see a shape moving through the water many times larger than my paddleboard.",
+        "exits": [null, 13, 16, 0, 0, 0, 0]
+    }, {
+        "id": 16,
+        "name": "on Delos beach",
+        "desc": "From my vantage point on the Delos beach, I can see the beach and marsh to the north. And if I squint very hard, I can even see Paulo sunbathing to the east of the marina. No wonder Paulo's biggest fans chose Delos for their party island. Too bad they made such a mess while they were here. The dune to the south slopes upward to form a steep hill.",
+        "exits": [null, 13, 17, 0, 0, 0, 0]
+    }, {
+        "id": 17,
+        "name": "in the agora",
+        "desc": "During festivals, Paulo's fans gather here to give lengthy orations about how much they love Paulo and, by extension, the sun.",
+        "exits": [null, 16, 0, 18, 20, 0, 0]
+    }, {
+        "id": 18,
+        "name": "among some columns",
+        "desc": "I can't tell you if these columns are ionic or doric. Regardless, they're very stately.",
+        "exits": [null, 0, 19, 0, 17, 0, 0]
+    }, {
+        "id": 19,
+        "name": "in the temple of the sun",
+        "desc": "Here in the elaborately decorated temple of the sun, folks leave offerings. Or at least that's what it says on the sign: \"Hi there. DROP sunny items here and receive a blessing. XOXO - Paulo.\"",
+        "exits": [null, 18, 0, 0, 0, 0, 0]
+    }, {
+        "id": 20,
+        "name": "near a well",
+        "desc": "This spot overlooks the coastline and the ragged cliffs to the west. In the center of the area is a small dry well. It looks like there may be something down there, but jumping into this hole will surely lead to my death.",
+        "exits": [null, 0, 0, 17, 0, 0, 21]
+    }, {
+        "id": 21,
+        "name": "at the bottom of a well",
+        "desc": "I guess there's truth to the rumor that nobody can die on Delos. The fall should have broken my neck, and for several seconds I wonder if it really did. Somehow I am still alive. Anyway, there's not much to see down here after all. Just a dry dirt floor. Sorry for misleading you. There is a faint light coming from the east, but that's it.",
+        "exits": [null, 0, 0, 16, 0, 0, 0]
+    }, {
+        "id": 22,
+        "name": "at the labyrinth gate",
+        "desc": "The labyrinth gates are as tall as a house, purposefully imposing. Through the gates, I can hear swirling winds and what appear to be the voices of the condemned bemoaning their fates for eternity. Or it could be a gas leak. One or the other.",
+        "exits": [null, 0, 0, 36, 6, 0, 0]
+    }, {
+        "id": 23,
+        "name": "on the outskirts of town",
+        "desc": "At the outskirts of town, we see the Welcome to Squalor Holler sign. On the other side of the sign, someone (persumably Zee) has written \"Stay out of O Mountain.\" To the south is a road that curves up the hill toward the west. A more direct route to O Mountain is up the adjacent hillside, but that seems exceedingly dangerous.",
+        "exits": [null, 24, 27, 1, 0, 28, 0]
+    }, {
+        "id": 24,
+        "name": "at Hermie's Messenger Service",
+        "desc": "Hermie has a small stall along the roadside for his messenger service. A while back, he may have had dozens of messages flitting back and forth between the mountain and Squalor Holler, but not anymore. He sits in his stall with his chin on his hand, bored. A nearby sunscreen vending machine seems to be getting more business than Hermies.",
+        "exits": [null, 26, 23, 25, 0, 0, 0]
+    }, {
+        "id": 25,
+        "name": "outside Ditey's cottage",
+        "desc": "Ditey's cottage on the outskirts of town is appointed with gingham curtains and dark red brick. The effect is designed to be adorable, and it is. The house is just a few yards away from her ex's forge, but in what must be a metaphor in map form, there is no direct route from here.",
+        "exits": [null, 0, 0, 0, 24, 0, 0]
+    }, {
+        "id": 26,
+        "name": "at Pandy's place",
+        "desc": "Pandy's small house sits below the steep hillside of O Mountain. A series of hand-painted protest signs lay resting against the exterior wall of the house as Pandy attempts to decide which is best. Each of them is a variation on the same theme \"the water is bad; fix the water.\"",
+        "exits": [null, 0, 24, 0, 0, 0, 0]
+    }, {
+        "id": 27,
+        "name": "at the O Mountain Estates gate",
+        "desc": "As I approach the wrought iron O Mountain gate, the guards snap to attention. \"Halt!\" shouts the lead guard. The guards here are very serious and have very serious mustaches, even the women guards. We better turn around. The road leads back to the east and curves around to safety. Heading north toward the O Mountain houses seems dangerous.",
+        "exits": [null, 28, 0, 23, 0, 0, 0]
+    }, {
+        "id": 28,
+        "name": "in a construction site",
+        "desc": "No one is working on the build site today, and the construction equipment here does not seem operable. It almost seems like no progress is being made on the other homes in the development. To the west, I can see the model home, stately and expensive looking. To the south is the guarded O Mountain gate. We should be careful not to let them know we snuck up here.",
+        "exits": [null, 0, 27, 0, 29, 0, 23]
+    }, {
+        "id": 29,
+        "name": "in the model home front yard",
+        "desc": "The sign in the yard declares that the house is \"Protected by M.E.D.U.S.A,\" which would explain the aluminum head mounted above the door on the front porch. It looks like there are lasers installed in the eyes of the thing ready to vaporize anything approaching the house. To the west, I detect an unmistakable chlorine smell.",
+        "exits": [null, 31, 0, 28, 30, 0, 0]
+    }, {
+        "id": 30,
+        "name": "chilling by the pool",
+        "desc": "The crisp blue water is a stark contrast to the gloomy environs just a few hundred feet down the hillside. Chera is here on a chez longue sipping tea and reading a romance novel.",
+        "exits": [null, 0, 0, 29, 0, 0, 0]
+    }, {
+        "id": 31,
+        "name": "on the front porch of the model home",
+        "desc": "The M.E.D.U.S.A unit is sputtering and malfunctioning, smoke emitting from its dead laser eyes.",
+        "exits": [null, 32, 29, 0, 0, 0, 0]
+    }, {
+        "id": 32,
+        "name": "in the foyer",
+        "desc": "I can smell food to the west and old paper to the east. I hear very profound snoring coming from the room upstairs.",
+        "exits": [null, 0, 31, 34, 33, 35, 0]
+    }, {
+        "id": 33,
+        "name": "in a kitchen",
+        "desc": "It's difficult to say whether someone designed this kitchen or if Zee and Chera just saw a kitchen in a movie and said \"I want this one.\" It looks beautiful, but nothing in it seems functional. This could be due to the fact that it's a model home.",
+        "exits": [null, 0, 0, 32, 0, 0, 0]
+    }, {
+        "id": 34,
+        "name": "in Zee's home office",
+        "desc": "The dark cherry wood desk and bookshelves are polished to a mirror shine. On the walls are plaques and certificates granted to Zee by Zee for various accomplishments. There is even a souvenir football in a glass case with an article detailing his college football victories, but the ball is clearly a dog toy, and it seems unlikely that Zee every played football or went to college.",
+        "exits": [null, 0, 0, 0, 32, 0, 0]
+    }, {
+        "id": 35,
+        "name": "in Zee's bedroom",
+        "desc": "I am being very quiet. Zee is napping on the bed. The charger for his precious lightning bolt sits on the bedside table. The sheer volume of snoring makes me genuinely worry that he needs to see a respiratory therapist.",
+        "exits": [null, 0, 0, 0, 0, 0, 32]
+    }, {
+        "id": 36,
+        "name": "in the labyrinth",
+        "desc": "I can see light coming from the west and a hand-painted sign: \"Any fool can get out of the labyrinth, but it takes a hero to find the center and defeat the dreaded minotaur.\" I feel like this sign is taunting me, drawing me deeper into the maze.",
+        "exits": [null, 0, 0, 38, 22, 0, 0]
+    }, {
+        "id": 37,
+        "name": "still in the labyrinth",
+        "desc": "Based on the amount of trash strewn around here, it's pretty clear that over time this labyrinth has come to serve multiple purposes: as a prison for the mythical minotaur and also as a junk yard.",
+        "exits": [null, 0, 38, 41, 0, 0, 0]
+    }, {
+        "id": 38,
+        "name": "also in the labyrinth",
+        "desc": "The walls of the maze are made up of a collection of discarded items: washing machines, crushed cars, etc. It's very easy to get turned around. A direction-finding device may be required to get where I intend to go.",
+        "exits": [null, 37, 39, 0, 36, 0, 0]
+    }, {
+        "id": 39,
+        "name": "in the labyrinth, confused",
+        "desc": "I wonder how many people have been condemned to the labyrinth. How many of them die by the hand of the minotaur and how many die of starvation wandering around this place?",
+        "exits": [null, 38, 0, 43, 0, 0, 0]
+    }, {
+        "id": 40,
+        "name": "in the labyrinth, dead end",
+        "desc": "This is a dead end. We have to turn back.",
+        "exits": [null, 0, 0, 44, 0, 0, 0]
+    }, {
+        "id": 41,
+        "name": "in the labyrinth, lost",
+        "desc": "Many of these areas look the same to me. I hope you've got some grid paper where you are. I'm lost.",
+        "exits": [null, 0, 0, 45, 37, 0, 0]
+    }, {
+        "id": 42,
+        "name": "in need of a map in the labyrinth",
+        "desc": "Are you sure where you're leading me? This is another dead end. Maybe you should make a map.",
+        "exits": [null, 0, 43, 0, 0, 0, 0]
+    }, {
+        "id": 43,
+        "name": "wandering in the labyrinth",
+        "desc": "Another anonymous-looking bit of labyrinth here, much like the others.",
+        "exits": [null, 42, 0, 47, 39, 0, 0]
+    }, {
+        "id": 44,
+        "name": "in the labyrinth near a chasm",
+        "desc": "To the west is a chasm that I cannot jump across. I may need something to help make a temporary bridge.",
+        "exits": [null, 0, 45, 49, 40, 0, 0]
+    }, {
+        "id": 45,
+        "name": "in the labyrinth, listening",
+        "desc": "I hear a sound coming from the east. It's a little frustrating since I can't get to the east from here.",
+        "exits": [null, 44, 0, 0, 41, 0, 0]
+    }, {
+        "id": 46,
+        "name": "in the labyrinth near a dangerous chasm",
+        "desc": "The chasm to the east looks dangerous. I'm sure we'll figure out how to cross it.",
+        "exits": [null, 0, 47, 51, 0, 0, 0]
+    }, {
+        "id": 47,
+        "name": "in the labyrinth with a hint on the wall",
+        "desc": "Scrawled on the plywood wall is a hint: \"Lost? The center of the maze is to the northeast.\" Now, if I could only figure out how to get northeast from here.",
+        "exits": [null, 46, 48, 0, 43, 0, 0]
+    }, {
+        "id": 48,
+        "name": "in the labyrinth at another dead end",
+        "desc": "Another dead end, sorry. Head back north, I guess.",
+        "exits": [null, 47, 0, 0, 0, 0, 0]
+    }, {
+        "id": 49,
+        "name": "in the labyrinth- yet another dead end",
+        "desc": "Dead end. The only way out is back to the west.",
+        "exits": [null, 0, 0, 0, 44, 0, 0]
+    }, {
+        "id": 50,
+        "name": "in the labyrinth, turned around",
+        "desc": "Is the geometry of this place even Euclidean? I guess it is, but it's confusing. This is giving me a headache.",
+        "exits": [null, 0, 51, 52, 0, 0, 0]
+    }, {
+        "id": 51,
+        "name": "in the labyrinth contemplating the infinite",
+        "desc": "There's a chasm ot the west. Don't try to cross it without something to help you.",
+        "exits": [null, 50, 0, 0, 46, 0, 0]
+    }, {
+        "id": 52,
+        "name": "in the labyrinth still",
+        "desc": "I think I see something moving to the east. I'm not sure since I no longer trust my eyes.",
+        "exits": [null, 0, 53, 54, 50, 0, 0]
+    }, {
+        "id": 53,
+        "name": "in the labyrinth, dead end to the south",
+        "desc": "Another dead end to the south. Head back north, I suppose.",
+        "exits": [null, 52, 0, 0, 0, 0, 0]
+    }, {
+        "id": 54,
+        "name": "at the center of the labyrinth",
+        "desc": "If this were a proper game, you would hear a grand musical flourish right about now. We made it to the center of the maze. At last, that's what the sign says. There's a small hut here. Someone has been living here for a while.",
+        "exits": [null, 0, 0, 52, 0, 0, 0]
+    }, {
+        "id": 55,
+        "name": "near a small museum",
+        "desc": "For an institution that has supposedly been around since the dawn of time, the museum devoted to its history only has one exhibit, kind of sad. I can see another room to the south but it's cut off by what appears to be a garage door.",
+        "exits": [null, 0, 56, 58, 0, 0, 0]
+    }, {
+        "id": 56,
+        "name": "in Hades' quarters",
+        "desc": "In stark contrast to the other parts of the underworld, Hades' quarters are finely appointed and, for lack of a better term, swanky. Thankfully, he's out at the moment or otherwise he would surely turn my soul inside out for fun, and I do not want that.",
+        "exits": [null, 55, 0, 59, 0, 0, 0]
+    }, {
+        "id": 57,
+        "name": "in Hell's Kitchen",
+        "desc": "The sign outside may have oversold this. It's less of a kitchen and more of a break room. Staff come here to unwind and eat their brown bag lunches.",
+        "exits": [null, 0, 58, 0, 0, 0, 0]
+    }, {
+        "id": 58,
+        "name": "in an underworld passage",
+        "desc": "North? South? The underworld is confusing. I'm getting confused. Maybe I need you to make a map and tell me where to go.",
+        "exits": [null, 57, 0, 61, 55, 0, 0]
+    }, {
+        "id": 59,
+        "name": "in Hades' closet",
+        "desc": "Hades has some interesting fashion sense. He has a dozen identical shirts in mustard yellow. Who does that?",
+        "exits": [null, 0, 0, 0, 56, 0, 0]
+    }, {
+        "id": 60,
+        "name": "at the dog house",
+        "desc": "This dog house is about the size of any house in Squalor Holler. The inhabitant, therefore, has got to be similarly enormous. Let's not get on the dog's bad side.",
+        "exits": [null, 0, 61, 64, 0, 0, 0]
+    }, {
+        "id": 61,
+        "name": "in the underworld trying not to freak out",
+        "desc": "The waling of lost souls weaves through the air, bouncing off the rough-hewn stone walls of the underworld.",
+        "exits": [null, 60, 0, 65, 58, 0, 0]
+    }, {
+        "id": 62,
+        "name": "in the underworld alcove",
+        "desc": "Are you lost? I know I am. Did I mention this place is warm? Nobody tells you that the underworld is really humid. I feel sticky. Let's get out of here.",
+        "exits": [null, 0, 63, 66, 0, 0, 0]
+    }, {
+        "id": 63,
+        "name": "in the underworld intake lounge",
+        "desc": "The red stone walls of the underworld seem to close in on me. There is a payphone in the corner for some reason. Is the underworld like jail? Do we get one phone call? Stephanie is here, full name Perstephanie, and she can offer us advice on how to survive here and perhaps make it to the surface.",
+        "exits": [null, 62, 0, 0, 0, 0, 0]
+    }, {
+        "id": 64,
+        "name": "in a tall chamber",
+        "desc": "There is a ladder here and a very faint light coming from above. The smell is horrendous, though. It's bad enough that I have half a mind to stay down here.",
+        "exits": [null, 0, 0, 0, 60, 4, 0]
+    }, {
+        "id": 65,
+        "name": "across the river Styx",
+        "desc": "To the south is the river Styx. The Ferry Person has gone back over, so it's not possible to go back south.",
+        "exits": [null, 0, 0, 67, 61, 0, 0]
+    }, {
+        "id": 66,
+        "name": "at the river Styx",
+        "desc": "I stand at the banks of the river Styx, its turbulent waters teaming with the souls of the dead. Ghostly arms reach up to grab at anything that appears to pass overhead. If you think I'm going to swim to the other side you are out of your alleged mind. The mysterious hooded Ferry Person awaits payment to take me across.",
+        "exits": [null, 0, 0, 0, 62, 0, 0]
+    }, {
+        "id": 67,
+        "name": "in the underworld",
+        "desc": "The sounds of chaos and despair surround me. It's anyone's guess where to go next.",
+        "exits": [null, 0, 68, 0, 65, 0, 0]
+    }, {
+        "id": 68,
+        "name": "in a control room",
+        "desc": "The room features a series of industrial panels, but the focus is a river flow control mechanism. The lever appears to be broken, but with a large pipe wrench I may be able to interact with it.",
+        "exits": [null, 67, 0, 0, 0, 0, 0]
+    }, {
+        "id": 69,
+		"name": "...",
 		"exits": [null, 0, 0, 0, 0, 0, 0]
 	}],
 	"items": [
@@ -61,23 +1355,673 @@
         }, {
             "id": 1,
             "article": "a",
-            "name": "note",
-            "loc": 1,
-            "short": "NOT"
+            "name": "fish",
+            "loc": 15,
+            "short": "FIS"
+        }, {
+            "id": 2,
+            "article": "a",
+            "name": "duck",
+            "loc": 12,
+            "short": "DUC"
+        }, {
+            "id": 3,
+            "article": "the",
+            "name": "Golden APPLE of Discord",
+            "loc": 30,
+            "short": "APP"
+        }, {
+            "id": 4,
+            "article": "a",
+            "name": "set of blueprints",
+            "loc": 28,
+            "short": "BLU"
+        }, {
+            "id": 5,
+            "article": "a",
+            "name": "lightning BOLT",
+            "loc": 35,
+            "short": "BOL"
+        }, {
+            "id": 6,
+            "article": "an",
+            "name": "MRE",
+            "loc": 0,
+            "short": "MRE"
+        }, {
+            "id": 7,
+            "article": "a",
+            "name": "remote (no batteries)",
+            "loc": 9,
+            "short": "REM"
+        }, {
+            "id": 8,
+            "article": "",
+            "name": "batteries",
+            "loc": 34,
+            "short": "BAT"
+        }, {
+            "id": 9,
+            "article": "a",
+            "name": "screwdriver",
+            "loc": 28,
+            "short": "SCR"
+        }, {
+            "id": 10,
+            "article": "a",
+            "name": "wind-up RADIO",
+            "loc": 27,
+            "short": "RAD"
+        }, {
+            "id": 11,
+            "article": "a",
+            "name": "long stem ROSE",
+            "loc": 48,
+            "short": "ROS"
+        }, {
+            "id": 12,
+            "article": "the",
+            "name": "Golden Fleece",
+            "loc": 40,
+            "short": "FLE"
+        }, {
+            "id": 13,
+            "article": "a",
+            "name": "water bowl",
+            "loc": 60,
+            "short": "BOW"
+        }, {
+            "id": 14,
+            "article": "a",
+            "name": "broken electric motor",
+            "loc": 37,
+            "short": "MOT"
+        }, {
+            "id": 15,
+            "article": "a",
+            "name": "knitting needle",
+            "loc": 0,
+            "short": "NEE"
+        }, {
+            "id": 16,
+            "article": "a",
+            "name": "booklet",
+            "loc": 36,
+            "short": "BOO"
+        }, {
+            "id": 17,
+            "article": "a",
+            "name": "brochure titled `so you've just died...`",
+            "loc": 62,
+            "short": "BRO"
+        }, {
+            "id": 18,
+            "article": "a",
+            "name": "large dinosaur bone",
+            "loc": 55,
+            "short": "BON"
+        }, {
+            "id": 19,
+            "article": "a",
+            "name": "long wooden plank",
+            "loc": 16,
+            "short": "PLA"
+        }, {
+            "id": 20,
+            "article": "a",
+            "name": "sunscreen vending machine",
+            "loc": 24
+        }, {
+            "id": 21,
+            "article": "some",
+            "name": "sunscreen",
+            "loc": 0,
+            "short": "SUN"
+        }, {
+            "id": 22,
+            "article": "a",
+            "name": "pipe wrench",
+            "loc": 8,
+            "short": "WRE"
+        }, {
+            "id": 23,
+            "article": "a",
+            "name": "hank of Paulo's hair",
+            "loc": 0,
+            "short": "HAI"
+        }, {
+            "id": 24,
+            "article": "a",
+            "name": "ripe pomegranate",
+            "loc": 57,
+            "short": "POM"
+        }, {
+            "id": 25,
+            "article": "a",
+            "name": "payphone",
+            "loc": 63,
+            "short": "PAY"
+        }, {
+            "id": 26,
+            "article": "",
+            "name": "shears",
+            "loc": 0,
+            "short": "SHE"
+        }, {
+            "id": 27,
+            "article": "a",
+            "name": "compass",
+            "loc": 0,
+            "short": "COM"
+        }, {
+            "id": 28,
+            "article": "a",
+            "name": "wicked-cool jetski",
+            "loc": 13
+        }, {
+            "id": 29,
+            "article": "a",
+            "name": "paddleboard",
+            "loc": 13
+        }, {
+            "id": 30,
+            "article": "",
+            "name": "climbing GEAR",
+            "loc": 0,
+            "short": "GEA"    
+        }, {
+            "id": 31,
+            "article": "a",
+            "name": "coin",
+            "loc": 0,
+            "short": "COI"
+        }, {
+            "id": 32,
+            "article": "a",
+            "name": "control panel",
+            "loc": 68,
+            "short": ""
+        }, {
+            "id": 33,
+            "article": "",
+            "name": "documents",
+            "loc": 34,
+            "short": "DOC"
+        }, {
+            "id": 34,
+            "article": "a",
+            "name": "glittery disco ball",
+            "loc": 0,
+            "short": "BAL"
+        }, {
+            "id": 35,
+            "article": "a",
+            "name": "box with no lid",
+            "loc": 59,
+            "short": "BOX"
+        }, {
+            "id": 36,
+            "article": "the",
+            "name": "Helm of Hades",
+            "loc": 0,
+            "invModifier": "worn",
+            "short": "HEL"
+        }, {
+            "id": 37,
+            "article": "a",
+            "name": "sun VISOR",
+            "loc": 26,
+            "short": "VIS"
+        }, {
+            "id": 38,
+            "article": "a",
+            "name": "sun MEDALLION",
+            "loc": 53,
+            "short": "MED"
+        }, {
+            "id": 39,
+            "article": "a",
+            "name": "banana peel",
+            "loc": 19,
+            "short": "BAN"
+        }, {
+            "id": 40,
+            "article": "an",
+            "name": "empty TUB of Delos Fried Chicken",
+            "loc": 0,
+            "short": "TUB"
+        }, {
+            "id": 41,
+            "article": "an",
+            "name": "opened CAN of oracle wax",
+            "loc": 17,
+            "short": "CAN"
+        }, {
+            "id": 42,
+            "article": "a",
+            "name": "broken foam CUP",
+            "loc": 21,
+            "short": "CUP"
+        }, {
+            "id": 43,
+            "article": "",
+            "name": "Theena",
+            "loc": 3
+        }, {
+            "id": 44,
+            "article": "",
+            "name": "Dion",
+            "loc": 2
+        }, {
+            "id": 45,
+            "article": "",
+            "name": "Hermie",
+            "loc": 24
+        }, {
+            "id": 46,
+            "article": "",
+            "name": "Ditey",
+            "loc": 25
+        }, {
+            "id": 47,
+            "article": "",
+            "name": "Festus",
+            "loc": 5
+        }, {
+            "id": 48,
+            "article": "",
+            "name": "Zee",
+            "loc": 35
+        }, {
+            "id": 49,
+            "article": "",
+            "name": "Chera",
+            "loc": 30
+        }, {
+            "id": 50,
+            "article": "",
+            "name": "Pandy",
+            "loc": 26
+        }, {
+            "id": 51,
+            "article": "",
+            "name": "Jerry (aka the Minotaur)",
+            "loc": 54
+        }, {
+            "id": 52,
+            "article": "",
+            "name": "Stephanie",
+            "loc": 63
+        }, {
+            "id": 53,
+            "article": "",
+            "name": "Cerberus",
+            "loc": 60
+        }, {
+            "id": 54,
+            "article": "",
+            "name": "A. Reeze",
+            "loc": 10
+        }, {
+            "id": 55,
+            "article": "",
+            "name": "Paulo",
+            "loc": 14
+        }, {
+            "id": 56,
+            "article": "",
+            "name": "Poe Sidon",
+            "loc": 11
+        }, {
+            "id": 57,
+            "article": "",
+            "name": "Cetus",
+            "loc": 15
+        }, {
+            "id": 58,
+            "article": "a",
+            "name": "tourist holding an empty tub of Delos Fried Chicken",
+            "loc": 18,
+            "short": ""
+        }, {
+            "id": 59,
+            "article": "a",
+            "name": "remote with batteries",
+            "loc": 0,
+            "short": "REM"
+        }, {
+            "id": 60,
+            "article": "a",
+            "name": "bottle of Trucker's Friend brand Wide Awake PILLS",
+            "loc": 24,
+            "short": "PIL"  
+        }, {
+            "id": 61,
+            "article": "a",
+            "name": "poster",
+            "loc": 11
+        }, {
+            "id": 62,
+            "article": "a",
+            "name": "personal floatation device (PFD)",
+            "loc": 0,
+            "short": "PFD"
+        }, {
+            "id": 63,
+            "article": "a",
+            "name": "plastic erosion FENCE blocking off the marshy area to the west",
+            "loc": 13
+        }, {
+            "id": 64,
+            "article": "a",
+            "name": "plastic erosion FENCE with a large hole in it",
+            "loc": 0,
+            "short": ""
+        }, {
+            "id": 65,
+            "article": "a",
+            "name": "water pump",
+            "loc": 6
+        }, {
+            "id": 66,
+            "article": "a",
+            "name": "romance novel",
+            "loc": 67,
+            "short": "NOV"
+        }, {
+            "id": 67,
+            "article": "the",
+            "name": "ferry-person of the Underworld",
+            "loc": 66
+        }, {
+            "id": 68,
+            "article": "a",
+            "name": "",
+            "loc": 0,
+            "short": ""
+        }, {
+            "id": 69,
+            "article": "a",
+            "name": "",
+            "loc": 0,
+            "short": ""
+        }, {
+            "id": 70,
+            "article": "a",
+            "name": "",
+            "loc": 0,
+            "short": ""
+        }, {
+            "id": 71,
+            "article": "a",
+            "name": "",
+            "loc": 0,
+            "short": ""
+        }, {
+            "id": 72,
+            "article": "a",
+            "name": "",
+            "loc": 0,
+            "short": ""
+        }, {
+            "id": 73,
+            "article": "a",
+            "name": "",
+            "loc": 0,
+            "short": ""
+        }, {
+            "id": 74,
+            "article": "a",
+            "name": "",
+            "loc": 0,
+            "short": ""
+        }, {
+            "id": 75,
+            "article": "a",
+            "name": "",
+            "loc": 0,
+            "short": ""
+        }, {
+            "id": 76,
+            "article": "a",
+            "name": "",
+            "loc": 0,
+            "short": ""
+        }, {
+            "id": 77,
+            "article": "a",
+            "name": "",
+            "loc": 0,
+            "short": ""
+        }, {
+            "id": 78,
+            "article": "a",
+            "name": "",
+            "loc": 0,
+            "short": ""
+        }, {
+            "id": 79,
+            "article": "a",
+            "name": "",
+            "loc": 0,
+            "short": ""
+        }, {
+            "id": 80,
+            "article": "a",
+            "name": "",
+            "loc": 0,
+            "short": ""  
         }
     ],
 	"bitFlagInfo": [
         {"id": 0, "label": "Unknown", "value": 0},
-        {"id": 1, "label": "The curious sort", "value": 10}
+        {"id": 1, "label": "Zee's rage", "value": 25},
+        {"id": 2, "label": "Sun worship", "value": 50},
+        {"id": 3, "label": "MEDUSA Defeated", "value": 20},
+        {"id": 4, "label": "Safety briefing", "value": 15},
+        {"id": 5, "label": "Bolt heist complete", "value": 30},
+        {"id": 6, "label": "", "value": 0},
+        {"id": 7, "label": "Festus fish", "value": 10},
+        {"id": 8, "label": "Ditey rose", "value": 25},
+        {"id": 9, "label": "Paulo sets mission", "value": 0},
+        {"id": 10, "label": "Paulo Trash 1", "value": 0},
+        {"id": 11, "label": "Paulo Trash 2", "value": 0},
+        {"id": 12, "label": "Paulo Trash 3", "value": 0},
+        {"id": 13, "label": "Paulo Trash 4", "value": 0},
+        {"id": 14, "label": "Theena blueprints", "value": 15},
+        {"id": 15, "label": "Theena apple", "value": 25},
+        {"id": 16, "label": "Dog bone", "value": 10},
+        {"id": 17, "label": "Water quality", "value": 25},
+        {"id": 18, "label": "Jerry freed", "value": 25},
+        {"id": 19, "label": "Poms to Steph", "value": 30},
+        {"id": 20, "label": "Dion gets duck", "value": 10}, 
+        {"id": 21, "label": "Dion gets fleece", "value": 10},
+        {"id": 22, "label": "Reeze MRE", "value": 10},
+        {"id": 23, "label": "Chera Distracted", "value": 10},
+        {"id": 24, "label": "Compass complete", "value": 20},
+        {"id": 25, "label": "Do not drop plank", "value": 0}
     ],
 	"messages": {
         "0": "Nothing is happening.",
-        "1": "While you might have expected a note left out for us to find would explain things a bit, but sadly it's just a scrap of paper the developer was scribbling on. The handwriting is atrocious, by the way. For what it's worth, there's a diagram on the note that could be a map, so at least that means development is underway.",
-
+        "1": "Something fell out.",
+        "2": "Placing the plank over the chasm, I casually walk over and pick it back up.",
+        "3": "I manage to open the back of the device with the screwdriver. The batteries fit perfectly.",
+        "4": "I feel the blessings of Paulo upon me.",
+        "5": "\"OH EM GEE!\" shouts the Paulo fan as they grab the baggie of hair from my hand and dash off to brag to their friends, leaving the empty tub behind.",
+        "6": "",
+        "7": "The Ferry Person accepts the coin and whisks escorts me across the river.",
+        "8": "\"No charge,\" says the Ferry Person. \"I think you've been through enough already.\" Soon I am on the other side of the river.",
+        "9": "The door slowly opens...",
+        "10": "The massive sea beast swallows me whole...",
+        "11": "Intense dog breath from three separate dog heads prevent me from passing that way.",
+        "12": "Zee wakes in a rage and zaps me to a crisp...",
+        "13": "The landmines explode, sending my limbs in various directions...",
+        "14": "The radio buzzes as I get too near the mines, allowing me to avoid them.",
+        "15": "I feel electricity crackling all around me. I run up to the fountain, threatening to dunk the bolt in the water, thus voiding Zee's warranty.",
+        "16": "The guards at the gate are less than thrilled to see me. A lot happened very quickly: bullets, knives, tweezers. Long story short, I am now dead...",
+        "17": "Paddle, paddle, paddle...",
+        "18": "Snip. Snip.",
+        "19": "Paulo suns himself in a manner I can only describe as \"gloriously.\"",
+        "20": "With a mighty ka-thunk the wrench rotates the mechanism inside. Somewhere above me, I can hear something change...",
+        "21": "With the clumbing gear, I manage to make it up the hill...",
+        "22": "\"Chera is so wrapped up in her new book that she hardly notices anything.\"",
+        "23": "I feel white hot rage burning my shoulder to meet Zee's fiery gaze. His preamble of grunts and roars clearly signals that he's building up to something big.  As a result, the other residents gather around the square to watch. \"Theif!\" he shouts. \"Unfortunately, due to the law of finders-keepers, I cannot unsteal the object from Theena. However, I can do something about you. I am hereby banishing you to the Labyrinth where the minotaur will surely rip you to pieces and devour you.\" The crowd emits a smattering of confused grumbling. \"We're about due for a sacrifice, and we need to punish this person. So, it's a two for one.\" I feel arms pulling be east toward the deadly labyrinth...",
+        "24": "I'm getting turned around...",
+        "25": "A wind pushes me back. From deep within the labyrinth an ancient voice stirs: \"the time is not yet right for you to test yourself here.\"",
+        "26": "The gap is too far to jump across.",
+        "27": "I'm not going to drop this while in the Labyrinth. That seems like a very bad idea in here.",
+        "28": "The M.E.D.U.S.A device comes to life in a blinding flash of light. It's high-powered lasers slice me to ribbons. I am dead...",
+        "29": "The M.E.D.U.S.A device comes to life as I approach, but the disco ball's mirrors reflect the high-powered lasers back toward the door. A smudge on the laser's lens causes the unit to overheat, sparks and metal bits fly everywhere. Let that be a lesson to everyone working with lasers: always clean your optics.",
+        "30": "A large metal barrier not unlike a garage door bars my entry...",
         "//": "------------------------------------------------------------------------------------",
-
         "52": "I sense that something has changed.",
-        "53": "All around me I feel the sensation of being where I don't belong...",
+        "53": "This sounds like a good idea, but I can't do that yet.",
+        "54": "Oh, I think I see what you're trying to do, but sadly that will not work.",
+        "55": "Dion grips his bottle of Mr. Zee's White Lightning Premium Corn Mash Liquor and grunts, \"I miss my duck. My pet duck. She's brown and white and about ankle high. She looks just like a duck, actually. Can you bring her back to me?\"",
+        "56": "A blue and silver fish that seems good for eating or for revenge, I guess.",
+        "57": "This brown and white duck-shaped animal walks like a duck and quacks like a duck. It's very likely that this is, in fact, a duck.",
+        "58": "The object is about twice the size of an average apple and solid gold. The heft of it, the way it catches the light as I turn it in my hand makes me want to keep it for myself. I must have it! I can see why people are fighting over this thing.",
+        "59": "I'm not an engineer or an architect, but it sure seems like these plans show that Zee is up to no good.",
+        "60": "As McGuffins go, this one is pretty nifty. This glowing blue and black lightning bolt hums with raw power. Of course, it could be buzzing because Zee is getting a call. I don't know.",
+        "61": "The dark grey-brown bag of \"food\" can be consumed in an emergency, but don't ask me to eat it. I think it's been in storage too long.",
+        "62": "It's a a small grey box with a single button. It looks a lot like a garage opener. The battery case on the back is empty. It looks like it takes button-cell batteries. The instructions say, \"To install batteries try USE BATTERIES. Requires screwdriver.\"",
+        "63": "It's a a small grey box with a single button. It looks a lot like a garage opener. The device now has batteries.",
+        "64": "The batteries are the small disc-shaped like buttons.",
+        "65": "It looks almost exactly like a small screwdriver. It drives screws, small ones.",
+        "66": "This radio receives AM and FM. It also seems to pick up on weird hums around town. I think Theena may have a metal plate in her head and we're picking it up. The radio also has a nifty hand-crank so we don't need to worry about running out of power.",
+        "67": "A rose by any other name would be a different flower entirely. This one is a rose.",
+        "68": "This handsome yellow fleece quarter-sip pullover comes in a variety of sizes. It's perfect for lounging around the house or tailgating with pals before the big game.",
+        "69": "This bowl filled with water is quite hard to carry. I sure hope it's useful for something. Otherwise, this is going to seem like a waste of effort.",
+        "70": "Like a lot of things left to rot in the Labyrinth, this broken electric motor is little more than junk. It could have useful parts, though. It may have a magnet in there somewhere.",
+        "71": "Theena's knitting needle is made of a solid non-ferrous material, good for pointing the way. Theena takes her knitting very seriously.",
+        "72": "The booklet reads: \"To construct a compass, you will need to assemble the following items: water in an open container, a needle of some kind, and a magnet. Assembling it is tricky, so you may need a friend to help you out.\"",
+        "73": "The brochure is filled with several colorful illustrations of lost souls making the best of things in the underworld. \"Oh, dear. It seems you have died. Well, no need to fret. Death is not the one way ticket you may have believed it to be. You are, in fact, only temporarily life-deprived. All the tools you need to survive and thrive in a post-life world are here in the Underworld. Some words of advice: don't go into unauthorized areas, and don't eat any food you find here. The food thing is very important. Just ask Stephanie.\"",
+        "74": "This is one find dinosaur bone. I assume it's a dinosaur because it's so dang big. I know literally nothing about paleontology. I'm not even sure if I spelled it right.",
+        "75": "A sturdy wooden plank about 10 inches across and 10 feet long. This thing might come in handy.",
+        "76": "The vending machine accepts coins and spits out tubes of SPF 50 sunscreen, the best on the market.",
+        "77": "The wrench has a satisfying heft to it in my hands. It's got a long handle, too, so I can use leverage to move something that is stuck.",
+        "78": "This is a small plastic baggie with a lock of Paulo's hair in it. Personally, I don't see the appeal, but it's clear that others do not feel this way.",
+        "79": "The plump red fruit looks delicious and highly dangerous.",
+        "80": "The payphone is a relic of an earlier time when it was considered polite for the newly deceased to phone up loved ones and announce that they would not be making it home for dinner.",
+        "81": "Solid shears good for cutting things like metal or plastic.",
+        "82": "Festus did a great job. It really looks like a compass. It even shows where north is and everything.",
+        "83": "Oh, man. This thing looks rad. Purple and green detailing, oversized exhaust. Just looking at it, I can tell that it can go really fast.",
+        "84": "It's fine. It's a paddleboard. I'm not sure I want to ride that thing, but I will if you make me.",
+        "85": "This is fancy alpine climbing gear.",
+        "86": "It has Zee's face on it, another reminder of who is in charge around here.",
+        "87": "The control panel's lights show the flow of the river Styx as it runs near the town's well. The lever is broken, but it could be moved with a tool of some kind. Currently, the flow control has the poisonous waters of the river Styx are flowing into the well above.",
+        "88": "The control panel's lights show the flow of the river Styx as it runs near the town's well. The lever is broken, but it could be moved with a tool of some kind. Currently, the river Styx is not connected to the water supply above.",
+        "89": "The printed spreadsheets have a lot of red numbers on them. There are some other documents, letters from investors with all-capital letters. Things are not going well at O Mountain Estates, it seems.",
+        "90": "I could stare at this thing for ages. It looks like a hundred tiny me's on the surface of the ball.",
+        "91": "The box has no lid. I'm sure something  important is inside, but I can't tell what it is.",
+        "92": "The elaborate Helm of Hades is to be worn on the head in times of danger, according to the instructions printed on the inside. Its abilities may not kick in until the right moment.",
+        "93": "The tube of sunscreen is a very high SPF, great for keeping a person safe while worshiping the sun.",
+        "94": "The visor blocks the sun above my eye-line, just the thing for an afternoon worshiping the sun.",
+        "95": "This elaborately-decorated chunk of metal looks like a million bucks, but is probably worth less than three dollars on the open market. It's only use, it seems, is sun worshiping.",
+        "96": "It's yellow-brown and it smells bad.",
+        "97": "The greasy rub of what was fried chicken is now trash.",
+        "98": "Everyone knows that oracles don't need waxing. They have a natural lubricant. This thing is trash.",
+        "99": "The cup is broken. Let's not leave it lying around. It's trash.",
+        "100": "From the bags under her eyes and her generally weary demeanor, it's clear that Theena has seen some stuff, and not all of it has been great. She seems to know a great deal about the town and the people in it. We should probably listen to her.",
+        "101": "I get the impression Dion slept in those clothes, and his aroma proves me right. Dion's relationship with alcohol is problematic. He drinks like it's his job, and somewhere in the blurry mists of his memory, it was his job.",
+        "102": "At one time, Hermie had a thriving messenger business in town, but by now it's clear that trade has fallen off considerably. It's hard to say when it happened or why.",
+        "103": "Ditey is the kind of woman people write country songs about. While I can't say exactly who's doing the drinkin' and who's doing the cheatin' or whose boots are under whose bed, it's clear that Ditey is in the picture somehow.",
+        "104": "Festus is a highly talented blacksmith and gadgeteer, and also a man with a broken heart.",
+        "105": "As angry as I am about him sending me to the labyrinth to die, I have to admit he is kind of adorable when he sleeps. Sue me.",
+        "106": "Lounging by the pool in her white one piece swimsuit sipping iced tea, Chera carries herself as if she knows nothing of her husband's plans. I've seen enough mob movies to know that if Zee is up to something, she is probably involved.",
+        "107": "Pandy is a curious sort of person, and she seems to be onto something.",
+        "108": "Jerry does not look one bit like a minotaur. He's kind of tall, I guess, but yeah, not a minotaur. I would say I'm happy he wasn't some murderous beast, but honestly I'm a little disappointed.",
+        "109": "Stephanie, also known by her full name Perstephanie, is a greeter here in the underworld. She came down here for an internship and stayed.",
+        "110": "This creature would be intimidating with one head, maybe two for good measure. Three heads? That just seems excessive. He's an enormous angry dog. If I move closer he will kill me- but aren't I already dead?",
+        "111": "Don't let the stained underwear fool you. Reeze is a serious military tactician. As evidenced by the landmines in his yard and this solidly constructed bunker, he is not one with which to trifle.",
+        "112": "Paulo's dark ringlets and his high, angular cheekbones make it clear why the people adore him so. The poor creature can't even go back to the island of his birth for fear of being mobbed by fans.",
+        "113": "Standing in his red shorts, whistle at the ready, Poe never quite outgrew his teenage job as a lifeguard. Poe rules the waves, but safety first.",
+        "114": "Scales and tentacles and teeth. Eyeballs and fins and an unpleasant fishy smell. These are the words I use to describe Cetus.",
+        "115": "\"Oh, thank you,\" says Stephanie, accepting the fruit. She takes a bite. Soon I see the pain of realization grip her face as it becomes clear that this one bite means she must spend another year in the underworld.",
+        "116": "Dion is overcome with joy upon being reunited with his pet duck. As a reward, he lobs a life jacket (or PFD) in my direction as he scurries off. I'm still not certain that was his duck. Oh, well.",
+        "117": "Theena unrolls the blueprints on the bar, slowly scanning the drawings for clues. \"There it is. The drainage for O Mountain, down there in the corner- it's designed to flood the town with raw sewage. I'll keep this.\" Looking around for a reward, she shrugs and hands me one of her knitting needles. \"Hey, if you get a chance to swipe a gold apple from Chera, bring it here. It belongs here.\"",
+        "118": "\"You should probably keep that away from me,\" she says. \"I don't think I trust myself with it.\"",
+        "119": "She smiles warmly. \"Like most valuable things in this world, having this is not as sweet as the knowledge that Chera doesn't have it.\" I peek outside the window and I see a crowd forming. \"Zee probably followed you here. He'll probably send you to get eaten by the Minotaur, but don't worry. He's a sweetheart.\"",
+        "120": "\"I don't want to talk to anyone,\" says Festus. He seems angry but also sad and confused. Ditey was out of Festus' league, but there's no point in mentioning that now. \"What I want is a way to get revenge on my ex, Ditey. Something smelly like a fish that I can stick under her radiator. You got anything like that?\"",
+        "121": "\"Yeah, thanks,\" he says. \"Now that I thought about it for a bit, revenge is a bad idea. Maybe I'll use the fish to cook her dinner.\" Festus wipes the liquids from his face and nose. \"You seem like a good person. Tell you what- I'll make you something for free. Bring me the materials and I can make you something useful. Here's an example of my work, a pair of heavy duty shears.\" He hand me the shears and goes back to work.",
+        "122": "\"I don't know what to do with that stuff,\" says Festus.",
+        "123": "\"Ah, OK. I know just what I can do with all of this,\" he says excitedly. After a half hour of hammering and muttering, Festus completes the project: a perfectly functional compass.",
+        "124": "\"I don't like to talk about that stuff.\"",
+        "125": "\"I'm going to send you on an epic quest,\" says Dion, his eyes half closed. \"I require the Golden Fleece. I lost it somewhere in the labyrinth, and I'm getting chilly. Please find it for me.\" He then returns to his pastime of muttering to himself.",
+        "126": "\"Excellent work, young adventurer,\" says Dion as he pulls his arms through the sleeves. \"Ah, that's better. I'm not sure what you can do wit this but I nicked this from Theena's back when she had a dance floor in that bar of hers.\" Dion hands me a shiny mirrored disco ball.",
+        "127": "\"Zee is planning something terrible, I just know it. I can't prove it yet, though.\"",
+        "128": "\"Ditey is so far out of Festus' league, they're not even playing the same sport. Poor guy. He's miserable, but he's going to have to get over it.\"",
+        "129": "\"I am not her biggest fan.\"",
+        "130": "\"That's a fancy word for maze. People go in and they don't come out. It's not all that bad, though.\"",
+        "131": "\"New in town?\" asks Theena. I nod. \"I can tell because you're not dead-eyed like the rest of us. Give it time, though. You'll catch on. In my line of work, I have the dirt on just about everyone, so just ask. For example, to ask about Zee, just SAY ZEE.\"",
+        "132": "\"Have you seen Chera? She's got my apple. I mean, it's not technically my apple, but it's certainly not hers.\"",
+        "133": "\"I know I can prove Zee is up to something, but I need some evidence. You got anything?\"",
+        "134": "\"Howdy, adventurer!\"",
+        "135": "\"I knew he was up to something nasty on O Mountain. To take him down, we need to steal the source of his power: his lightning bolt.\"",
+        "136": "\"I am not her biggest fan. She has something of mine, an apple.\"",
+        "137": "\"Oh, it's only the most magnificent object in the world. To see it is to covet it completely. Also, stealing it would get Chera all cheesed off, so go steal it for me.\"",
+        "138": "\"She's been ringing alarm bells about the water here for a while, and I don't know. Maybe she has a point. It smells really bad.\"",
+        "139": "\"The fame has gone to his head, you know, and he's not all there if you know what I mean. He's been sitting out in the sun too long. The guy is going to turn himself into a raisin if he's not careful.\"",
+        "140": "\"She's a nice girl, I suppose, but dumb. Hades has a strict rule against eating food in the Underworld. It's how you get ants, he says. Anyway, Steph forgets and gets hungry - then bam, she's stuck down there for another year. Bless her heart.\"",
+        "141": "\"Rumor has it he has a special helmet. Not sure what it does, but I have a feeling you're going to need to find it before we're done with you.\"",
+        "142": "\"Paulo's fans are crazy. I wouldn't get near that place if you paid me.\"",
+        "143": "\"He can set you up with transportation out to the island if you want, but you have to sit through his safety lecture- and good luck with that!\"",
+        "144": "\"He's not doing so well, I guess. He started day drinking a while back, and I should probably cut him off but he's my best customer.\"",
+        "145": "\"I don't know what to say.\"",
+        "146": "\"Welcome to the Marina! If you want to enjoy the Jetski, you'll need two things: a personal floatation device or PFD and you need attend my safety briefing.\"",
+        "147": "To get Poe to give you a safety briefing, just SAY SAFETY to him. It's really that easy.",
+        "148": "\"Now that you have the knowledge you need to be safe on the water, you can USE the JETSKI as long as you have a PFD. Be careful, though. Safety first! And also second. And sometimes third as well.\"",
+        "149": "Poe begins speaking about sea rescues, but soon I find myself unable to stay awake... by the time I shake myself awake, he's chiding me for my inattention. I have failed the safety briefing.",
+        "150": "I pop a few of the Wide Awake pills as Poe begins speaking and manage to stay awake for the whole thing. It's been four hours, and I am now a certified lifeguard in seven countries excluding this one. I also have access to the JEKSKI as long as I have a PFD.",
+        "151": "This sweet motorcycle of the sea is only available for use by people who: 1) have taken the thorough safety briefing from Poe and 2) possess a PFD. Safety first!",
+        "152": "The fence blocks my path.",
+        "153": "\"Oh, hey,\" says Paulo casually. \"Delos is my spot, bro. I was born there, love the place. But check it out- it's a mess now because my fans are all over the place, and they don't know what a trash can is for, I guess. Can you go over there and bring me trash you find. Four pieces of trash should do it. I'd take care of this myself, but we both know I'm too famous for that. Hey, if anyone gives you trouble over there, use this.\" He clips off a lock of his hair, puts it in a small plastic baggie and hands it to me.",
+        "154": "Paulo accepts the refuse gladly.",
+        "155": "Paulo is beaming with pride. \"My island is clean, bro! Thanks. I should really give you something as a reward, but I dunno. I'm all shrug emoji over here. How about this ready to eat meal thing? I found it lying around. Maybe you could find a use for it.\"",
+        "156": "\"Soldier!\" shouts Reeze, inches from my face. \"In our battle against the encroaching menace of Zee and his minions, we must become self-sufficient if we want to survive! I can only assume that by now the world above ground has descended into a nightmare of radiation and communism. I need you to go out there and find me self-sufficient sustenance.\" I'm not sure what all of this means. I think he's just hungry.",
+        "157": "\"Soldier! Do not for one second slacken your commitment to the cause. Be ever-vigilant! Zee is everywhere! I see his shadow on the walls. At night I can hear him in the pipes. Be always alert!\"",
+        "158": "Reeze grabs the MRE and pops a small straw in it like a drink pouch and begins consuming it. \"Your efforts in the support of freedom have not gone unnoticed, soldier. I acquired this alpine climbing gear from a mercenary job a while back. You can have it. You earned it.\"",
+        "159": "\"Welcome to the Underworld, traveller,\" she says with a pasted-on grin. \"The Underworld staff recognizes that you have choices where you spend the afterlife, and we're glad and proud that you chose us. Please follow the passage along to the banks of the river Styx and present a coin for passage. B-bye now. B-bye.\"",
+        "160": "The water coming from the pump smells really odd.",
+        "161": "The water coming from the pump smells fine, just like water.",
+        "162": "The slobbery beast gleefully accepts the gift. He leans down briefly so I can pet him. The fur is coarse and dark. His three heads fight over the bone and he runs off bury it somewhere in the bowels of the underworld.",
+        "163": "One day, perhaps the tables will be turned and I would demand that you jump into the stinky abyss of a port-a-potty. For today, though, the answer is no.",
+        "164": "The hillside is very slippery. I try to make it up, but I only succeed in skinning my knee.",
+        "165": "Bad idea. The guards are there and will surely kill me if they see me coming from the O Mountain property. Hard pass.",
+        "166": "\"Are you the new pool boy? Please do a better job skimming than our last one.\"",
+        "167": "She seems to ignore me.",
+        "168": "\"Theena, what a wretch,\" says Chera through her teeth. \"She and her friends are going to get what's coming to them soon enough.\"",
+        "169": "I should probably find something about what Zee has planned before I go hang out by the pool.",
+        "170": "I can't make much sense of these. I should give them to Theena to see what she has to say.",
+        "171": "\"Ooh, this is her new one!\" she squeals, grasping the book tightly. \"I simply must devour this right away!.\" Chera is now thoroughly distracted.",
+        "172": "\"Just what do you think you're doing?\" she shouts slapping the apple out of your hand. \"You are fired!\" Before I can explain that I do not work for her, she becomes very bored and ignores me.",
+        "173": "The cover features a muscular, long-haired man wearing a shirt that seems simultaneously too small, too large, and insufficiently buttoned. The description on the back promises a forbidden love that knew no boundaries. In it, a shy woman of simple upbringing falls for the charms of a saucy rogue who turns out to be unbelievably wealthy, a prince, as well as a poet of some renown. Book 17 of 50. Hot stuff.",
+        "174": "\"Oh, it's a lovely little bauble, isn't it?\" she says glancing over at the object as the rays of the sun glint off of its perfect surface. \"Some time ago, a few of the dirty women from down in the Holler were fighting over it, so I had Zee steal it from Theena. I had to do it. Those girls lack the class and sophistication to properly care for magnificent objet d'art such as this. Let's face it, those girls are trash. They ought to know their place.",
+        "175": "If you want me to make you something, put drop three items on the floor, and if I can make something out of them I'll do it.",
+        "176": "Festus takes the items and knows just what to do. After several hours of hammering and some light cursing, he pulls from the flames a perfectly operational compass.",
+        "177": "\"Oh, hi there. Are you a stranger in town? I've always relied on the kindness of those kinds of people.\"",
+        "178": "\"Festus is very sweet, but it'll never work out between us. I'm the personification of beauty and he's, well, Festus.\"",
+        "179": "\"Oh, that's nice. I like roses. Did Festus send this? He's a nice guy, but it really won't work out with us. I hated to break his heart, but that's just how it is sometimes.\" She places the rose on a shelf next to the roughly five hundred roses from other suitors.",
+        "180": "\"Hello!\" says Jerry (aka The Minotaur) with a friendly handshake. \"Welcome to the center of the labyrinth!\" He removes the Papier-mâché bull's head and shrugs. \"It's all for show. Usually people run away and I live off the scraps that fall out of their backpacks. The town threw me in here a while back fopr asking too many questions about city management. Every few months, they send me 'sacrifices' like yourself.\" He grabs my feet and stares at my shoes. \"I can follow your footprints back out of here. Soon I'll be free! After I fold the laundry, of course.\"",
+        "181": "Zee shakes himself awake. Now that I am invisible, he only sees the bolt floating in space and assumes that he is still dreaming. He resumes his snoring.",
+        "182": "\"Yeah, I'm not feeling it right now. I'm worried about the water in this town. Have you smelled it? It's weird. I think we're being poisoned.\"",
+        "183": "Pandy takes the box from me and slaps the top with the flat palm of her hand. The box opens to reveal The Helm of Hades. \"I'll take the box as a reward,\" she says.",
+        "184": "184",
+        "185": "185",
+        "186": "186",
+        "187": "187",
+        "188": "188",
+        "189": "189",
+        "190": "190",
+        "191": "191",
+        "192": "192",
+        "193": "193",
+        "194": "194",
+        "195": "195",
+        "196": "196",
+        "197": "197",
+        "198": "198",
+        "199": "199",
         "": ""
     }
 }

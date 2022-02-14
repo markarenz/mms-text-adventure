@@ -16,22 +16,22 @@
 	"vocab": [ 
         {
             "//": "GO CAR - MALL",
-            "matches": [158],
-            "conditions": [44,42,80,0,0],
+            "matches": [158, 153],
+            "conditions": [44,42,80,0,0,0,0],
             "actions": [8170, 0]
         }, {
             "//": "GO CAR - UNIVERSITY",
-            "matches": [158],
+            "matches": [158, 154],
             "conditions": [42,524,80,0,0,0,0],
             "actions": [8170, 0]    
         }, {
             "//": "EXIT CAR - MALL",
-            "matches": [1358],
+            "matches": [1358, 154],
             "conditions": [84,129,40,0,0,0,0],
             "actions": [8170, 0]
         }, {
             "//": "EXIT CAR - UNIVERSITY",
-            "matches": [1358],
+            "matches": [1358, 154],
             "conditions": [84,128,520,0,0,0,0],
             "actions": [8170, 0]            
         }, {
@@ -150,12 +150,12 @@
             "conditions": [184,313,60,0,0],
             "actions": [8170,0]
         }, {
-            "//": "GO FOUNTAIN - WET",
-            "matches": [177],
-            "conditions": [382,0,0,0,0],
-            "actions": [16500,0]
+            "//": "GO SOUTH, GO FOUNTAIN - WET",
+            "matches": [177, 152],
+            "conditions": [382,280,0,0,0,0,0],
+            "actions": [16554,0]
         }, {
-            "//": "GO FOUNTAIN - DRY",
+            "//": "GO SOUTH, GO FOUNTAIN - DRY",
             "matches": [177],
             "conditions": [402,300,0,0,0],
             "actions": [8100,0]
@@ -414,8 +414,46 @@
             "matches": [4110, 4115],
             "conditions": [883,0,0,0,0,0,0],
             "actions": [22350,0]
-        
-
+        }, {
+            "//": "LOOK COMPACTOR",
+            "matches": [4104],
+            "conditions": [242,0,0,0,0,0,0],
+            "actions": [22650,0]
+        }, {
+            "//": "LOOK COMPACTOR",
+            "matches": [4104],
+            "conditions": [242,0,0,0,0,0,0],
+            "actions": [22650,0]
+        }, {
+            "//": "LOOK CAR",
+            "matches": [4058],
+            "conditions": [42,0,0,0,0,0,0],
+            "actions": [23550,0]
+        }, {
+            "//": "LOOK TISSUES",
+            "matches": [4059],
+            "conditions": [23,0,0,0,0,0,0],
+            "actions": [23400,0]
+        }, {
+            "//": "LOOK PAINT",
+            "matches": [4061],
+            "conditions": [83,0,0,0,0,0,0],
+            "actions": [23250,0]
+        }, {
+            "//": "LOOK RECEIPT",
+            "matches": [4068],
+            "conditions": [63,0,0,0,0,0,0],
+            "actions": [23100,0]
+        }, {
+            "//": "LOOK HORSE",
+            "matches": [4065],
+            "conditions": [123,0,0,0,0,0,0],
+            "actions": [22950,0]
+        }, {
+            "//": "LOOK CAT",
+            "matches": [4071],
+            "conditions": [203,0,0,0,0,0,0],
+            "actions": [22800,0]
         }
     ],
 	"events": [ 
@@ -478,8 +516,8 @@
 	}, {
         "id": 2,
 		"name": "in a mall parking lot (north)",
-        "desc": "Circles of harsh halogen light stream down onto the nearly empty flat black surface of the lot, as empty and dull as the town itself. A path leads north and curves west to the back of the mall.",
-		"exits": [null, 7, 5, 0, 1, 0, 0]
+        "desc": "Circles of harsh halogen light stream down onto the nearly empty flat black surface of the lot, as empty and dull as the town itself. A car sits off to the east. A path leads north and curves west to the back of the mall.",
+		"exits": [null, 7, 5, 4, 1, 0, 0]
 	}, {
         "id": 3,
 		"name": "in a fenced-in area near a large wall",
@@ -489,7 +527,7 @@
         "id": 4,
 		"name": "in a parked 1982 Chevette",
         "desc": "Although I cannot confirm this, it seems highly likely that the the car's current owner eats every meal right here in the driver's seat. Empty Burger Duke bags are strewn everywhere. If I'm honest, the smell makes me wish I was still in the dumpster.",
-		"exits": [null, 0, 0, 0, 0, 0, 0]
+		"exits": [null, 0, 0, 0, 2, 0, 0]
     }, {
         "id": 5,
         "name": "in a mall parking lot (south)",
@@ -538,8 +576,8 @@
     }, {
         "id": 14,
         "name": "at the mall entrance",
-        "desc": "I stand in the stately entrance of the Caperville Mall, truly a wonder of the world. As I may have mentioned previously, the door to the south is blocked from the outside. To the north is the main CONCOURSE. There is a lovely FOUNTAIN here generating some lovely white noise to drown out the soft jazz coming from the mall speakers.",
-        "exits": [null, 0, 0, 13, 16, 0, 0]
+        "desc": "I stand in the stately entrance of the Caperville Mall, truly a wonder of the world. As I may have mentioned previously, the door to the south is blocked from the outside. To the north is the main CONCOURSE. There is a lovely foutain to the south generating some lovely white noise to drown out the soft jazz coming from the mall speakers.",
+        "exits": [null, 0, 15, 13, 16, 0, 0]
     }, {
         "id": 15,
         "name": "fully inside this fountain",
@@ -599,8 +637,8 @@
     }, {
         "id": 26,
         "name": "in a parking lot at the university",
-        "desc": "Through the glare of the nearby streetlamp, I can see college life unfolding around me. To my north I see the statue-freckled courtyard that marks the center of campus. Thanks to the loud music coming from the fraternity house nearby, I am already getting a headache.",
-        "exits": [null, 27, 0, 0, 29, 0, 0]
+        "desc": "Through the glare of the nearby streetlamp, I can see college life unfolding around me. To my north I see the statue-freckled courtyard that marks the center of campus. Tony's car is off to the east. Thanks to the loud music coming from the fraternity house nearby, I am already getting a headache.",
+        "exits": [null, 27, 0, 4, 29, 0, 0]
     }, {
         "id": 27,
         "name": "in the central quad of the university",
@@ -709,42 +747,35 @@
             "id": 1,
             "article": "a",
             "name": "tissue box",
-            "desc": "It's a rectangular box of facial tissue with a tearaway lid for ease of use, a simple but elegant design.",
-            "//":  "10",
             "loc": 1,
             "short": "TIS"
         }, {
             "id": 2,
             "article": "a",
             "name": "poorly maintained car",
-            "desc": "While it's not surprising that Tony 'Has a Car' Phillipson does, indeed, have a car, the dilapidated state of the vehicle does make me wonder why he brags about it so much.",
             "loc": 2
         }, {
             "id": 3,
             "article": "a",
             "name": "stained receipt",
-            "desc": "This recent receipt from Rick's House of Lo Mein is thoroughly covered in duck sauce, so much so that it's nearly impossible to read.",
             "loc": 4,
             "short": "REC"
         }, {
             "id": 4,
             "article": "",
             "name": "orange spray paint",
-            "desc": "This is the kind of quick dry paint you see advertized on TV. It's a good quality paint, though this shade of orange is a little tacky for my sensibilities.",
             "loc": 3,
             "short": "SPR"
         }, {
             "id": 5,
             "article": "a",
             "name": "coin",
-            "desc": "While it would be fun to report that this is a rare 1917 Liberty half dollar, it's just a boring 1978 quarter. No good for keeping in your pockets if you're time travelling, of course, but it'll do.",
             "loc": 15,
             "short": "COI"
         }, {
             "id": 6,
             "article": "a",
             "name": "glorious coin-operated horse",
-            "desc": "My words are insufficient to describe the raw majesty of this artificial beast. I know my job is to do what you say, but if you were to perhaps find a coin and then instruct me to RIDE the HORSE, I would be ever so grateful. The coin acceptance slot seems a little dodgy, though.",
             "loc": 6
         }, {
             "id": 7,
@@ -768,7 +799,6 @@
             "id": 10,
             "article": "a",
             "name": "small black cat",
-            "desc": "The sleek black cat has a small glass cylinder handing from its collar. Hey, is this the cat Dr. Morbus was talking about?",
             "short": "CAT",
             "fakeTake": true,
             "loc": 36
@@ -782,7 +812,6 @@
             "id": 12,
             "article": "an",
             "name": "industrial compactor",
-            "desc": "This is a PowerCrush 7200, a truly impressive machine. Though it is marketed as a highly versital compactor, it seems like this can only handle one or two types of things to crush because, well, games.",
             "loc": 7
         }, {
             "id": 13,
@@ -867,7 +896,7 @@
         }, {
             "id": 28,
             "article": "",
-            "name": "Tony (has a car) Phillipson",
+            "name": "Tony (has a car) Hazakar",
             "loc": 19
         }, {
             "id": 29,
@@ -1002,8 +1031,8 @@
     ],
 	"messages": {
         "0": "Nothing is happening.",
-        "1": "`Slow ride! Take it ... Slow ride!` The 8-track stuck in the dash seems to be looping.",
-        "2": "If you want me to exit a car, sometimes it's as simple as saying EXIT CAR.",
+        "1": "\"You... you light up my life...\" Of all the 8-tracks to get stuck in the dash, it had to be this one?",
+        "2": "\"So many dreams... I kept deep inside me...\" Make it stop. If I have to listen to this song loop one more time I'm going to corrupt your save files.",
         "3": "Ah, that's better. My face less hideous now.",
         "4": "No need. I already wiped my nose.",
         "5": "I cannot do that.",
@@ -1074,6 +1103,13 @@
         "98": "\"BEEP - Also, memo to self - I need to pick up my zither from the music store.\" The messages seem to loop back around from here.",
         "99": "It's hard to say if it looks important. Some items seem to be here just to distract us.",
         "100": "CONGRATS! By collecting all of the pointless items in the game, you have won the Red Herring award and boosted another meaningless stat, your score!",
+        "101": "This is a PowerCrush 7200, a truly impressive machine. Though it is marketed as a highly versital compactor, it seems like this can only handle one or two types of things to crush because, well, games.",
+        "102": "The sleek black cat has a small glass cylinder handing from its collar. Hey, is this the cat Dr. Morbus was talking about?",
+        "103": "My words are insufficient to describe the raw majesty of this artificial beast. I know my job is to do what you say, but if you were to perhaps find a coin and then instruct me to RIDE the HORSE, I would be ever so grateful. The coin acceptance slot seems a little dodgy, though.",
+        "104": "This recent receipt from Rick's House of Lo Mein is thoroughly covered in duck sauce, so much so that it's nearly impossible to read.",
+        "105": "This is the kind of quick dry paint you see advertized on TV. It's a good quality paint, though this shade of orange is a little tacky for my sensibilities.",
+        "106": "It's a rectangular box of facial tissue with a tearaway lid for ease of use, a simple but elegant design.",
+        "107": "While it's not surprising that Tony 'Has a Car' Hazakar does, indeed, have a car, the dilapidated state of the vehicle does make me wonder why he brags about it so much.",
         "": ""
     }
 }

@@ -7,7 +7,14 @@ import { loadGame, saveGame } from './gameSaveFunctions';
 import displayRoom from './displayRoom';
 import showScore from './showScore';
 import { getNounVerbFromInput, getWordsFromInput } from './processInput';
-import { reverseConditions, reverseActions } from './devToolsFunctions';
+import {
+  reverseConditions,
+  reverseActions,
+  checkUsage,
+  fixGameSave,
+  getActionString,
+  getFullVocab,
+} from './devToolsFunctions';
 import isDark from './isDark';
 
 export {
@@ -29,4 +36,8 @@ export {
   reverseConditions,
   reverseActions,
   isDark,
+  checkUsage,
+  fixGameSave,
+  getActionString,
+  getFullVocab,
 };
