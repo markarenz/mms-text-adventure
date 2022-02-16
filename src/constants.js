@@ -8,7 +8,7 @@ const noComprendeMessages = [
 ];
 const takeErrorMsg = `It is beyond my power to do that.\n`;
 const exitLabels = ['', 'North', 'South', 'East', 'West', 'Up', 'Down'];
-const selectGameIntroText = `BEEP. BOOP. BEEP. This reverse-engineered adventure likes "VERB NOUN" combinations such as "GO NORTH" and "LIGHT TORCH."
+const selectGameIntroText = `BEEP. BOOP. BEEP. This reverse-engineered adventure likes "VERB NOUN" combinations such as "GO NORTH" and "LIGHT TORCH." You can save locally, so save often.
 During the game, type ? for more help. Select an adventure from the list below.`;
 const SELECTING_GAME = 0;
 const PLAYING_GAME = 1;

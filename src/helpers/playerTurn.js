@@ -627,7 +627,7 @@ const playerTurn = (
       output = 'Tell me what to do...\n';
     } else {
       outputMode = 'clear';
-      output = `${output}<i>${gameData.headers.introText}</i>\n\n`;
+      output = `"${output}${gameData.headers.title}" by ${gameData.headers.author}\n\n<i>${gameData.headers.introText}</i>\n\n`;
       output = displayRoom(
         output,
         forceDisplayRoomDesc,

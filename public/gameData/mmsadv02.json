@@ -1,6 +1,6 @@
 {
 	"headers": {
-        "title": "Squalor Holler",
+        "title": "Greetings from Squalor Holler",
         "author": "Mark Arenz",
         "year": 2022,
 		"maxCarry": 5,
@@ -9,8 +9,8 @@
 		"lightTime": 0,
         "lightOffItemId": 0,
         "lightOnItemId": 0,
-        "introText": "It was all a big myth-understanding...\n\nLocal bigwig Mr. Zee has bulldozed the hilltop to make way for a gated community, O Mountain Estates, leaving everyone else to eke out a living down here in a depressing little village affectionately known as Squalor Holler. Saving the town will mean defeating Zee at his own game, but judging by the lightning bolt he carries around with him everywhere, I don't think butting heads with him is a good idea.\n\nI will be your avatar in this world. I am new in town, so I won't be much help in explaining what's going on. We need to talk to people here to make things happen. If you know a character is interested in fish, for example, try a command like SAY FISH to trigger more dialogue or other events. You can also just SAY HI to engage with a character if you want.",
-        "gameWonMessage": "Zee has followed me here, panting and wheezing as I hold the lightning bolt over the fountain threatening to destroy it. \"No! Stop!\" shouts Zee, pleading. \"OK, I admit it! Yes, The gated community project was just an excuse to drown the town in raw sewage. Yes, it's a failure and out of cash. I would have gotten away with it, too, if it weren't for those meddling gods.\"\n\n\"Oh yeah\" says Theena in sudden realization. \"I suppose we are gods. We used to live up on that hill together. It's all coming back to me now.\"\n\n\"Oh, that,\" said Zee sheepishly. \"A while back, I put something in the water supply to get you to forget who you are, and I think it's wearing off.\"\n\nZee then quickly fled, closely pursued by a pack of pitchfork-wielding O Mountain investors. In the hours that followed, the residents of Squalor Holler (soon to be renamed something slightly less degrading) held an informal election to decide the town's new post-Zee leadership. Folks chose Jerry for town marshall and Paulo for tourism director. Dion, now sober as a judge, accepted the role of judge, and Theena became the new mayor with a fancy sash and everything.\n\nThings are shaping up well enough here that I may just stick around in Squalor Holler. You can go on and play some other game. Go on, now. Git!",
+        "introText": "It was all a big myth-take...\n\nLocal bigwig Mr. Zee has bulldozed the hilltop to make way for a gated community, O Mountain Estates, leaving everyone else to eke out a living down here in a depressing little village affectionately known as Squalor Holler. Saving the town will mean defeating Zee at his own game, but judging by the lightning bolt he carries around with him everywhere, I don't think butting heads with him is a good idea.\n\nI will be your avatar in this world. I am new in town, so I won't be much help in explaining what's going on. We need to talk to people here to make things happen. If you know a character has info we need, try a command like SAY HI or SAY another character's name to trigger further dialogue or other events.",
+        "gameWonMessage": "Zee has followed me here, panting and wheezing as I hold the lightning bolt over the fountain threatening to destroy it. \"No! Stop!\" shouts Zee, pleading. \"OK, I admit it! Yes, the gated community project was just an excuse to drown the town in raw sewage. Yes, it's a failure and out of cash. I would have gotten away with it, too, if it weren't for those meddling gods.\"\n\n\"Oh yeah\" says Theena in sudden realization. \"I suppose we are gods. We used to live up on that hill together. It's all coming back to me now.\"\n\n\"Oh, that,\" said Zee sheepishly. \"A while back, I put something in the water supply to get you to forget who you are, and I think it's wearing off.\"\n\nZee then quickly fled, closely pursued by a pack of pitchfork-wielding O Mountain investors. In the hours that followed, the residents of Squalor Holler (soon to be renamed something slightly less degrading) held an informal election to decide the town's new post-Zee leadership. Folks chose Jerry for town marshal and Paulo for tourism director. Dion, now sober as a judge, accepted the role of judge, and Theena became the new mayor with a fancy sash and everything.\n\nThings are shaping up well enough here that I may just stick around in Squalor Holler. You can go on and play some other game. Go on, now. Git!",
         "deathMessage": "Oh, dear. I have died."
 	},
 	"vocab": [ 
@@ -81,7 +81,7 @@
             "actions": [26700,0]
         }, {
             "//": "Say Labyrinth to Theena",
-            "matches": [1280],
+            "matches": [1280, 1269, 1294],
             "conditions": [862,0,0,0,0,0,0],
             "actions": [27000,0]
         }, {
@@ -89,6 +89,11 @@
             "matches": [1268],
             "conditions": [862,0,0,0,0,0,0],
             "actions": [28200,0]
+        }, {
+            "//": "SAY HI Pandy",
+            "matches": [1278],
+            "conditions": [1002,0,0,0,0,0,0],
+            "actions": [35250,0]          
         }, {
             "//": "Say Paulo to Theena",
             "matches": [1274],
@@ -581,9 +586,9 @@
             "actions": [2004,0]
         }, {
             "//": "Landmines S yes radio",
-            "matches": [152],
-            "conditions": [164,201,0,0,0,0,0],
-            "actions": [2100,0]    
+            "matches": [152, 3919],
+            "conditions": [164,201,140,0,0,0,0],
+            "actions": [2154,0] 
         }, {
             "//": "Landmines N no radio",
             "matches": [151],
@@ -591,9 +596,9 @@
             "actions": [2004,0]
         }, {
             "//": "Landmines N yes radio",
-            "matches": [151],
-            "conditions": [144,201,0,0,0,0,0],
-            "actions": [2100,0]
+            "matches": [151, 3919],
+            "conditions": [144,201,160,0,0,0,0],
+            "actions": [2154,0]
         }, {
             "//": "Say hi Reeze - pre MRE flag",
             "matches": [1278],
@@ -656,7 +661,7 @@
 			"actions": [31500,0]
         }, {
 			"//": "USE PUMP- ok",
-			"matches": [3991],
+			"matches": [3991, 4141],
 			"conditions": [1302,348,0,0,0,0,0],
 			"actions": [31650,0]
         }, {
@@ -740,10 +745,15 @@
 			"conditions": [982,468,62,0,0,0,0],
 			"actions": [3300,0]            
         }, {
-			"//": "SAY APPLE - Chera",
+			"//": "SAY APPLE - Chera - pre theft",
 			"matches": [1211],
-			"conditions": [982,0,0,0,0,0,0],
+            "conditions": [982,309,0,0,0,0,0],
 			"actions": [33600,0]
+        }, {
+			"//": "SAY APPLE - Chera - post theft",
+			"matches": [1211],
+            "conditions": [982,308,0,0,0,0,0],
+            "actions": [35100,0]
         }, {
 			"//": "GIVE APPLE",
 			"matches": [2411],
@@ -806,9 +816,9 @@
 			"actions": [3954,0]
         }, {
             "//": "GO WEST 44 chasm - plank",
-			"matches": [154],
-			"conditions": [884,381,0,0,0,0,0],
-			"actions": [300,0]                        
+			"matches": [154, 3930],
+            "conditions": [884,381,800,0,0,0,0],
+            "actions": [354,0]                  
         }, {
             "//": "GO EAST 46 chasm - no plank",
             "matches": [153],
@@ -816,9 +826,9 @@
             "actions": [3954,0]            
         }, {
             "//": "GO EAST 46 chasm - plank",
-            "matches": [153],
-			"conditions": [924,381,0,0,0,0,0],
-			"actions": [300,0]
+            "matches": [153, 3930],
+            "conditions": [924,381,1020,0,0,0,0],
+            "actions": [354,0]
         }, {
 			"//": "GIVE FLEECE",
 			"matches": [2420],
@@ -851,9 +861,9 @@
 			"actions": [4254,0]
         }, {
 			"//": "GO NORTH - MEDUSA SUCCESS",
-			"matches": [151],
-			"conditions": [584,681,60,0,0,0,0],
-			"actions": [4408,0]
+			"matches": [151, 3948],
+            "conditions": [584,681,60,620,0,0,0],
+            "actions": [4408,8100]
         }, {
 			"//": "TAKE BOLT - failure",
 			"matches": [1513],
@@ -876,9 +886,9 @@
 			"actions": [4554,0]
         }, {
 			"//": "GO SOUTH - Hades Door - Success",
-			"matches": [152],
-			"conditions": [1104,1181,1100,0,0,0,0],
-			"actions": [1350,0]
+			"matches": [152, 3916],
+            "conditions": [1104,1181,1120,0,0,0,0],
+            "actions": [1404,0]
         }, {
 			"//": "GIVE BOX failure",
 			"matches": [2407],
@@ -996,7 +1006,7 @@
         }
     ],
 	"verbs": ["AUT", "GO", "*CLI", "*WAL", "*RUN", "*ENT", "*PAC", "*FOL", "SAY", "EXI", "GET", "*TAK", "*CAT", "*PIC", "*REM", "*WEA", "GIV", "*OFF", "DRO", "*REL", "*THR", "*LEA", "", "", "", "", "USE", "LOO", "*EXA", "*WAT", "REA", "CUT", "EAT", "PAY", ""],
-	"nouns": ["ANY", "NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN", "BOX", "HEL", "FIS", "DUC", "APP", "BLU", "BOL", "*LIG", "MRE", "REM", "BAT", "SCR", "RAD", "FLE", "*GOL", "BOW", "*WAT", "MOT", "*ELE", "NEE", "*KNI", "BOO", "BRO", "PLA", "VEN", "*MAC", "WRE", "*PIP", "HAI", "POM", "PAY", "*PHO", "SHE", "COM", "JET", "*SKI", "PAD", "GEA", "*CLI", "COI", "DOC", "BAL", "*DIS", "SUN", "VIS", "MED", "BAN", "*PEE", "TUB", "*CHI", "CAN", "*WAX", "CUP", "*FOA", "THE", "DIO", "HER", "DIT", "FES", "ZEE", "CHE", "PAN", "JER", "STE", "CER", "*DOG", "REE", "PAU", "POE", "*SID", "CET", "HI", "WAT", "LAB", "HAD", "DEL", "PIL", "SAF", "POS", "FEN", "ROS", "BON", "PFD", "FER", "PUM", "NOV", "*ROM"],
+	"nouns": ["ANY", "NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN", "BOX", "HEL", "FIS", "DUC", "APP", "BLU", "BOL", "*LIG", "MRE", "REM", "BAT", "SCR", "RAD", "FLE", "*GOL", "BOW", "*WAT", "MOT", "*ELE", "NEE", "*KNI", "BOO", "BRO", "PLA", "VEN", "*MAC", "WRE", "*PIP", "HAI", "POM", "PAY", "*PHO", "SHE", "COM", "JET", "*SKI", "PAD", "GEA", "*CLI", "COI", "DOC", "BAL", "*DIS", "SUN", "VIS", "MED", "BAN", "*PEE", "TUB", "*CHI", "CAN", "*WAX", "CUP", "*FOA", "THE", "DIO", "HER", "DIT", "FES", "ZEE", "CHE", "PAN", "JER", "STE", "CER", "*DOG", "REE", "PAU", "POE", "*SID", "CET", "HI", "WAT", "LAB", "HAD", "DEL", "PIL", "SAF", "POS", "FEN", "ROS", "BON", "PFD", "FER", "PUM", "NOV", "*ROM", "MIN"],
 	"rooms": [{
         "id": 0,
 		"name": "",
@@ -1004,7 +1014,7 @@
 	}, {
         "id": 1,
 		"name": "in the Squalor Holler town square",
-        "desc": "Here in the center of town, the space is dominated my a large statue of a lightning bolt just to remind us who is in charge here. Dirt paths lead off in all directions. To the north is a blacksmith's forge, and to the south I see a ramshackle building with a sign declaring it to be \"Theena's.\"",
+        "desc": "Here in the center of town, the space is dominated by a large statue of a lightning bolt just to remind us who is in charge here. Dirt paths lead off in all directions. To the north is a blacksmith's forge, and to the south I see a ramshackle building with a sign declaring it to be \"Theena's.\"",
 		"exits": [null, 5, 2, 6, 23, 0, 0]
 	}, {
         "id": 2,
@@ -1064,7 +1074,7 @@
     }, {
         "id": 13,
         "name": "on the beach",
-        "desc": "Here on the white sands of the marina, I can see the perilous sea and the gleaming island of Delos beyond. The beast Cetus swims these waters they say, and given the menacing grey fin visible between the breaking waves, I believe them. There are two ways to enjoy the waters here, according to Poe. The JETSKI can travel fast but it requires a safety briefing and a PFD (personal floatation device). The PADDLEBOARD, on the other hand, is free for anyone to use.",
+        "desc": "Here on the white sands of the marina, I can see the perilous sea and the gleaming island of Delos beyond. The beast Cetus swims these waters, they say, and given the menacing grey fin visible between the breaking waves, I believe them. There are two ways to enjoy the waters here, according to Poe. The JETSKI can travel fast but it requires a safety briefing and a PFD (personal floatation device). The PADDLEBOARD, on the other hand, is free for anyone to use.",
         "exits": [null, 11, 0, 14, 12, 0, 0]
     }, {
         "id": 14,
@@ -1074,7 +1084,7 @@
     }, {
         "id": 15,
         "name": "in dangerous waters",
-        "desc": "Here in the middle of the harbor, the waves are growing larger and the paddleboard struggles to make progress. Besides, my arms are tired and I need a rest. To the south is the isle of Delos. Between here and there, I can see a shape moving through the water many times larger than my paddleboard.",
+        "desc": "Here in the middle of the harbor, the waves are growing larger, and the paddleboard struggles to make progress. Besides, my arms are tired, and I need a rest. To the south is the isle of Delos. Between here and there, I can see a shape moving through the water many times larger than my paddleboard.",
         "exits": [null, 13, 16, 0, 0, 0, 0]
     }, {
         "id": 16,
@@ -1104,7 +1114,7 @@
     }, {
         "id": 21,
         "name": "at the bottom of a well",
-        "desc": "I guess there's truth to the rumor that nobody can die on Delos. The fall should have broken my neck, and for several seconds I wonder if it really did. Somehow I am still alive. Anyway, there's not much to see down here after all. Just a dry dirt floor. Sorry for misleading you. There is a faint light coming from the east, but that's it.",
+        "desc": "I guess there's truth to the rumor that nobody can die on Delos. The fall should have broken my neck, and for several seconds I wonder if it really did. Somehow, I am still alive. Anyway, there's not much to see down here after all. Just a dry dirt floor. Sorry for misleading you. There is a faint light coming from the east, but that's it.",
         "exits": [null, 0, 0, 16, 0, 0, 0]
     }, {
         "id": 22,
@@ -1114,12 +1124,12 @@
     }, {
         "id": 23,
         "name": "on the outskirts of town",
-        "desc": "At the outskirts of town, we see the Welcome to Squalor Holler sign. On the other side of the sign, someone (persumably Zee) has written \"Stay out of O Mountain.\" To the south is a road that curves up the hill toward the west. A more direct route to O Mountain is up the adjacent hillside, but that seems exceedingly dangerous.",
+        "desc": "At the outskirts of town, we see the Welcome to Squalor Holler sign. On the other side of the sign, someone (presumably Zee) has written \"Stay out of O Mountain.\" To the south is a road that curves up the hill toward the west. A more direct route to O Mountain is up the adjacent hillside, but that seems exceedingly dangerous.",
         "exits": [null, 24, 27, 1, 0, 28, 0]
     }, {
         "id": 24,
         "name": "at Hermie's Messenger Service",
-        "desc": "Hermie has a small stall along the roadside for his messenger service. A while back, he may have had dozens of messages flitting back and forth between the mountain and Squalor Holler, but not anymore. He sits in his stall with his chin on his hand, bored. A nearby sunscreen vending machine seems to be getting more business than Hermies.",
+        "desc": "Hermie has a small stall along the roadside for his messenger service. A while back, he may have had dozens of messages flitting back and forth between the mountain and Squalor Holler, but not anymore. He sits in his stall with his chin on his hand, bored. A nearby sunscreen vending machine seems to be getting more business than Hermie.",
         "exits": [null, 26, 23, 25, 0, 0, 0]
     }, {
         "id": 25,
@@ -1184,7 +1194,7 @@
     }, {
         "id": 37,
         "name": "still in the labyrinth",
-        "desc": "Based on the amount of trash strewn around here, it's pretty clear that over time this labyrinth has come to serve multiple purposes: as a prison for the mythical minotaur and also as a junk yard.",
+        "desc": "Based on the amount of trash strewn around here, it's pretty clear that over time this labyrinth has come to serve multiple purposes: as a prison for the mythical minotaur as well as a junk yard.",
         "exits": [null, 0, 38, 41, 0, 0, 0]
     }, {
         "id": 38,
@@ -1194,7 +1204,7 @@
     }, {
         "id": 39,
         "name": "in the labyrinth, confused",
-        "desc": "I wonder how many people have been condemned to the labyrinth. How many of them die by the hand of the minotaur and how many die of starvation wandering around this place?",
+        "desc": "I wonder how many people have been condemned to the labyrinth. How many of them die by the hand of the minotaur and how many have died of starvation wandering around this place?",
         "exits": [null, 38, 0, 43, 0, 0, 0]
     }, {
         "id": 40,
@@ -1254,7 +1264,7 @@
     }, {
         "id": 51,
         "name": "in the labyrinth contemplating the infinite",
-        "desc": "There's a chasm ot the west. Don't try to cross it without something to help you.",
+        "desc": "There's a chasm to the west. Don't try to cross it without something to help you.",
         "exits": [null, 50, 0, 0, 46, 0, 0]
     }, {
         "id": 52,
@@ -1270,16 +1280,16 @@
         "id": 54,
         "name": "at the center of the labyrinth",
         "desc": "If this were a proper game, you would hear a grand musical flourish right about now. We made it to the center of the maze. At last, that's what the sign says. There's a small hut here. Someone has been living here for a while.",
-        "exits": [null, 0, 0, 52, 0, 0, 0]
+        "exits": [null, 0, 0, 0, 52, 0, 0]
     }, {
         "id": 55,
         "name": "near a small museum",
-        "desc": "For an institution that has supposedly been around since the dawn of time, the museum devoted to its history only has one exhibit, kind of sad. I can see another room to the south but it's cut off by what appears to be a garage door.",
+        "desc": "For an institution that has supposedly been around since the dawn of time, the museum devoted to its history only has one exhibit, kind of sad. I can see another room to the south, but it's cut off by what appears to be a garage door.",
         "exits": [null, 0, 56, 58, 0, 0, 0]
     }, {
         "id": 56,
         "name": "in Hades' quarters",
-        "desc": "In stark contrast to the other parts of the underworld, Hades' quarters are finely appointed and, for lack of a better term, swanky. Thankfully, he's out at the moment or otherwise he would surely turn my soul inside out for fun, and I do not want that.",
+        "desc": "In stark contrast to the other parts of the underworld, Hades' quarters are finely appointed and, for lack of a better term, swanky. Thankfully, he's out at the moment. Otherwise, he would surely turn my soul inside out for fun, and I do not want that.",
         "exits": [null, 55, 0, 59, 0, 0, 0]
     }, {
         "id": 57,
@@ -1298,8 +1308,8 @@
         "exits": [null, 0, 0, 0, 56, 0, 0]
     }, {
         "id": 60,
-        "name": "at the dog house",
-        "desc": "This dog house is about the size of any house in Squalor Holler. The inhabitant, therefore, has got to be similarly enormous. Let's not get on the dog's bad side.",
+        "name": "at the doghouse",
+        "desc": "This doghouse is about the size of any house in Squalor Holler. The inhabitant, therefore, has got to be similarly enormous. Let's not get on the dog's bad side.",
         "exits": [null, 0, 61, 64, 0, 0, 0]
     }, {
         "id": 61,
@@ -1329,7 +1339,7 @@
     }, {
         "id": 66,
         "name": "at the river Styx",
-        "desc": "I stand at the banks of the river Styx, its turbulent waters teaming with the souls of the dead. Ghostly arms reach up to grab at anything that appears to pass overhead. If you think I'm going to swim to the other side you are out of your alleged mind. The mysterious hooded Ferry Person awaits payment to take me across.",
+        "desc": "I stand at the banks of the river Styx, its turbulent waters teaming with the souls of the dead. Ghostly arms reach up to grab at anything that appears to pass overhead. If you think I'm going to swim to the other side, you are out of your alleged mind. The mysterious hooded Ferry Person awaits payment to take me across.",
         "exits": [null, 0, 0, 0, 62, 0, 0]
     }, {
         "id": 67,
@@ -1733,84 +1743,6 @@
             "article": "the",
             "name": "ferry-person of the Underworld",
             "loc": 66
-        }, {
-            "id": 68,
-            "article": "a",
-            "name": "",
-            "loc": 0,
-            "short": ""
-        }, {
-            "id": 69,
-            "article": "a",
-            "name": "",
-            "loc": 0,
-            "short": ""
-        }, {
-            "id": 70,
-            "article": "a",
-            "name": "",
-            "loc": 0,
-            "short": ""
-        }, {
-            "id": 71,
-            "article": "a",
-            "name": "",
-            "loc": 0,
-            "short": ""
-        }, {
-            "id": 72,
-            "article": "a",
-            "name": "",
-            "loc": 0,
-            "short": ""
-        }, {
-            "id": 73,
-            "article": "a",
-            "name": "",
-            "loc": 0,
-            "short": ""
-        }, {
-            "id": 74,
-            "article": "a",
-            "name": "",
-            "loc": 0,
-            "short": ""
-        }, {
-            "id": 75,
-            "article": "a",
-            "name": "",
-            "loc": 0,
-            "short": ""
-        }, {
-            "id": 76,
-            "article": "a",
-            "name": "",
-            "loc": 0,
-            "short": ""
-        }, {
-            "id": 77,
-            "article": "a",
-            "name": "",
-            "loc": 0,
-            "short": ""
-        }, {
-            "id": 78,
-            "article": "a",
-            "name": "",
-            "loc": 0,
-            "short": ""
-        }, {
-            "id": 79,
-            "article": "a",
-            "name": "",
-            "loc": 0,
-            "short": ""
-        }, {
-            "id": 80,
-            "article": "a",
-            "name": "",
-            "loc": 0,
-            "short": ""  
         }
     ],
 	"bitFlagInfo": [
@@ -1848,7 +1780,7 @@
         "3": "I manage to open the back of the device with the screwdriver. The batteries fit perfectly.",
         "4": "I feel the blessings of Paulo upon me.",
         "5": "\"OH EM GEE!\" shouts the Paulo fan as they grab the baggie of hair from my hand and dash off to brag to their friends, leaving the empty tub behind.",
-        "6": "",
+        "6": "You really shouldn't be looking at the raw JSON files. It kind of ruins the illusion.",
         "7": "The Ferry Person accepts the coin and whisks escorts me across the river.",
         "8": "\"No charge,\" says the Ferry Person. \"I think you've been through enough already.\" Soon I am on the other side of the river.",
         "9": "The door slowly opens...",
@@ -1863,14 +1795,14 @@
         "18": "Snip. Snip.",
         "19": "Paulo suns himself in a manner I can only describe as \"gloriously.\"",
         "20": "With a mighty ka-thunk the wrench rotates the mechanism inside. Somewhere above me, I can hear something change...",
-        "21": "With the clumbing gear, I manage to make it up the hill...",
+        "21": "With the climbing gear, I manage to make it up the hill...",
         "22": "\"Chera is so wrapped up in her new book that she hardly notices anything.\"",
-        "23": "I feel white hot rage burning my shoulder to meet Zee's fiery gaze. His preamble of grunts and roars clearly signals that he's building up to something big.  As a result, the other residents gather around the square to watch. \"Theif!\" he shouts. \"Unfortunately, due to the law of finders-keepers, I cannot unsteal the object from Theena. However, I can do something about you. I am hereby banishing you to the Labyrinth where the minotaur will surely rip you to pieces and devour you.\" The crowd emits a smattering of confused grumbling. \"We're about due for a sacrifice, and we need to punish this person. So, it's a two for one.\" I feel arms pulling be east toward the deadly labyrinth...",
+        "23": "I feel white hot rage burning my shoulder to meet Zee's fiery gaze. His preamble of grunts and roars clearly signals that he's building up to something big.  As a result, the other residents gather around the square to watch. \"Thief!\" he shouts. \"Unfortunately, due to the law of finders-keepers, I cannot un-steal the object from Theena. However, I can do something about you. I am hereby banishing you to the Labyrinth where the minotaur will surely rip you to pieces and devour you.\" The crowd emits a smattering of confused grumbling. \"We're about due for a sacrifice, and we need to punish this person. So, it's a two for one.\" I feel arms pulling be east toward the deadly labyrinth...",
         "24": "I'm getting turned around...",
         "25": "A wind pushes me back. From deep within the labyrinth an ancient voice stirs: \"the time is not yet right for you to test yourself here.\"",
         "26": "The gap is too far to jump across.",
         "27": "I'm not going to drop this while in the Labyrinth. That seems like a very bad idea in here.",
-        "28": "The M.E.D.U.S.A device comes to life in a blinding flash of light. It's high-powered lasers slice me to ribbons. I am dead...",
+        "28": "The M.E.D.U.S.A device comes to life in a blinding flash of light. Its high-powered lasers slice me to ribbons. I am dead...",
         "29": "The M.E.D.U.S.A device comes to life as I approach, but the disco ball's mirrors reflect the high-powered lasers back toward the door. A smudge on the laser's lens causes the unit to overheat, sparks and metal bits fly everywhere. Let that be a lesson to everyone working with lasers: always clean your optics.",
         "30": "A large metal barrier not unlike a garage door bars my entry...",
         "//": "------------------------------------------------------------------------------------",
@@ -1884,8 +1816,8 @@
         "59": "I'm not an engineer or an architect, but it sure seems like these plans show that Zee is up to no good.",
         "60": "As McGuffins go, this one is pretty nifty. This glowing blue and black lightning bolt hums with raw power. Of course, it could be buzzing because Zee is getting a call. I don't know.",
         "61": "The dark grey-brown bag of \"food\" can be consumed in an emergency, but don't ask me to eat it. I think it's been in storage too long.",
-        "62": "It's a a small grey box with a single button. It looks a lot like a garage opener. The battery case on the back is empty. It looks like it takes button-cell batteries. The instructions say, \"To install batteries try USE BATTERIES. Requires screwdriver.\"",
-        "63": "It's a a small grey box with a single button. It looks a lot like a garage opener. The device now has batteries.",
+        "62": "It's a small grey box with a single button. It looks a lot like a garage opener. The battery case on the back is empty. It looks like it takes button-cell batteries. The instructions say, \"To install batteries try USE BATTERIES. Requires screwdriver.\"",
+        "63": "It's a small grey box with a single button. It looks a lot like a garage opener. The device now has batteries.",
         "64": "The batteries are the small disc-shaped like buttons.",
         "65": "It looks almost exactly like a small screwdriver. It drives screws, small ones.",
         "66": "This radio receives AM and FM. It also seems to pick up on weird hums around town. I think Theena may have a metal plate in her head and we're picking it up. The radio also has a nifty hand-crank so we don't need to worry about running out of power.",
@@ -1895,7 +1827,7 @@
         "70": "Like a lot of things left to rot in the Labyrinth, this broken electric motor is little more than junk. It could have useful parts, though. It may have a magnet in there somewhere.",
         "71": "Theena's knitting needle is made of a solid non-ferrous material, good for pointing the way. Theena takes her knitting very seriously.",
         "72": "The booklet reads: \"To construct a compass, you will need to assemble the following items: water in an open container, a needle of some kind, and a magnet. Assembling it is tricky, so you may need a friend to help you out.\"",
-        "73": "The brochure is filled with several colorful illustrations of lost souls making the best of things in the underworld. \"Oh, dear. It seems you have died. Well, no need to fret. Death is not the one way ticket you may have believed it to be. You are, in fact, only temporarily life-deprived. All the tools you need to survive and thrive in a post-life world are here in the Underworld. Some words of advice: don't go into unauthorized areas, and don't eat any food you find here. The food thing is very important. Just ask Stephanie.\"",
+        "73": "The brochure is filled with several colorful illustrations of lost souls making the best of things in the underworld. \"Oh, dear. It seems you have died. Well, no need to fret. Death is not the one-way ticket you may have believed it to be. You are, in fact, only temporarily life-deprived. All the tools you need to survive and thrive in a post-life world are here in the Underworld. Some words of advice: don't go into unauthorized areas, and don't eat any food you find here. The food thing is very important. Just ask Stephanie.\"",
         "74": "This is one find dinosaur bone. I assume it's a dinosaur because it's so dang big. I know literally nothing about paleontology. I'm not even sure if I spelled it right.",
         "75": "A sturdy wooden plank about 10 inches across and 10 feet long. This thing might come in handy.",
         "76": "The vending machine accepts coins and spits out tubes of SPF 50 sunscreen, the best on the market.",
@@ -1905,7 +1837,7 @@
         "80": "The payphone is a relic of an earlier time when it was considered polite for the newly deceased to phone up loved ones and announce that they would not be making it home for dinner.",
         "81": "Solid shears good for cutting things like metal or plastic.",
         "82": "Festus did a great job. It really looks like a compass. It even shows where north is and everything.",
-        "83": "Oh, man. This thing looks rad. Purple and green detailing, oversized exhaust. Just looking at it, I can tell that it can go really fast.",
+        "83": "Oh, man. This thing looks rad. Purple-and-green detailing, oversized exhaust. Just looking at it, I can tell that it can go wicked fast.",
         "84": "It's fine. It's a paddleboard. I'm not sure I want to ride that thing, but I will if you make me.",
         "85": "This is fancy alpine climbing gear.",
         "86": "It has Zee's face on it, another reminder of who is in charge around here.",
@@ -1913,11 +1845,11 @@
         "88": "The control panel's lights show the flow of the river Styx as it runs near the town's well. The lever is broken, but it could be moved with a tool of some kind. Currently, the river Styx is not connected to the water supply above.",
         "89": "The printed spreadsheets have a lot of red numbers on them. There are some other documents, letters from investors with all-capital letters. Things are not going well at O Mountain Estates, it seems.",
         "90": "I could stare at this thing for ages. It looks like a hundred tiny me's on the surface of the ball.",
-        "91": "The box has no lid. I'm sure something  important is inside, but I can't tell what it is.",
+        "91": "The box has no lid. I'm sure something important is inside, but I can't tell what it is.",
         "92": "The elaborate Helm of Hades is to be worn on the head in times of danger, according to the instructions printed on the inside. Its abilities may not kick in until the right moment.",
         "93": "The tube of sunscreen is a very high SPF, great for keeping a person safe while worshiping the sun.",
         "94": "The visor blocks the sun above my eye-line, just the thing for an afternoon worshiping the sun.",
-        "95": "This elaborately-decorated chunk of metal looks like a million bucks, but is probably worth less than three dollars on the open market. It's only use, it seems, is sun worshiping.",
+        "95": "This elaborately-decorated chunk of metal looks like a million bucks but is probably worth less than three dollars on the open market. It's only use, it seems, is sun worshiping.",
         "96": "It's yellow-brown and it smells bad.",
         "97": "The greasy rub of what was fried chicken is now trash.",
         "98": "Everyone knows that oracles don't need waxing. They have a natural lubricant. This thing is trash.",
@@ -1926,13 +1858,13 @@
         "101": "I get the impression Dion slept in those clothes, and his aroma proves me right. Dion's relationship with alcohol is problematic. He drinks like it's his job, and somewhere in the blurry mists of his memory, it was his job.",
         "102": "At one time, Hermie had a thriving messenger business in town, but by now it's clear that trade has fallen off considerably. It's hard to say when it happened or why.",
         "103": "Ditey is the kind of woman people write country songs about. While I can't say exactly who's doing the drinkin' and who's doing the cheatin' or whose boots are under whose bed, it's clear that Ditey is in the picture somehow.",
-        "104": "Festus is a highly talented blacksmith and gadgeteer, and also a man with a broken heart.",
+        "104": "Festus is a highly talented blacksmith and gadgeteer. He's also a man with a broken heart.",
         "105": "As angry as I am about him sending me to the labyrinth to die, I have to admit he is kind of adorable when he sleeps. Sue me.",
-        "106": "Lounging by the pool in her white one piece swimsuit sipping iced tea, Chera carries herself as if she knows nothing of her husband's plans. I've seen enough mob movies to know that if Zee is up to something, she is probably involved.",
+        "106": "Lounging by the pool in her white one-piece swimsuit sipping iced tea, Chera carries herself as if she knows nothing of her husband's plans. I've seen enough mob movies to know that if Zee is up to something, she is probably involved.",
         "107": "Pandy is a curious sort of person, and she seems to be onto something.",
         "108": "Jerry does not look one bit like a minotaur. He's kind of tall, I guess, but yeah, not a minotaur. I would say I'm happy he wasn't some murderous beast, but honestly I'm a little disappointed.",
         "109": "Stephanie, also known by her full name Perstephanie, is a greeter here in the underworld. She came down here for an internship and stayed.",
-        "110": "This creature would be intimidating with one head, maybe two for good measure. Three heads? That just seems excessive. He's an enormous angry dog. If I move closer he will kill me- but aren't I already dead?",
+        "110": "This creature would be intimidating with one head, maybe two for good measure. Three heads? That just seems excessive. He's an enormous angry dog. If I move closer, he will kill me- but aren't I already dead?",
         "111": "Don't let the stained underwear fool you. Reeze is a serious military tactician. As evidenced by the landmines in his yard and this solidly constructed bunker, he is not one with which to trifle.",
         "112": "Paulo's dark ringlets and his high, angular cheekbones make it clear why the people adore him so. The poor creature can't even go back to the island of his birth for fear of being mobbed by fans.",
         "113": "Standing in his red shorts, whistle at the ready, Poe never quite outgrew his teenage job as a lifeguard. Poe rules the waves, but safety first.",
@@ -1941,18 +1873,18 @@
         "116": "Dion is overcome with joy upon being reunited with his pet duck. As a reward, he lobs a life jacket (or PFD) in my direction as he scurries off. I'm still not certain that was his duck. Oh, well.",
         "117": "Theena unrolls the blueprints on the bar, slowly scanning the drawings for clues. \"There it is. The drainage for O Mountain, down there in the corner- it's designed to flood the town with raw sewage. I'll keep this.\" Looking around for a reward, she shrugs and hands me one of her knitting needles. \"Hey, if you get a chance to swipe a gold apple from Chera, bring it here. It belongs here.\"",
         "118": "\"You should probably keep that away from me,\" she says. \"I don't think I trust myself with it.\"",
-        "119": "She smiles warmly. \"Like most valuable things in this world, having this is not as sweet as the knowledge that Chera doesn't have it.\" I peek outside the window and I see a crowd forming. \"Zee probably followed you here. He'll probably send you to get eaten by the Minotaur, but don't worry. He's a sweetheart.\"",
+        "119": "She smiles warmly. \"Like most valuable things in this world, having this is not as sweet as the knowledge that Chera doesn't have it.\" I peek outside the window, and I see a crowd forming. \"Zee probably followed you here. He'll probably send you to get eaten by the Minotaur, but don't worry. He's a sweetheart.\"",
         "120": "\"I don't want to talk to anyone,\" says Festus. He seems angry but also sad and confused. Ditey was out of Festus' league, but there's no point in mentioning that now. \"What I want is a way to get revenge on my ex, Ditey. Something smelly like a fish that I can stick under her radiator. You got anything like that?\"",
-        "121": "\"Yeah, thanks,\" he says. \"Now that I thought about it for a bit, revenge is a bad idea. Maybe I'll use the fish to cook her dinner.\" Festus wipes the liquids from his face and nose. \"You seem like a good person. Tell you what- I'll make you something for free. Bring me the materials and I can make you something useful. Here's an example of my work, a pair of heavy duty shears.\" He hand me the shears and goes back to work.",
+        "121": "\"Yeah, thanks,\" he says. \"Now that I thought about it for a bit, revenge is a bad idea. Maybe I'll use the fish to cook her dinner.\" Festus wipes the liquids from his face and nose. \"You seem like a good person. Tell you what- I'll make you something for free. Bring me the materials and I can make you something useful. Here's an example of my work, a pair of heavy-duty shears.\" He hands me the shears and goes back to work.",
         "122": "\"I don't know what to do with that stuff,\" says Festus.",
         "123": "\"Ah, OK. I know just what I can do with all of this,\" he says excitedly. After a half hour of hammering and muttering, Festus completes the project: a perfectly functional compass.",
         "124": "\"I don't like to talk about that stuff.\"",
         "125": "\"I'm going to send you on an epic quest,\" says Dion, his eyes half closed. \"I require the Golden Fleece. I lost it somewhere in the labyrinth, and I'm getting chilly. Please find it for me.\" He then returns to his pastime of muttering to himself.",
-        "126": "\"Excellent work, young adventurer,\" says Dion as he pulls his arms through the sleeves. \"Ah, that's better. I'm not sure what you can do wit this but I nicked this from Theena's back when she had a dance floor in that bar of hers.\" Dion hands me a shiny mirrored disco ball.",
+        "126": "\"Excellent work, young adventurer,\" says Dion as he pulls his arms through the sleeves. \"Ah, that's better. I'm not sure what you can do with this but I nicked this from Theena's back when she had a dance floor in that bar of hers.\" Dion hands me a shiny mirrored disco ball.",
         "127": "\"Zee is planning something terrible, I just know it. I can't prove it yet, though.\"",
         "128": "\"Ditey is so far out of Festus' league, they're not even playing the same sport. Poor guy. He's miserable, but he's going to have to get over it.\"",
         "129": "\"I am not her biggest fan.\"",
-        "130": "\"That's a fancy word for maze. People go in and they don't come out. It's not all that bad, though.\"",
+        "130": "\"Labyrinth is just a fancy word for maze. People go in and they don't come out. Folks say they get eaten by the minotaur, but really he's a sweetheart. Just SAY HI and he'll drop the monster act.\"",
         "131": "\"New in town?\" asks Theena. I nod. \"I can tell because you're not dead-eyed like the rest of us. Give it time, though. You'll catch on. In my line of work, I have the dirt on just about everyone, so just ask. For example, to ask about Zee, just SAY ZEE.\"",
         "132": "\"Have you seen Chera? She's got my apple. I mean, it's not technically my apple, but it's certainly not hers.\"",
         "133": "\"I know I can prove Zee is up to something, but I need some evidence. You got anything?\"",
@@ -1981,10 +1913,10 @@
         "156": "\"Soldier!\" shouts Reeze, inches from my face. \"In our battle against the encroaching menace of Zee and his minions, we must become self-sufficient if we want to survive! I can only assume that by now the world above ground has descended into a nightmare of radiation and communism. I need you to go out there and find me self-sufficient sustenance.\" I'm not sure what all of this means. I think he's just hungry.",
         "157": "\"Soldier! Do not for one second slacken your commitment to the cause. Be ever-vigilant! Zee is everywhere! I see his shadow on the walls. At night I can hear him in the pipes. Be always alert!\"",
         "158": "Reeze grabs the MRE and pops a small straw in it like a drink pouch and begins consuming it. \"Your efforts in the support of freedom have not gone unnoticed, soldier. I acquired this alpine climbing gear from a mercenary job a while back. You can have it. You earned it.\"",
-        "159": "\"Welcome to the Underworld, traveller,\" she says with a pasted-on grin. \"The Underworld staff recognizes that you have choices where you spend the afterlife, and we're glad and proud that you chose us. Please follow the passage along to the banks of the river Styx and present a coin for passage. B-bye now. B-bye.\"",
+        "159": "\"Welcome to the Underworld, traveler,\" she says with a pasted-on grin. \"The Underworld staff recognizes that you have choices where you spend the afterlife, and we're glad and proud that you chose us. Please follow the passage along to the banks of the river Styx and present a coin for passage. B-bye now. B-bye.\"",
         "160": "The water coming from the pump smells really odd.",
         "161": "The water coming from the pump smells fine, just like water.",
-        "162": "The slobbery beast gleefully accepts the gift. He leans down briefly so I can pet him. The fur is coarse and dark. His three heads fight over the bone and he runs off bury it somewhere in the bowels of the underworld.",
+        "162": "The slobbery beast gleefully accepts the gift. He leans down briefly so I can pet him. The fur is coarse and dark. His three heads fight over the bone, and he runs off bury it somewhere in the bowels of the underworld.",
         "163": "One day, perhaps the tables will be turned and I would demand that you jump into the stinky abyss of a port-a-potty. For today, though, the answer is no.",
         "164": "The hillside is very slippery. I try to make it up, but I only succeed in skinning my knee.",
         "165": "Bad idea. The guards are there and will surely kill me if they see me coming from the O Mountain property. Hard pass.",
@@ -1993,35 +1925,21 @@
         "168": "\"Theena, what a wretch,\" says Chera through her teeth. \"She and her friends are going to get what's coming to them soon enough.\"",
         "169": "I should probably find something about what Zee has planned before I go hang out by the pool.",
         "170": "I can't make much sense of these. I should give them to Theena to see what she has to say.",
-        "171": "\"Ooh, this is her new one!\" she squeals, grasping the book tightly. \"I simply must devour this right away!.\" Chera is now thoroughly distracted.",
+        "171": "\"Ooh, this is her new one!\" she squeals, grasping the book tightly. \"I simply must devour this right away!\" Chera is now thoroughly distracted.",
         "172": "\"Just what do you think you're doing?\" she shouts slapping the apple out of your hand. \"You are fired!\" Before I can explain that I do not work for her, she becomes very bored and ignores me.",
         "173": "The cover features a muscular, long-haired man wearing a shirt that seems simultaneously too small, too large, and insufficiently buttoned. The description on the back promises a forbidden love that knew no boundaries. In it, a shy woman of simple upbringing falls for the charms of a saucy rogue who turns out to be unbelievably wealthy, a prince, as well as a poet of some renown. Book 17 of 50. Hot stuff.",
-        "174": "\"Oh, it's a lovely little bauble, isn't it?\" she says glancing over at the object as the rays of the sun glint off of its perfect surface. \"Some time ago, a few of the dirty women from down in the Holler were fighting over it, so I had Zee steal it from Theena. I had to do it. Those girls lack the class and sophistication to properly care for magnificent objet d'art such as this. Let's face it, those girls are trash. They ought to know their place.",
-        "175": "If you want me to make you something, put drop three items on the floor, and if I can make something out of them I'll do it.",
+        "174": "\"Oh, it's a lovely little bauble, isn't it?\" she says, imagining the rays of the sun glinting off of its perfect surface. \"Some time ago, a few of the dirty women from down in the Holler were fighting over it, so I had Zee steal it from Theena. I had to do it. Those girls lack the class and sophistication to properly care for magnificent objet d'art such as this. Let's face it, those girls are trash. They ought to know their place.",
+        "175": "If you want me to make you something, put drop three items on the floor, and if I can make something out of them, I'll do it.",
         "176": "Festus takes the items and knows just what to do. After several hours of hammering and some light cursing, he pulls from the flames a perfectly operational compass.",
         "177": "\"Oh, hi there. Are you a stranger in town? I've always relied on the kindness of those kinds of people.\"",
         "178": "\"Festus is very sweet, but it'll never work out between us. I'm the personification of beauty and he's, well, Festus.\"",
         "179": "\"Oh, that's nice. I like roses. Did Festus send this? He's a nice guy, but it really won't work out with us. I hated to break his heart, but that's just how it is sometimes.\" She places the rose on a shelf next to the roughly five hundred roses from other suitors.",
-        "180": "\"Hello!\" says Jerry (aka The Minotaur) with a friendly handshake. \"Welcome to the center of the labyrinth!\" He removes the Papier-mâché bull's head and shrugs. \"It's all for show. Usually people run away and I live off the scraps that fall out of their backpacks. The town threw me in here a while back fopr asking too many questions about city management. Every few months, they send me 'sacrifices' like yourself.\" He grabs my feet and stares at my shoes. \"I can follow your footprints back out of here. Soon I'll be free! After I fold the laundry, of course.\"",
+        "180": "\"Hello!\" says Jerry (aka The Minotaur) with a friendly handshake. \"Welcome to the center of the labyrinth!\" He removes the Papier-mâché bull's head and shrugs. \"It's all for show. Usually, people run away and I live off the scraps that fall out of their backpacks. The town threw me in here a while back for asking too many questions about city management. Every few months, they send me 'sacrifices' like yourself.\" He grabs my feet and stares at my shoes. \"I can follow your footprints back out of here. Soon I'll be free! After I fold the laundry, of course.\"",
         "181": "Zee shakes himself awake. Now that I am invisible, he only sees the bolt floating in space and assumes that he is still dreaming. He resumes his snoring.",
         "182": "\"Yeah, I'm not feeling it right now. I'm worried about the water in this town. Have you smelled it? It's weird. I think we're being poisoned.\"",
         "183": "Pandy takes the box from me and slaps the top with the flat palm of her hand. The box opens to reveal The Helm of Hades. \"I'll take the box as a reward,\" she says.",
-        "184": "184",
-        "185": "185",
-        "186": "186",
-        "187": "187",
-        "188": "188",
-        "189": "189",
-        "190": "190",
-        "191": "191",
-        "192": "192",
-        "193": "193",
-        "194": "194",
-        "195": "195",
-        "196": "196",
-        "197": "197",
-        "198": "198",
-        "199": "199",
+        "184": "\"I am not angry about the theft of the apple. Anger is cheap and common. Anger is beneath me. I am, however, certain in the knowledge that Zee will soon have the culprit in his clutches and that they will surely fry under the power of his thunderbolt. Fry, peasants! FRY!!\"",
+        "185": "\"Oh, hi. I'm a little distracted right now.\"",
         "": ""
     }
 }
