@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import ReactGA from 'react-ga';
 import { fetchGameData, playerTurn } from '@src/helpers';
 import {
   SELECTING_GAME,
@@ -25,6 +26,9 @@ const PageMain = () => {
   const [gameData, setGameData] = useState(null);
   const [gameState, setGameState] = useState(null);
   const [showDevTools, setShowDevTools] = useState(false);
+
+  ReactGA.initialize('UA-118400872-5');
+  ReactGA.pageview(window.location.pathname);
 
   const handleInputChange = (e) => {
     if (appStatus === PLAYING_GAME) {
@@ -76,6 +80,12 @@ const PageMain = () => {
   };
   const handleGameChange = async (selectedGame) => {
     if (selectedGame && selectedGame.slug) {
+      ReactGA.event({
+        category: 'LOAD_GAME',
+        action: selectedGame.slug,
+        label: selectedGame.slug,
+      });
+
       triggerLoadDisplay(false, 'loading');
       setGameInitted(false);
       await fetchGameData(selectedGame, setGameData, setGameState);
