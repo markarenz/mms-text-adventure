@@ -17,8 +17,9 @@
   "scripts": {
     "dev": "PORT=3033 craco start",
     "start": "craco start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "craco build",
+    "test": "craco test",
+    "deploy": "aws s3 sync build/ s3://adventure.ridiculopathy.com",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

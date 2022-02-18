@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import ReactGA from 'react-ga';
-import { fetchGameData, playerTurn } from '@src/helpers';
+import { fetchGameData, playerTurn, displayHelp } from '@src/helpers';
 import {
   SELECTING_GAME,
   PLAYING_GAME,
@@ -12,8 +12,9 @@ import {
   LoadingDisplay,
   SelectGame,
   DevTools,
+  TerminalInput,
+  TerminalOutput,
 } from '@src/components';
-import { displayHelp } from '../../helpers';
 const PageMain = () => {
   const [appStatus, setAppStatus] = useState(SELECTING_GAME);
   const terminalInputRef = useRef(null);
@@ -29,7 +30,6 @@ const PageMain = () => {
 
   ReactGA.initialize('UA-118400872-5');
   ReactGA.pageview(window.location.pathname);
-
   const handleInputChange = (e) => {
     if (appStatus === PLAYING_GAME) {
       setInputBuffer(e.target.value.toUpperCase());
@@ -141,36 +141,16 @@ const PageMain = () => {
         {appStatus === SELECTING_GAME && (
           <SelectGame setGame={handleGameChange} />
         )}
-
         <div
           className={`gameWrap ${appStatus === PLAYING_GAME ? 'active' : ''}`}
         >
-          <div className="terminalOutputWrap">
-            <label>» Terminal Output</label>
-            <div className="terminalOutput">
-              <div
-                className="terminalOutputContent"
-                dangerouslySetInnerHTML={{ __html: stdOutput }}
-              />
-              <div ref={soEof} className="terminalOutputEof">
-                EOF
-              </div>
-            </div>
-          </div>
-          <div className="terminalInputWrap">
-            <label>» Type Your Commands Here</label>
-            <form onSubmit={handleInputSubmit}>
-              <input
-                className="terminalInput"
-                name="userInput"
-                value={inputBuffer}
-                onChange={handleInputChange}
-                autoFocus
-                autoComplete="off"
-                ref={terminalInputRef}
-              />
-            </form>
-          </div>
+          <TerminalOutput stdOutput={stdOutput} soEof={soEof} />
+          <TerminalInput
+            inputBuffer={inputBuffer}
+            handleInputSubmit={handleInputSubmit}
+            handleInputChange={handleInputChange}
+            terminalInputRef={terminalInputRef}
+          />
         </div>
         {defaultShowDevTools && gameData && (
           <div className="devToolsToggle">
