@@ -15,7 +15,7 @@
     "web-vitals": "^2.1.2"
   },
   "scripts": {
-    "dev": "PORT=3033 craco start",
+    "dev": "craco start PORT=3033",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
